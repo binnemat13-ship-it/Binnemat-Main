@@ -57,9 +57,7 @@ function getAuthHeaders() {
   const { key, secret } = getAdminCredentials();
   const headers = {
     'Accept': 'application/json',
-    'Content-Type': 'application/json',
-    'X-Client-Agent': 'Binnemat-React-Client/1.0',
-    'X-Requested-With': 'XMLHttpRequest'
+    'Content-Type': 'application/json'
   };
 
   if (key && secret) {
@@ -234,9 +232,7 @@ export async function uploadMediaToWordPress(file, options = {}) {
   const cleanName = file.name.replace(/[^a-zA-Z0-9.-]/g, '_');
   const headers = {
     'Content-Disposition': `attachment; filename="${cleanName}"`,
-    'Content-Type': file.type || 'image/jpeg',
-    'X-Client-Agent': 'Binnemat-React-Client/1.0',
-    'X-Requested-With': 'XMLHttpRequest'
+    'Content-Type': file.type || 'image/jpeg'
   };
 
   if (wpPass) {
@@ -293,8 +289,6 @@ export async function fetchWpSettings(options = {}) {
   const endpoint = '/api-wp-v2/settings';
   const headers = { 
     'Accept': 'application/json',
-    'X-Client-Agent': 'Binnemat-React-Client/1.0',
-    'X-Requested-With': 'XMLHttpRequest',
     'Authorization': 'Basic ' + btoa(`${wpUser}:${wpPass.replace(/\s+/g, '')}`)
   };
   
@@ -315,9 +309,7 @@ export async function updateWpSettings(settingsData, options = {}) {
   const endpoint = '/api-wp-v2/settings';
   const headers = {
     'Content-Type': 'application/json',
-    'Accept': 'application/json',
-    'X-Client-Agent': 'Binnemat-React-Client/1.0',
-    'X-Requested-With': 'XMLHttpRequest'
+    'Accept': 'application/json'
   };
   if (wpPass) headers['Authorization'] = 'Basic ' + btoa(`${wpUser}:${wpPass.replace(/\s+/g, '')}`);
   const res = await fetch(endpoint, {

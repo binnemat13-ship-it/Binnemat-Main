@@ -39,8 +39,6 @@ function buildHeaders(extra = {}) {
   const headers = {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
-    'X-Client-Agent': 'Binnemat-React-Client/1.0',
-    'X-Requested-With': 'XMLHttpRequest',
     ...extra
   };
   const nonce = getStoredHeader('wc_nonce');
