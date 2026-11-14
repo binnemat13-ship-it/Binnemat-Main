@@ -69,22 +69,39 @@ export async function fetchProductsByCategory(categorySlug, options = {}) {
   const allMock = [...MOCK_WINTER_PRODUCTS, ...MOCK_SUMMER_PRODUCTS, ...MOCK_STOVES_HOBS];
 
   try {
+    // Note: WooCommerce Store API accepts ?category=<id> OR ?category=<slug> OR ?category_slug=<slug>
     const endpoint = (categorySlug && categorySlug !== 'all') 
-      ? `/products?per_page=20&category=${categorySlug}` 
-      : `/products?per_page=30`;
-    const data = await getJson(endpoint, {}, options);
+      ? `/products?per_page=50&category=${categorySlug}` 
+      : `/products?per_page=50`;
+    let data = await getJson(endpoint, {}, options);
+
+    // If empty with ?category=slug, try fallback to all products and filter client-side
+    if ((!Array.isArray(data) || data.length === 0) && categorySlug && categorySlug !== 'all') {
+      try {
+        const allProducts = await getJson('/products?per_page=100', {}, options);
+        if (Array.isArray(allProducts) && allProducts.length > 0) {
+          data = allProducts;
+        }
+      } catch (err) {}
+    }
 
     if (Array.isArray(data) && data.length > 0) {
       console.log(`Data from backend - Products (${categorySlug || 'all'}):`, data);
       const normalized = data.map(normalizeWcProduct);
       if (categorySlug && categorySlug !== 'all') {
-        const target = categorySlug.toLowerCase();
-        const filtered = normalized.filter(p => 
-          p.category?.toLowerCase() === target || 
-          p.categorySlugs?.includes(target) ||
-          p.categorySlugs?.some(s => s.includes('main'))
-        );
-        return filtered.length > 0 ? filtered : normalized;
+        const target = categorySlug.toLowerCase().trim();
+        const filtered = normalized.filter(p => {
+          const directCat = (p.category || '').toLowerCase();
+          const allCats = (p.categorySlugs || []).map(s => s.toLowerCase());
+          return directCat === target || 
+                 allCats.includes(target) ||
+                 allCats.some(s => s.replace(/-/g, '') === target.replace(/-/g, '')) ||
+                 directCat.includes(target);
+        });
+
+        if (filtered.length > 0) {
+          return filtered;
+        }
       }
       return normalized;
     }
@@ -140,9 +157,9 @@ export async function fetchProductsByCategory(categorySlug, options = {}) {
     ];
   }
   if (!categorySlug || categorySlug === 'all') return allMock;
-  if (categorySlug === 'winter-collection') return MOCK_WINTER_PRODUCTS;
-  if (categorySlug === 'summer-collection') return MOCK_SUMMER_PRODUCTS;
-  if (categorySlug === 'stoves-hobs' || categorySlug === 'kitchen-appliances') return MOCK_STOVES_HOBS;
+  if (categorySlug === 'winter-collection' || categorySlug === 'premium-collection' || categorySlug === 'signature-series') return MOCK_WINTER_PRODUCTS;
+  if (categorySlug === 'summer-collection' || categorySlug === 'mid-tier-collection' || categorySlug === 'pro-series') return MOCK_SUMMER_PRODUCTS;
+  if (categorySlug === 'stoves-hobs' || categorySlug === 'kitchen-appliances' || categorySlug === 'essential-collection' || categorySlug === 'essential-series') return MOCK_STOVES_HOBS;
   
   const matched = allMock.filter(p => p.category === categorySlug);
   return matched.length > 0 ? matched : allMock;

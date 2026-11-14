@@ -18,13 +18,13 @@ import { useProductsByCategoryQuery } from '../../hooks/useWooQueries';
 import { SAFE_SVG_PLACEHOLDER } from '../../services/mockData';
 
 export default function SuperconsciousHero({ onSelectProduct, onExploreClick, onSelectCategory }) {
-  // 1. DYNAMIC DATA: Fetch all products under the backend "winter-collection" category
-  const { data: winterProducts = [], isLoading } = useProductsByCategoryQuery('winter-collection');
+  // 1. DYNAMIC DATA: Fetch Premium / Flagship Tier products from backend
+  const { data: premiumProducts = [], isLoading } = useProductsByCategoryQuery('premium-collection');
   const [activeIdx, setActiveIdx] = useState(0);
 
   // Safe fallback to prevent out-of-bounds index
-  const safeIdx = (activeIdx >= 0 && activeIdx < winterProducts.length) ? activeIdx : 0;
-  const currentProduct = winterProducts[safeIdx] || null;
+  const safeIdx = (activeIdx >= 0 && activeIdx < premiumProducts.length) ? activeIdx : 0;
+  const currentProduct = premiumProducts[safeIdx] || null;
 
   const heroRef = useRef(null);
   const visualStageRef = useRef(null);
@@ -97,14 +97,14 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
       ];
 
   const handleNext = () => {
-    if (winterProducts.length > 0) {
-      setActiveIdx((prev) => (prev + 1) % winterProducts.length);
+    if (premiumProducts.length > 0) {
+      setActiveIdx((prev) => (prev + 1) % premiumProducts.length);
     }
   };
 
   const handlePrev = () => {
-    if (winterProducts.length > 0) {
-      setActiveIdx((prev) => (prev - 1 + winterProducts.length) % winterProducts.length);
+    if (premiumProducts.length > 0) {
+      setActiveIdx((prev) => (prev - 1 + premiumProducts.length) % premiumProducts.length);
     }
   };
 
@@ -281,7 +281,7 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
                 </div>
 
                 {/* Prev / Next Stage Arrows */}
-                {winterProducts.length > 1 && (
+                {premiumProducts.length > 1 && (
                   <>
                     <button
                       onClick={(e) => {
@@ -311,12 +311,12 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
 
           </div>
 
-          {/* 5. DYNAMIC PRODUCT SWITCHER DECK (FROM BACKEND 'winter-collection' CATEGORY) */}
-          {winterProducts.length > 1 && (
+          {/* 5. DYNAMIC PRODUCT SWITCHER DECK (FROM BACKEND 'premium-collection' CATEGORY) */}
+          {premiumProducts.length > 1 && (
             <div className="mt-8 pt-6 border-t border-black/[0.06] dark:border-white/[0.08]">
               <div className="flex items-center justify-between mb-3 px-1">
                 <span className="text-[11px] font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 font-bold">
-                  Select Model ({safeIdx + 1} of {winterProducts.length})
+                  Select Model ({safeIdx + 1} of {premiumProducts.length})
                 </span>
                 <span className="text-[10px] text-slate-400 dark:text-slate-500 font-medium">
                   Tap to preview live specs
@@ -325,7 +325,7 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
 
               {/* Horizontal Scrollable Thumbnails Deck */}
               <div className="flex items-center gap-3 overflow-x-auto pb-2 no-scrollbar">
-                {winterProducts.map((item, idx) => {
+                {premiumProducts.map((item, idx) => {
                   const isActive = idx === safeIdx;
                   const itemImg = item.images?.[0]?.src || SAFE_SVG_PLACEHOLDER;
                   const itemPrice = item.formatted_price || (item.price ? `Rs. ${Number(item.price).toLocaleString()}` : '');

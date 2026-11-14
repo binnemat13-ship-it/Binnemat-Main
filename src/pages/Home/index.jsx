@@ -18,16 +18,18 @@ import {
 export default function Home({ onSelectProduct, onSelectCategory, setActivePage }) {
   // TanStack Query caching with 5-minute staleTime (0 network calls on component re-mounts)
   const { data: categories = [] } = useCategoriesQuery();
-  const { data: winterProducts = [] } = useProductsByCategoryQuery('winter-collection');
-  const { data: summerProducts = [] } = useProductsByCategoryQuery('summer-collection');
-  const { data: cookingProducts = [] } = useProductsByCategoryQuery('stoves-hobs');
+  
+  // 3 Distinct Tiers from WooCommerce Backend
+  const { data: premiumProducts = [] } = useProductsByCategoryQuery('premium-collection');
+  const { data: midTierProducts = [] } = useProductsByCategoryQuery('mid-tier-collection');
+  const { data: essentialProducts = [] } = useProductsByCategoryQuery('essential-collection');
 
   return (
     <div className="relative z-10 bg-[#F7F6F4] dark:bg-[#0E0C0B] text-slate-900 dark:text-white overflow-hidden transition-colors duration-300">
-      {/* 1. SUPERCONSCIOUS HERO SECTION WITH 3D SPATIAL APPLIANCES & AURORA GLOW */}
+      {/* 1. HERO SHOWCASE: TIER 1 - PREMIUM / SIGNATURE COLLECTION */}
       <SuperconsciousHero 
         onSelectProduct={onSelectProduct}
-        onExploreClick={() => onSelectCategory && onSelectCategory('winter-collection')}
+        onExploreClick={() => onSelectCategory && onSelectCategory('premium-collection')}
         onSelectCategory={onSelectCategory}
       />
 
@@ -37,69 +39,59 @@ export default function Home({ onSelectProduct, onSelectCategory, setActivePage 
       {/* 3. CAMPAIGN HIGHLIGHT BAR (FROSTED PILL CARDS) */}
       <CampaignBannerSection />
 
-      {/* 4. SUPERCONSCIOUS SIGNATURE CAPSULE TYPOGRAPHY (CONTROL YOUR REALITY STYLE) */}
+      {/* 4. SUPERCONSCIOUS SIGNATURE CAPSULE TYPOGRAPHY */}
       <SuperconsciousTypographySection />
 
-      {/* FIXED STILL BACKGROUND (MOCHA BROWN, PLATINUM SILVER & PALE LAVENDER AURORA) */}
+      {/* FIXED STILL BACKGROUND */}
       <div className="fixed inset-0 pointer-events-none -z-20 bg-[#F7F6F4] dark:bg-[#0E0C0B] transition-colors duration-300">
         <div className="absolute top-[15%] left-1/2 -translate-x-1/2 w-[850px] h-[850px] bg-[#fff0f0]/60 dark:bg-[#fff0f0]/[0.06] blur-[150px] rounded-full" />
         <div className="absolute top-[55%] right-[-5%] w-[650px] h-[650px] bg-[#ff3131]/[0.045] dark:bg-[#ff3131]/[0.1] blur-[130px] rounded-full" />
         <div className="absolute top-[80%] left-[-5%] w-[550px] h-[550px] bg-[#E5E4E2]/50 dark:bg-[#E5E4E2]/[0.04] blur-[120px] rounded-full" />
       </div>
 
-      {/* 4. UPGRADE YOUR LIVING - PINNED STACKING CARDS (BACKGROUND STILL, CARDS SLIDE UP) */}
+      {/* 4. UPGRADE YOUR LIVING - PINNED STACKING CARDS: TIER 1 - PREMIUM COLLECTION */}
       <SuperconsciousWidgetsSection 
         onSelectCategory={onSelectCategory} 
         onSelectProduct={onSelectProduct}
       />
 
-      {/* 6. WINTER COLLECTION CAROUSEL (ELECTRIC GEYSERS) */}
+      {/* 5. TIER 2 CAROUSEL - PRO / MID-TIER PERFORMANCE COLLECTION */}
       <section className="max-w-[1360px] mx-auto px-[5%]">
         <ProductCarousel
-          eyebrow="THERMAL COMFORT &bull; 3S FASTHEAT"
-          title="Winter Collection (Electric Geysers)"
-          products={winterProducts}
+          eyebrow="HIGH EFFICIENCY &bull; PERFORMANCE ENGINEERING"
+          title="Mid-Tier Collection (Pro Performance Series)"
+          products={midTierProducts}
           onSelectProduct={onSelectProduct}
         />
       </section>
 
-      {/* 8. 30W BLDC FANS MARKETING BILL COMPARISON BANNER */}
-      <EnergyBannerSection onShopClick={() => onSelectCategory && onSelectCategory('summer-collection')} />
+      {/* 6. 30W BLDC FANS MARKETING BILL COMPARISON BANNER */}
+      <EnergyBannerSection onShopClick={() => onSelectCategory && onSelectCategory('mid-tier-collection')} />
 
-      {/* 9. SUMMER COLLECTION CAROUSEL (BLDC & ELECTRIC FANS) */}
-      {/* <section className="max-w-[1360px] mx-auto px-[5%]">
+      {/* 7. TIER 3 CAROUSEL - ESSENTIAL EVERYDAY VALUE COLLECTION */}
+      <section className="max-w-[1360px] mx-auto px-[5%]">
         <ProductCarousel
-          eyebrow="AERODYNAMIC COOLING &bull; 30W SOLAR INVERTERS"
-          title="Summer Collection (BLDC & Electric Fans)"
-          products={summerProducts}
+          eyebrow="DAILY COMFORT &bull; TIMELESS DURABILITY"
+          title="Essential Collection (Everyday Value Series)"
+          products={essentialProducts}
           onSelectProduct={onSelectProduct}
         />
-      </section> */}
+      </section>
 
-      {/* 10. COOKING PRODUCTS CAROUSEL (STOVES & BUILT-IN HOBS) */}
-      {/* <section className="max-w-[1360px] mx-auto px-[5%]">
-        <ProductCarousel
-          eyebrow="CULINARY MASTERY &bull; 8MM BEVELED GLASS"
-          title="Cooking Stoves & Built-in Hobs"
-          products={cookingProducts}
-          onSelectProduct={onSelectProduct}
-        />
-      </section> */}
-
-      {/* 11. CATEGORIES DIRECTORY GRID IN FROSTED GLASS */}
+      {/* 8. CATEGORIES DIRECTORY GRID IN FROSTED GLASS */}
       <CategoriesSection 
         categories={categories} 
         onSelectCategory={onSelectCategory}
         onViewAllClick={() => setActivePage && setActivePage('categories')}
       />
-<ManifestoSection />
-      {/* 13. REAL PAKISTANI HOMES VERIFIED REVIEWS */}
+      <ManifestoSection />
+      {/* 9. REAL PAKISTANI HOMES VERIFIED REVIEWS */}
       <TestimonialsSection />
 
-      {/* 14. OFFICIAL BRAND PARTNERS */}
+      {/* 10. OFFICIAL BRAND PARTNERS */}
       <BrandLogosSection />
 
-      {/* 15. VIP CONCIERGE & CAPSULE NEWSLETTER */}
+      {/* 11. VIP CONCIERGE & CAPSULE NEWSLETTER */}
       <NewsletterSection />
     </div>
   );

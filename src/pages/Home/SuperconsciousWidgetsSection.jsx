@@ -9,12 +9,12 @@ import { SAFE_SVG_PLACEHOLDER } from '../../services/mockData';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function SuperconsciousWidgetsSection({ onSelectCategory, onSelectProduct }) {
-  // 1. Fetch live Winter Collection products from backend
-  const { data: liveWinterProducts = [] } = useProductsByCategoryQuery('winter-collection');
+  // 1. Fetch live Premium Collection products from backend
+  const { data: livePremiumProducts = [] } = useProductsByCategoryQuery('premium-collection');
 
-  // Convert live backend winter products into cards, or fallback to default specs if empty
-  const winterCards = (liveWinterProducts.length > 0)
-    ? liveWinterProducts.map((p, idx) => {
+  // Convert live backend premium products into cards, or fallback to default specs if empty
+  const premiumCards = (livePremiumProducts.length > 0)
+    ? livePremiumProducts.map((p, idx) => {
         const specs = p.specs 
           ? (Array.isArray(p.specs) ? p.specs : Object.entries(p.specs).map(([k, v]) => `${k}: ${v}`))
           : [
@@ -90,14 +90,14 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory, onSelec
   useEffect(() => {
     const el = containerRef.current;
     const stage = pinnedStageRef.current;
-    if (!el || !stage || winterCards.length === 0) return;
+    if (!el || !stage || premiumCards.length === 0) return;
 
     const mm = gsap.matchMedia();
 
     // DESKTOP: PINNED CARD STACKING ON SCROLL
     mm.add('(min-width: 1024px)', () => {
-      // Set initial states for all winter cards
-      winterCards.forEach((_, idx) => {
+      // Set initial states for all premium cards
+      premiumCards.forEach((_, idx) => {
         if (!cardRefs.current[idx]) return;
         if (idx === 0) {
           gsap.set(cardRefs.current[0], { yPercent: 0, scale: 1, opacity: 1, zIndex: 10, filter: 'blur(0px)' });
@@ -106,8 +106,8 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory, onSelec
         }
       });
 
-      if (winterCards.length > 1) {
-        const totalDistance = Math.min(2600, 900 * (winterCards.length - 1));
+      if (premiumCards.length > 1) {
+        const totalDistance = Math.min(2600, 900 * (premiumCards.length - 1));
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: el,
@@ -118,9 +118,9 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory, onSelec
             anticipatePin: 1,
             onUpdate: (self) => {
               const p = self.progress;
-              const step = 1 / winterCards.length;
+              const step = 1 / premiumCards.length;
               const calculatedIdx = Math.min(
-                winterCards.length - 1,
+                premiumCards.length - 1,
                 Math.floor(p / step)
               );
               setActiveTab(calculatedIdx);
@@ -131,7 +131,7 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory, onSelec
         stInstanceRef.current = tl.scrollTrigger;
 
         // Animate each subsequent card sliding over previous card
-        for (let i = 1; i < winterCards.length; i++) {
+        for (let i = 1; i < premiumCards.length; i++) {
           const insertTime = (i - 1) * 1.1;
           
           tl.to(cardRefs.current[i], {
@@ -165,14 +165,14 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory, onSelec
     return () => {
       mm.revert();
     };
-  }, [winterCards.length]);
+  }, [premiumCards.length]);
 
   // Smooth scroll to card when user clicks a tab
   const handleTabClick = (idx) => {
     setActiveTab(idx);
     const st = stInstanceRef.current;
-    if (st && window.innerWidth >= 1024 && winterCards.length > 1) {
-      const step = 1 / (winterCards.length - 1 || 1);
+    if (st && window.innerWidth >= 1024 && premiumCards.length > 1) {
+      const step = 1 / (premiumCards.length - 1 || 1);
       const targetScroll = st.start + (idx * step * 0.92) * (st.end - st.start);
       window.scrollTo({
         top: targetScroll,
@@ -223,12 +223,12 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory, onSelec
                 <div 
                   className="w-full bg-gradient-to-b from-[#ff3131] to-[#d01a1a] transition-all duration-500 rounded-full shadow-[0_0_8px_#ff3131]"
                   style={{ 
-                    height: `${((activeTab + 1) / winterCards.length) * 100}%` 
+                    height: `${((activeTab + 1) / premiumCards.length) * 100}%` 
                   }}
                 />
               </div>
 
-              {winterCards.map((item, idx) => {
+              {premiumCards.map((item, idx) => {
                 const isSelected = activeTab === idx;
                 return (
                   <button
@@ -266,7 +266,7 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory, onSelec
 
           {/* RIGHT COLUMN: STACKING CARDS STAGE (CARDS SLIDE UP OVER EACH OTHER) */}
           <div className="lg:col-span-7 relative w-full h-auto lg:h-[560px]">
-            {winterCards.map((item, idx) => {
+            {premiumCards.map((item, idx) => {
               const Icon = item.icon;
               const GaugeIcon = item.gaugeIcon;
               const isSelected = activeTab === idx;
