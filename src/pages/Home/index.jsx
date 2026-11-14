@@ -65,8 +65,11 @@ export default function Home({ onSelectProduct, onSelectCategory, setActivePage 
         />
       </section>
 
-      {/* 6. 30W BLDC FANS MARKETING BILL COMPARISON BANNER */}
-      <EnergyBannerSection onShopClick={() => onSelectCategory && onSelectCategory('mid-tier-collection')} />
+      {/* 6. LOWEST PRICE HEATER BILL COMPARISON & ENERGY BANNER */}
+      <EnergyBannerSection 
+        onShopClick={() => onSelectCategory && onSelectCategory('winter-collection')} 
+        onSelectProduct={onSelectProduct}
+      />
 
       {/* 7. TIER 3 CAROUSEL - ESSENTIAL EVERYDAY VALUE COLLECTION */}
       <section className="max-w-[1360px] mx-auto px-[5%]">
