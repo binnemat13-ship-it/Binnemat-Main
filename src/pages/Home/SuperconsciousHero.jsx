@@ -18,13 +18,13 @@ import { useProductsByCategoryQuery } from '../../hooks/useWooQueries';
 import { SAFE_SVG_PLACEHOLDER } from '../../services/mockData';
 
 export default function SuperconsciousHero({ onSelectProduct, onExploreClick, onSelectCategory }) {
-  // 1. DYNAMIC DATA: Fetch all products under the backend "main-products" category
-  const { data: mainProducts = [], isLoading } = useProductsByCategoryQuery('main-products');
+  // 1. DYNAMIC DATA: Fetch all products under the backend "winter-collection" category
+  const { data: winterProducts = [], isLoading } = useProductsByCategoryQuery('winter-collection');
   const [activeIdx, setActiveIdx] = useState(0);
 
   // Safe fallback to prevent out-of-bounds index
-  const safeIdx = (activeIdx >= 0 && activeIdx < mainProducts.length) ? activeIdx : 0;
-  const currentProduct = mainProducts[safeIdx] || null;
+  const safeIdx = (activeIdx >= 0 && activeIdx < winterProducts.length) ? activeIdx : 0;
+  const currentProduct = winterProducts[safeIdx] || null;
 
   const heroRef = useRef(null);
   const visualStageRef = useRef(null);
@@ -97,14 +97,14 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
       ];
 
   const handleNext = () => {
-    if (mainProducts.length > 0) {
-      setActiveIdx((prev) => (prev + 1) % mainProducts.length);
+    if (winterProducts.length > 0) {
+      setActiveIdx((prev) => (prev + 1) % winterProducts.length);
     }
   };
 
   const handlePrev = () => {
-    if (mainProducts.length > 0) {
-      setActiveIdx((prev) => (prev - 1 + mainProducts.length) % mainProducts.length);
+    if (winterProducts.length > 0) {
+      setActiveIdx((prev) => (prev - 1 + winterProducts.length) % winterProducts.length);
     }
   };
 
@@ -136,14 +136,14 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
       </div>
 
       {/* 3. HERO HEADLINE & PHILOSOPHY */}
-      <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8 px-2">
+      {/* <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8 px-2">
         <h1 className="gsap-hero-header font-wix font-black text-4xl sm:text-6xl lg:text-[76px] tracking-tight text-slate-900 dark:text-white leading-[1.08] select-none m-0">
           Thermal &amp; Inverter <span className="bg-gradient-to-r from-[#ff5c5c] via-[#ff3131] to-[#d01a1a] bg-clip-text text-transparent">Luxury.</span>
         </h1>
         <p className="gsap-hero-header text-slate-600 dark:text-slate-300 text-xs sm:text-base max-w-xl mx-auto mt-2.5 sm:mt-3 font-normal leading-relaxed">
           Zero winter gas chills, whisper-silent 30W solar fans, and Italian precision cooking.
         </p>
-      </div>
+      </div> */}
 
       {/* 4. THE MASTER STAGE (EXPANSIVE LUXURY DUAL-ZONE PRESENTATION) */}
       <div className="gsap-hero-stage w-full max-w-6xl mx-auto relative z-10">
@@ -169,12 +169,12 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
               </div>
 
               {/* Product Title */}
-              <h2 className="text-2xl sm:text-4xl lg:text-[42px] font-wix font-black text-slate-900 dark:text-white tracking-tight leading-[1.15] mb-3">
+              <h2 className="text-2xl sm:text-4xl lg:text-[40px] font-wix font-black text-slate-900 dark:text-white tracking-tight leading-[1.15] mb-3 line-clamp-2" title={productName}>
                 {productName}
               </h2>
 
-              {/* Description */}
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-5 font-normal max-w-lg">
+              {/* Description (Fixed Height & Clamped to prevent section expanding on long backend texts) */}
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-5 font-normal max-w-lg line-clamp-3 min-h-[3.75rem] overflow-hidden" title={productDesc}>
                 {productDesc}
               </p>
 
@@ -281,7 +281,7 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
                 </div>
 
                 {/* Prev / Next Stage Arrows */}
-                {mainProducts.length > 1 && (
+                {winterProducts.length > 1 && (
                   <>
                     <button
                       onClick={(e) => {
@@ -311,12 +311,12 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
 
           </div>
 
-          {/* 5. DYNAMIC PRODUCT SWITCHER DECK (FROM BACKEND 'main-products' CATEGORY) */}
-          {mainProducts.length > 1 && (
+          {/* 5. DYNAMIC PRODUCT SWITCHER DECK (FROM BACKEND 'winter-collection' CATEGORY) */}
+          {winterProducts.length > 1 && (
             <div className="mt-8 pt-6 border-t border-black/[0.06] dark:border-white/[0.08]">
               <div className="flex items-center justify-between mb-3 px-1">
                 <span className="text-[11px] font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 font-bold">
-                  Select Model ({safeIdx + 1} of {mainProducts.length})
+                  Select Model ({safeIdx + 1} of {winterProducts.length})
                 </span>
                 <span className="text-[10px] text-slate-400 dark:text-slate-500 font-medium">
                   Tap to preview live specs
@@ -325,7 +325,7 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
 
               {/* Horizontal Scrollable Thumbnails Deck */}
               <div className="flex items-center gap-3 overflow-x-auto pb-2 no-scrollbar">
-                {mainProducts.map((item, idx) => {
+                {winterProducts.map((item, idx) => {
                   const isActive = idx === safeIdx;
                   const itemImg = item.images?.[0]?.src || SAFE_SVG_PLACEHOLDER;
                   const itemPrice = item.formatted_price || (item.price ? `Rs. ${Number(item.price).toLocaleString()}` : '');

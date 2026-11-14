@@ -32,7 +32,7 @@ export default function Home({ onSelectProduct, onSelectCategory, setActivePage 
       />
 
       {/* 2. THE BINNEMAT URDU MANIFESTO ("ہر گھر کا سکون") */}
-      <ManifestoSection />
+      
 
       {/* 3. CAMPAIGN HIGHLIGHT BAR (FROSTED PILL CARDS) */}
       <CampaignBannerSection />
@@ -64,24 +64,24 @@ export default function Home({ onSelectProduct, onSelectCategory, setActivePage 
       <EnergyBannerSection onShopClick={() => onSelectCategory && onSelectCategory('summer-collection')} />
 
       {/* 9. SUMMER COLLECTION CAROUSEL (BLDC & ELECTRIC FANS) */}
-      <section className="max-w-[1360px] mx-auto px-[5%]">
+      {/* <section className="max-w-[1360px] mx-auto px-[5%]">
         <ProductCarousel
           eyebrow="AERODYNAMIC COOLING &bull; 30W SOLAR INVERTERS"
           title="Summer Collection (BLDC & Electric Fans)"
           products={summerProducts}
           onSelectProduct={onSelectProduct}
         />
-      </section>
+      </section> */}
 
       {/* 10. COOKING PRODUCTS CAROUSEL (STOVES & BUILT-IN HOBS) */}
-      <section className="max-w-[1360px] mx-auto px-[5%]">
+      {/* <section className="max-w-[1360px] mx-auto px-[5%]">
         <ProductCarousel
           eyebrow="CULINARY MASTERY &bull; 8MM BEVELED GLASS"
           title="Cooking Stoves & Built-in Hobs"
           products={cookingProducts}
           onSelectProduct={onSelectProduct}
         />
-      </section>
+      </section> */}
 
       {/* 11. CATEGORIES DIRECTORY GRID IN FROSTED GLASS */}
       <CategoriesSection 
@@ -89,7 +89,7 @@ export default function Home({ onSelectProduct, onSelectCategory, setActivePage 
         onSelectCategory={onSelectCategory}
         onViewAllClick={() => setActivePage && setActivePage('categories')}
       />
-
+<ManifestoSection />
       {/* 13. REAL PAKISTANI HOMES VERIFIED REVIEWS */}
       <TestimonialsSection />
 
