@@ -48,7 +48,10 @@ export default function Home({ onSelectProduct, onSelectCategory, setActivePage 
       </div>
 
       {/* 4. UPGRADE YOUR LIVING - PINNED STACKING CARDS (BACKGROUND STILL, CARDS SLIDE UP) */}
-      <SuperconsciousWidgetsSection onSelectCategory={onSelectCategory} />
+      <SuperconsciousWidgetsSection 
+        onSelectCategory={onSelectCategory} 
+        onSelectProduct={onSelectProduct}
+      />
 
       {/* 6. WINTER COLLECTION CAROUSEL (ELECTRIC GEYSERS) */}
       <section className="max-w-[1360px] mx-auto px-[5%]">

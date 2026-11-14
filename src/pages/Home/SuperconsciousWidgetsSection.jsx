@@ -3,185 +3,154 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Shield, Zap, Flame, Award, ArrowUpRight, CheckCircle2, Cpu, Sparkles, Thermometer, Wind } from 'lucide-react';
 import GsapCounter from '../../components/common/GsapCounter';
+import { useProductsByCategoryQuery } from '../../hooks/useWooQueries';
+import { SAFE_SVG_PLACEHOLDER } from '../../services/mockData';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const WIDGETS_DATA = [
-  {
-    id: 'thermal',
-    tabNumber: '01',
-    category: 'Winter Thermal Sanctuary',
-    title: 'FastHeat™ Diamond Core System',
-    tagline: 'Endurance Against Saline Hard Water',
-    image: '/images/superconscious_heater_hero.jpg',
-    endValue: 85,
-    prefix: '+',
-    suffix: '%',
-    statDesc: 'Boiling Heat Retention (Heavy PUF)',
-    gaugeLabel: 'Max Water Temp',
-    gaugeVal: '75°C Boiling',
-    gaugePercent: 90,
-    gaugeIcon: Thermometer,
-    icon: Flame,
-    color: '#ff3131',
-    accentBg: 'rgba(255, 49, 49, 0.1)',
-    badgeText: '7-Year Tank Warranty',
-    categorySlug: 'winter-collection',
-    btnText: 'Explore Winter Geysers',
-    points: [
-      'Italian Incoloy 840 anti-corrosive heating coil',
-      'Sapphire diamond enamel tank rated for 8-Bar',
-      'Instant 3-second continuous hot water flow'
-    ]
-  },
-  {
-    id: 'inverter',
-    tabNumber: '02',
-    category: 'Summer Aerodynamic Eco',
-    title: 'AeroDrive 30W BLDC Motor',
-    tagline: 'Silent Inverter Cooling on Solar & UPS',
-    image: '/images/superconscious_fan_hero.jpg',
-    endValue: 30,
-    suffix: 'W',
-    statDesc: 'Peak Solar Power Draw',
-    gaugeLabel: 'Summer Bill Slashed',
-    gaugeVal: '65% Savings',
-    gaugePercent: 65,
-    gaugeIcon: Wind,
-    icon: Zap,
-    color: '#059669',
-    accentBg: 'rgba(5, 150, 105, 0.08)',
-    badgeText: 'Pure Copper BLDC',
-    categorySlug: 'summer-collection',
-    btnText: 'Explore 30W Fans',
-    points: [
-      'Direct 12V solar panel & UPS battery connection',
-      'Slashes electricity bills by 65% with 30W draw',
-      'Whisper-quiet aerofoil aerodynamic blades'
-    ]
-  },
-  {
-    id: 'culinary',
-    tabNumber: '03',
-    category: 'Gourmet Kitchen Burners',
-    title: 'Ignis 8mm Beveled Glass Hobs',
-    tagline: 'Precision Italian Brass Flame Engine',
-    image: '/images/superconscious_hob_hero.jpg',
-    endValue: 4.8,
-    suffix: 'kW',
-    decimals: 1,
-    statDesc: 'Triple Ring Turbo Wok Heat Output',
-    gaugeLabel: 'Gas Auto-Cutoff Safety',
-    gaugeVal: '0.1s Flame Safety',
-    gaugePercent: 100,
-    gaugeIcon: Shield,
-    icon: Cpu,
-    color: '#D97706',
-    accentBg: 'rgba(217, 119, 6, 0.08)',
-    badgeText: 'Flame Failure Safety',
-    categorySlug: 'stoves-hobs',
-    btnText: 'Explore Built-in Hobs',
-    points: [
-      'Spanish thermoelectric flame failure auto safety cutoff',
-      '8mm shatter-resistant diamond beveled glass',
-      'Heavy cast iron trivets for oversized cookware'
-    ]
-  }
-];
+export default function SuperconsciousWidgetsSection({ onSelectCategory, onSelectProduct }) {
+  // 1. Fetch live Winter Collection products from backend
+  const { data: liveWinterProducts = [] } = useProductsByCategoryQuery('winter-collection');
 
-export default function SuperconsciousWidgetsSection({ onSelectCategory }) {
+  // Convert live backend winter products into cards, or fallback to default specs if empty
+  const winterCards = (liveWinterProducts.length > 0)
+    ? liveWinterProducts.map((p, idx) => {
+        const specs = p.specs 
+          ? (Array.isArray(p.specs) ? p.specs : Object.entries(p.specs).map(([k, v]) => `${k}: ${v}`))
+          : [
+              'Italian Incoloy 840 anti-corrosive heating coil',
+              'Sapphire diamond enamel tank rated for 8-Bar',
+              'Instant 3-second continuous hot water flow'
+            ];
+
+        const imgSrc = p.images?.[0]?.src || p.image || '/images/superconscious_heater_hero.jpg';
+
+        return {
+          id: p.id || `winter-${idx}`,
+          rawProduct: p,
+          tabNumber: String(idx + 1).padStart(2, '0'),
+          category: p.name || 'Winter Thermal Geyser',
+          title: p.name,
+          tagline: p.badge || 'Official Brand Warranty & Winter Warmth',
+          image: imgSrc,
+          priceFormatted: p.formatted_price || (p.price ? `Rs. ${Number(p.price).toLocaleString()}` : null),
+          endValue: 85 + (idx * 2) % 15,
+          prefix: '+',
+          suffix: '%',
+          statDesc: 'Heat Retention & Efficiency',
+          gaugeLabel: 'Thermal Efficiency',
+          gaugeVal: '75°C Max Heat',
+          gaugePercent: 88,
+          gaugeIcon: Thermometer,
+          icon: Flame,
+          color: '#ff3131',
+          accentBg: 'rgba(255, 49, 49, 0.1)',
+          badgeText: 'Official Factory Sealed',
+          categorySlug: 'winter-collection',
+          btnText: 'View Appliance',
+          points: specs.slice(0, 3)
+        };
+      })
+    : [
+        {
+          id: 'thermal-1',
+          tabNumber: '01',
+          category: 'Winter Thermal Sanctuary',
+          title: 'FastHeat™ Diamond Core System',
+          tagline: 'Endurance Against Saline Hard Water',
+          image: '/images/superconscious_heater_hero.jpg',
+          endValue: 85,
+          prefix: '+',
+          suffix: '%',
+          statDesc: 'Boiling Heat Retention (Heavy PUF)',
+          gaugeLabel: 'Max Water Temp',
+          gaugeVal: '75°C Boiling',
+          gaugePercent: 90,
+          gaugeIcon: Thermometer,
+          icon: Flame,
+          color: '#ff3131',
+          accentBg: 'rgba(255, 49, 49, 0.1)',
+          badgeText: '7-Year Tank Warranty',
+          categorySlug: 'winter-collection',
+          btnText: 'Explore Winter Geysers',
+          points: [
+            'Italian Incoloy 840 anti-corrosive heating coil',
+            'Sapphire diamond enamel tank rated for 8-Bar',
+            'Instant 3-second continuous hot water flow'
+          ]
+        }
+      ];
+
   const [activeTab, setActiveTab] = useState(0);
   const containerRef = useRef(null);
   const pinnedStageRef = useRef(null);
   const cardRefs = useRef([]);
-  const fanRef = useRef(null);
   const stInstanceRef = useRef(null);
 
   useEffect(() => {
     const el = containerRef.current;
     const stage = pinnedStageRef.current;
-    if (!el || !stage) return;
+    if (!el || !stage || winterCards.length === 0) return;
 
     const mm = gsap.matchMedia();
 
-    // DESKTOP: PINNED CARD STACKING ON SCROLL (Single Page Stage with Still Background)
+    // DESKTOP: PINNED CARD STACKING ON SCROLL
     mm.add('(min-width: 1024px)', () => {
-      // Initialize card positions:
-      // Card 0: in center
-      // Card 1: below view (yPercent: 120)
-      // Card 2: below view (yPercent: 120)
-      gsap.set(cardRefs.current[0], { yPercent: 0, scale: 1, opacity: 1, zIndex: 10, filter: 'blur(0px)' });
-      gsap.set(cardRefs.current[1], { yPercent: 120, scale: 0.95, opacity: 0, zIndex: 20, filter: 'blur(0px)' });
-      gsap.set(cardRefs.current[2], { yPercent: 120, scale: 0.95, opacity: 0, zIndex: 30, filter: 'blur(0px)' });
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: el,
-          start: 'top top',
-          end: '+=2200', // Scroll distance for scrubbed stacking
-          pin: stage,
-          scrub: 0.8,
-          anticipatePin: 1,
-          onUpdate: (self) => {
-            const p = self.progress;
-            if (p < 0.35) {
-              setActiveTab(0);
-            } else if (p < 0.70) {
-              setActiveTab(1);
-            } else {
-              setActiveTab(2);
-            }
-          }
+      // Set initial states for all winter cards
+      winterCards.forEach((_, idx) => {
+        if (!cardRefs.current[idx]) return;
+        if (idx === 0) {
+          gsap.set(cardRefs.current[0], { yPercent: 0, scale: 1, opacity: 1, zIndex: 10, filter: 'blur(0px)' });
+        } else {
+          gsap.set(cardRefs.current[idx], { yPercent: 120, scale: 0.95, opacity: 0, zIndex: 10 + idx * 10, filter: 'blur(0px)' });
         }
       });
 
-      stInstanceRef.current = tl.scrollTrigger;
+      if (winterCards.length > 1) {
+        const totalDistance = Math.min(2600, 900 * (winterCards.length - 1));
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: el,
+            start: 'top top',
+            end: `+=${totalDistance}`,
+            pin: stage,
+            scrub: 0.8,
+            anticipatePin: 1,
+            onUpdate: (self) => {
+              const p = self.progress;
+              const step = 1 / winterCards.length;
+              const calculatedIdx = Math.min(
+                winterCards.length - 1,
+                Math.floor(p / step)
+              );
+              setActiveTab(calculatedIdx);
+            }
+          }
+        });
 
-      // STEP 1: Card 2 slides UP and lands on Card 1
-      tl.to(cardRefs.current[1], {
-        yPercent: 0,
-        opacity: 1,
-        scale: 1,
-        ease: 'power2.out',
-        duration: 1
-      }, 0.2);
+        stInstanceRef.current = tl.scrollTrigger;
 
-      // Card 1 recedes into background with subtle scale & blur
-      tl.to(cardRefs.current[0], {
-        scale: 0.94,
-        opacity: 0.35,
-        y: -15,
-        filter: 'blur(2px)',
-        ease: 'power2.out',
-        duration: 1
-      }, 0.2);
+        // Animate each subsequent card sliding over previous card
+        for (let i = 1; i < winterCards.length; i++) {
+          const insertTime = (i - 1) * 1.1;
+          
+          tl.to(cardRefs.current[i], {
+            yPercent: 0,
+            opacity: 1,
+            scale: 1,
+            ease: 'power2.out',
+            duration: 1
+          }, insertTime + 0.2);
 
-      // STEP 2: Card 3 slides UP and lands on Card 2
-      tl.to(cardRefs.current[2], {
-        yPercent: 0,
-        opacity: 1,
-        scale: 1,
-        ease: 'power2.out',
-        duration: 1
-      }, 1.3);
-
-      // Card 2 recedes into background
-      tl.to(cardRefs.current[1], {
-        scale: 0.94,
-        opacity: 0.35,
-        y: -15,
-        filter: 'blur(2px)',
-        ease: 'power2.out',
-        duration: 1
-      }, 1.3);
-
-      // Continuous 360-deg Fan Blade Rotation on scrub
-      if (fanRef.current) {
-        tl.to(fanRef.current, {
-          rotation: 360,
-          ease: 'none',
-          duration: 2.3
-        }, 0);
+          tl.to(cardRefs.current[i - 1], {
+            scale: 0.94,
+            opacity: 0.35,
+            y: -15,
+            filter: 'blur(2px)',
+            ease: 'power2.out',
+            duration: 1
+          }, insertTime + 0.2);
+        }
       }
     });
 
@@ -196,15 +165,15 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory }) {
     return () => {
       mm.revert();
     };
-  }, []);
+  }, [winterCards.length]);
 
   // Smooth scroll to card when user clicks a tab
   const handleTabClick = (idx) => {
     setActiveTab(idx);
     const st = stInstanceRef.current;
-    if (st && window.innerWidth >= 1024) {
-      const scrollTargets = [0, 0.48, 0.88];
-      const targetScroll = st.start + scrollTargets[idx] * (st.end - st.start);
+    if (st && window.innerWidth >= 1024 && winterCards.length > 1) {
+      const step = 1 / (winterCards.length - 1 || 1);
+      const targetScroll = st.start + (idx * step * 0.92) * (st.end - st.start);
       window.scrollTo({
         top: targetScroll,
         behavior: 'smooth'
@@ -233,7 +202,7 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory }) {
           <div className="lg:col-span-5 flex flex-col justify-center">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#fff0f0] dark:bg-[#1A1715] border border-[#E5E4E2] dark:border-white/[0.1] text-xs font-mono text-[#ff3131] dark:text-[#ff8585] mb-4 font-bold w-fit shadow-xs">
               <Sparkles size={13} className="text-[#ff3131] dark:text-[#ff8585]" />
-              <span>Core Engineering Pillars</span>
+              <span>Winter Collection Pillars</span>
             </div>
 
             <h2 className="font-wix font-black text-4xl sm:text-5xl lg:text-6xl text-slate-900 dark:text-white tracking-tight leading-[1.08] mb-4">
@@ -244,22 +213,22 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory }) {
             </h2>
 
             <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6 font-normal max-w-md">
-              Purpose-built for Pakistani climate realities: saline hard water, gas cuts, and summer loadshedding.
+              Live Winter Collection appliances engineered for Pakistani saline hard water, zero gas dependency, and maximum thermal endurance.
             </p>
 
             {/* VERTICAL SELECTOR TABS WITH DYNAMIC PROGRESS TRACK */}
-            <div className="relative flex flex-col gap-3 max-w-md">
+            <div className="relative flex flex-col gap-3 max-w-md max-h-[340px] overflow-y-auto no-scrollbar pr-1">
               {/* Left Vertical Progress Line */}
               <div className="absolute left-1 top-2 bottom-2 w-1 bg-slate-200 dark:bg-white/10 rounded-full overflow-hidden hidden sm:block">
                 <div 
                   className="w-full bg-gradient-to-b from-[#ff3131] to-[#d01a1a] transition-all duration-500 rounded-full shadow-[0_0_8px_#ff3131]"
                   style={{ 
-                    height: `${((activeTab + 1) / WIDGETS_DATA.length) * 100}%` 
+                    height: `${((activeTab + 1) / winterCards.length) * 100}%` 
                   }}
                 />
               </div>
 
-              {WIDGETS_DATA.map((item, idx) => {
+              {winterCards.map((item, idx) => {
                 const isSelected = activeTab === idx;
                 return (
                   <button
@@ -271,16 +240,21 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory }) {
                         : 'bg-white/60 dark:bg-[#111018]/60 border-black/[0.06] dark:border-white/[0.06] hover:border-black/15 dark:hover:border-white/15 hover:bg-white/80 dark:hover:bg-[#111018]/80'
                     }`}
                   >
-                    <div>
+                    <div className="pr-2 max-w-[280px]">
                       <span className={`text-[10px] font-mono block font-bold ${isSelected ? 'text-[#ff3131] dark:text-[#ff8585]' : 'text-slate-400 dark:text-slate-500'}`}>
                         {item.tabNumber}
                       </span>
-                      <span className={`text-sm font-wix font-bold ${isSelected ? 'text-slate-900 dark:text-white' : 'text-slate-600 dark:text-slate-300'}`}>
-                        {item.category}
+                      <span className={`text-sm font-wix font-bold truncate block ${isSelected ? 'text-slate-900 dark:text-white' : 'text-slate-600 dark:text-slate-300'}`}>
+                        {item.title}
                       </span>
+                      {item.priceFormatted && (
+                        <span className="text-[11px] font-bold text-[#ff3131] dark:text-[#ff8585] block mt-0.5">
+                          {item.priceFormatted}
+                        </span>
+                      )}
                     </div>
                     <div
-                      className={`w-2.5 h-2.5 rounded-full transition-all ${
+                      className={`w-2.5 h-2.5 rounded-full transition-all flex-shrink-0 ${
                         isSelected ? 'bg-[#ff3131] shadow-[0_0_10px_#ff3131] scale-125' : 'bg-slate-300 dark:bg-slate-600'
                       }`}
                     />
@@ -292,7 +266,7 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory }) {
 
           {/* RIGHT COLUMN: STACKING CARDS STAGE (CARDS SLIDE UP OVER EACH OTHER) */}
           <div className="lg:col-span-7 relative w-full h-auto lg:h-[560px]">
-            {WIDGETS_DATA.map((item, idx) => {
+            {winterCards.map((item, idx) => {
               const Icon = item.icon;
               const GaugeIcon = item.gaugeIcon;
               const isSelected = activeTab === idx;
@@ -324,11 +298,11 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory }) {
                         >
                           <Icon size={22} style={{ color: item.color }} />
                         </div>
-                        <div>
-                          <span className="text-[11px] font-mono text-slate-500 dark:text-slate-400 block font-semibold">
+                        <div className="max-w-[280px] sm:max-w-[340px]">
+                          <span className="text-[11px] font-mono text-slate-500 dark:text-slate-400 block font-semibold truncate">
                             {item.tagline}
                           </span>
-                          <h3 className="text-xl sm:text-2xl font-wix font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
+                          <h3 className="text-xl sm:text-2xl font-wix font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight line-clamp-1">
                             {item.title}
                           </h3>
                         </div>
@@ -383,19 +357,22 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory }) {
                       {item.points.map((pt, i) => (
                         <div key={i} className="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
                           <CheckCircle2 size={13} className="text-[#ff3131] dark:text-[#ff8585] mt-0.5 flex-shrink-0" />
-                          <span>{pt}</span>
+                          <span className="line-clamp-2">{pt}</span>
                         </div>
                       ))}
                     </div>
 
                     {/* Spatial Appliance Portal */}
                     <div className="sm:col-span-5 flex justify-center">
-                      <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden bg-[#0C0B0C] p-2 relative shadow-[0_12px_30px_rgba(0,0,0,0.18)] border border-black/10 dark:border-white/10 group-hover:scale-105 transition-transform">
+                      <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden bg-[#0C0B0C] p-2 relative shadow-[0_12px_30px_rgba(0,0,0,0.18)] border border-black/10 dark:border-white/10 group-hover:scale-105 transition-transform flex items-center justify-center">
                         <img
-                          ref={item.id === 'inverter' ? fanRef : null}
                           src={item.image}
                           alt={item.title}
                           className="w-full h-full object-contain filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.7)] will-change-transform"
+                          onError={(e) => {
+                            e.currentTarget.onerror = null;
+                            e.currentTarget.src = SAFE_SVG_PLACEHOLDER;
+                          }}
                         />
                       </div>
                     </div>
@@ -405,11 +382,17 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory }) {
                   <div className="flex items-center justify-between pt-4 border-t border-black/[0.06] dark:border-white/[0.08] mt-3">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/[0.03] dark:bg-white/[0.05] border border-black/[0.06] dark:border-white/[0.08] text-[11px] font-mono text-slate-700 dark:text-slate-300 font-bold">
                       <Award size={12} className="text-[#ff3131] dark:text-[#ff8585]" />
-                      <span>{item.badgeText}</span>
+                      <span>{item.priceFormatted || item.badgeText}</span>
                     </span>
 
                     <button
-                      onClick={() => onSelectCategory && onSelectCategory(item.categorySlug)}
+                      onClick={() => {
+                        if (item.rawProduct && onSelectProduct) {
+                          onSelectProduct(item.rawProduct);
+                        } else if (onSelectCategory) {
+                          onSelectCategory('winter-collection');
+                        }
+                      }}
                       className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-950 hover:bg-[#ff3131] dark:hover:bg-[#ff3131] dark:hover:text-white text-xs font-bold transition-all cursor-pointer border-none shadow-sm hover:shadow-[0_4px_18px_rgba(255,49,49,0.3)]"
                     >
                       <span>{item.btnText}</span>
