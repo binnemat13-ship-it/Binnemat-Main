@@ -15,12 +15,12 @@ export default function EnergyBannerSection({ onShopClick, onSelectProduct }) {
     if (combined.length === 0) {
       return {
         id: 101,
-        name: 'FastHeat™ Compact 15L Instant Geyser',
-        price: 19500,
-        formatted_price: 'Rs. 19,500',
-        badge: 'AFFORDABLE WARMTH',
+        name: 'FastHeat™ Quartz Space Heater',
+        price: 8500,
+        formatted_price: 'Rs. 8,500',
+        badge: 'ENERGY SAVER HEATER',
         images: [{ src: '/images/superconscious_heater_hero.jpg' }],
-        description: 'Heavy gauge steel tank with Italian incoloy heating element. Zero Sui gas dependency at lowest operational electricity cost.'
+        description: 'Instant infrared quartz heating with low wattage draw and built-in tip-over safety switch. Zero gas danger.'
       };
     }
 
@@ -34,9 +34,9 @@ export default function EnergyBannerSection({ onShopClick, onSelectProduct }) {
     return sorted[0];
   }, [winterProducts, essentialProducts]);
 
-  const productName = lowestPriceHeater?.name || 'FastHeat™ Compact 15L Instant Geyser';
-  const productPrice = lowestPriceHeater?.formatted_price || (lowestPriceHeater?.price ? `Rs. ${Number(lowestPriceHeater.price).toLocaleString()}` : 'Rs. 19,500');
-  const numericPrice = Number(lowestPriceHeater?.price) || 19500;
+  const productName = lowestPriceHeater?.name || 'FastHeat™ Quartz Space Heater';
+  const productPrice = lowestPriceHeater?.formatted_price || (lowestPriceHeater?.price ? `Rs. ${Number(lowestPriceHeater.price).toLocaleString()}` : 'Rs. 8,500');
+  const numericPrice = Number(lowestPriceHeater?.price) || 8500;
   const productImg = lowestPriceHeater?.images?.[0]?.src || '/images/superconscious_heater_hero.jpg';
 
   return (
@@ -49,36 +49,36 @@ export default function EnergyBannerSection({ onShopClick, onSelectProduct }) {
         <div className="lg:col-span-7">
           <span className="text-[10px] sm:text-[11px] font-mono tracking-wider sm:tracking-widest text-[#ff3131] dark:text-[#ff8585] uppercase block mb-2 sm:mb-3 font-bold flex items-center gap-1.5">
             <Flame size={14} className="text-[#ff3131] fill-[#ff3131] shrink-0" />
-            <span>3-SECOND INSTANT FLOW &bull; ZERO SUI GAS DEPENDENCY</span>
+            <span>INSTANT ROOM WARMTH &bull; LOW POWER ELECTRIC HEATING</span>
           </span>
 
           <h2 className="font-wix text-2xl sm:text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-3 sm:mb-4 leading-tight tracking-tight">
-            High Efficiency Geysers. <br />
+            High Efficiency Electric Heaters. <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5c5c] via-[#ff3131] to-[#d01a1a]">
-              Instant Hot Water at Lowest Cost.
+              Safe Warmth at Lowest Operating Cost.
             </span>
           </h2>
 
           <p className="text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-6 max-w-xl font-normal">
-            Beat severe winter gas cuts and high cylinder costs. High-density PUF insulation retains boiling temperature for over 24 hours with minimum electricity draw.
+            Say goodbye to suffocating gas fumes, cylinder refills, and gas load-shedding. Instant infrared thermal warmth with auto-thermostat and child-safe cool-touch exterior.
           </p>
 
           {/* VISUAL BILL COMPARISON TILE */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 p-3.5 sm:p-4 rounded-2xl bg-white dark:bg-[#1A1715] border border-[#E5E4E2] dark:border-white/[0.1] mb-6 sm:mb-8 max-w-lg text-xs shadow-sm">
             <div className="sm:border-r border-[#E5E4E2] dark:border-white/10 sm:pr-4 pb-2 sm:pb-0 border-b sm:border-b-0">
-              <span className="text-slate-500 block mb-0.5 font-medium">LPG Gas Cylinder / Old Geyser</span>
+              <span className="text-slate-500 block mb-0.5 font-medium">Gas Heater / Cylinder Refills</span>
               <strong className="text-rose-600 text-base block font-wix font-bold">
-                <GsapCounter endValue={5800} prefix="Rs. " suffix=" / Mo" />
+                <GsapCounter endValue={6500} prefix="Rs. " suffix=" / Mo" />
               </strong>
-              <span className="text-[10px] text-slate-400">Frequent refill costs &amp; gas leakage risks</span>
+              <span className="text-[10px] text-slate-400">Carbon monoxide fumes &amp; fire hazards</span>
             </div>
             <div className="sm:pl-2 pt-1 sm:pt-0">
-              <span className="text-emerald-700 dark:text-emerald-400 font-mono font-bold block mb-0.5">Binnemat Smart Geyser</span>
+              <span className="text-emerald-700 dark:text-emerald-400 font-mono font-bold block mb-0.5">Binnemat Smart Heater</span>
               <strong className="text-emerald-600 dark:text-emerald-400 text-base block font-wix font-bold">
-                <GsapCounter endValue={2400} prefix="Rs. " suffix=" / Mo" />
+                <GsapCounter endValue={2800} prefix="Rs. " suffix=" / Mo" />
               </strong>
               <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold">
-                <GsapCounter endValue={34000} prefix="Save Rs. " suffix="+ per winter" />
+                <GsapCounter endValue={22000} prefix="Save Rs. " suffix="+ every winter" />
               </span>
             </div>
           </div>
@@ -94,12 +94,12 @@ export default function EnergyBannerSection({ onShopClick, onSelectProduct }) {
               }}
               className="px-6 py-3 rounded-full bg-gradient-to-r from-[#ff3131] to-[#d01a1a] hover:brightness-105 text-white font-bold text-xs tracking-wide transition-all shadow-[0_4px_18px_rgba(255,49,49,0.35)] flex items-center justify-center gap-2 cursor-pointer border-none"
             >
-              <span>Explore Value Geysers</span>
+              <span>Explore Value Heaters</span>
               <ArrowUpRight size={15} />
             </button>
             <span className="text-xs text-slate-600 dark:text-slate-300 flex items-center justify-center gap-1.5 font-mono font-semibold">
               <ShieldCheck size={16} className="text-[#ff3131] dark:text-[#ff8585]" />
-              <span>5-Year Official Tank Warranty</span>
+              <span>Official Binnemat Brand Warranty</span>
             </span>
           </div>
         </div>
@@ -132,7 +132,7 @@ export default function EnergyBannerSection({ onShopClick, onSelectProduct }) {
                   {productName}
                 </strong>
                 <span className="text-[11px] text-slate-500 dark:text-slate-400">
-                  Italian Heating &bull; Built-in Safety
+                  Infrared Warmth &bull; Low Power
                 </span>
               </div>
               <strong className="text-base text-[#ff3131] dark:text-[#ff8585] font-wix font-extrabold flex-shrink-0">
