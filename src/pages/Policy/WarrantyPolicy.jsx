@@ -24,11 +24,11 @@ export default function WarrantyPolicy() {
     <div className="max-w-[1050px] mx-auto px-[5%] py-4 sm:py-6 relative z-10">
       <div ref={cardRef} className="glass-apple-card p-8 sm:p-12 rounded-3xl border border-[#E5E4E2] dark:border-white/10 bg-white/95 dark:bg-[#161311]/95 shadow-md">
         <div className="flex items-center gap-3 mb-6">
-          <div className="w-12 h-12 rounded-2xl bg-[#E6EDFD] text-[#6F4E37] dark:bg-[#6F4E37]/20 dark:text-[#E6EDFD] flex items-center justify-center">
+          <div className="w-12 h-12 rounded-2xl bg-[#fff0f0] text-[#ff3131] dark:bg-[#ff3131]/20 dark:text-[#ff8585] flex items-center justify-center">
             <ShieldCheck size={26} />
           </div>
           <div>
-            <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#6F4E37] dark:text-[#C49774] block">
+            <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#ff3131] dark:text-[#ff8585] block">
               OFFICIAL CERTIFICATION
             </span>
             <h1 className="font-wix text-2xl sm:text-3xl font-extrabold text-neutral-900 dark:text-neutral-100 m-0">
@@ -46,19 +46,19 @@ export default function WarrantyPolicy() {
             <h3 className="font-wix text-base font-bold text-neutral-900 dark:text-neutral-100">Specific Product Coverage Breakdown</h3>
             <ul className="space-y-2.5 text-xs sm:text-sm">
               <li className="flex gap-2.5 items-start">
-                <CheckCircle size={16} className="text-[#6F4E37] dark:text-[#C49774] flex-shrink-0 mt-0.5" />
+                <CheckCircle size={16} className="text-[#ff3131] dark:text-[#ff8585] flex-shrink-0 mt-0.5" />
                 <span><strong>Electric Storage Geysers:</strong> 5 to 7 Years official tank warranty against rust and scaling. 1 to 2 Years warranty on Italian Incoloy heating elements and thermostats.</span>
               </li>
               <li className="flex gap-2.5 items-start">
-                <CheckCircle size={16} className="text-[#6F4E37] dark:text-[#C49774] flex-shrink-0 mt-0.5" />
+                <CheckCircle size={16} className="text-[#ff3131] dark:text-[#ff8585] flex-shrink-0 mt-0.5" />
                 <span><strong>Instant Digital Geysers:</strong> 2 Years official warranty covering copper heat exchangers, flow sensors, and automatic safety cutoff switches.</span>
               </li>
               <li className="flex gap-2.5 items-start">
-                <CheckCircle size={16} className="text-[#6F4E37] dark:text-[#C49774] flex-shrink-0 mt-0.5" />
+                <CheckCircle size={16} className="text-[#ff3131] dark:text-[#ff8585] flex-shrink-0 mt-0.5" />
                 <span><strong>BLDC Inverter Ceiling Fans:</strong> 2 Years full replacement warranty covering pure copper brushless motors and RF remote receivers.</span>
               </li>
               <li className="flex gap-2.5 items-start">
-                <CheckCircle size={16} className="text-[#6F4E37] dark:text-[#C49774] flex-shrink-0 mt-0.5" />
+                <CheckCircle size={16} className="text-[#ff3131] dark:text-[#ff8585] flex-shrink-0 mt-0.5" />
                 <span><strong>Tempered Glass Built-in Hobs:</strong> 1 to 2 Years warranty on cast iron pan trivets, brass burner caps, and pulse ignition switches.</span>
               </li>
             </ul>
@@ -74,7 +74,7 @@ export default function WarrantyPolicy() {
               href={`https://wa.me/${APP_CONFIG.WHATSAPP_NUMBER}?text=Salam%20Binnemat,%20I%20need%20warranty%20claim%20assistance`}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#6F4E37] to-[#8C6547] hover:brightness-105 text-white font-bold text-xs shadow-md no-underline transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#ff3131] to-[#d01a1a] hover:brightness-105 text-white font-bold text-xs shadow-md no-underline transition-all"
             >
               <PhoneCall size={15} />
               <span>Contact Warranty Desk (+92 321 2418430)</span>

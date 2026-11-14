@@ -38,22 +38,22 @@ export default function Footer({ logoSrc }) {
           </p>
           <div className="flex flex-col gap-3 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
             <div className="flex items-center gap-2.5">
-              <Phone size={15} className="text-[#6F4E37] dark:text-[#C49774]" />
+              <Phone size={15} className="text-[#ff3131] dark:text-[#ff8585]" />
               <a
                 href={getWhatsAppLink('Salam Binnemat, I need support regarding appliances.')}
                 target="_blank"
                 rel="noreferrer"
-                className="text-slate-800 dark:text-slate-200 hover:text-[#6F4E37] dark:hover:text-[#E6EDFD] transition-colors font-semibold"
+                className="text-slate-800 dark:text-slate-200 hover:text-[#ff3131] dark:hover:text-[#ff8585] transition-colors font-semibold"
               >
                 +{whatsappNumber} (Direct Customer Support)
               </a>
             </div>
             <div className="flex items-center gap-2.5">
-              <Mail size={15} className="text-[#6F4E37] dark:text-[#C49774]" />
+              <Mail size={15} className="text-[#ff3131] dark:text-[#ff8585]" />
               <span>{supportEmail}</span>
             </div>
             <div className="flex items-center gap-2.5">
-              <MapPin size={15} className="text-[#6F4E37] dark:text-[#C49774] shrink-0" />
+              <MapPin size={15} className="text-[#ff3131] dark:text-[#ff8585] shrink-0" />
               <span>{storeAddress}</span>
             </div>
           </div>
@@ -78,7 +78,7 @@ export default function Footer({ logoSrc }) {
               <li key={link.path}>
                 <button 
                   onClick={() => handleNav(link.path)} 
-                  className="hover:text-[#6F4E37] dark:hover:text-[#E6EDFD] transition-colors text-left bg-transparent border-none cursor-pointer p-0"
+                  className="hover:text-[#ff3131] dark:hover:text-[#ff8585] transition-colors text-left bg-transparent border-none cursor-pointer p-0"
                 >
                   {link.label}
                 </button>
@@ -97,7 +97,7 @@ export default function Footer({ logoSrc }) {
               <li key={link.path}>
                 <button 
                   onClick={() => handleNav(link.path)} 
-                  className="hover:text-[#6F4E37] dark:hover:text-[#E6EDFD] transition-colors text-left bg-transparent border-none cursor-pointer p-0"
+                  className="hover:text-[#ff3131] dark:hover:text-[#ff8585] transition-colors text-left bg-transparent border-none cursor-pointer p-0"
                 >
                   {link.label}
                 </button>
@@ -110,7 +110,7 @@ export default function Footer({ logoSrc }) {
       {/* COPYRIGHT BOTTOM BAR */}
       <div className="max-w-[1360px] mx-auto px-[5%] pt-8 border-t border-[#E5E4E2] dark:border-white/[0.08] flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4 text-center sm:text-left">
         <p className="m-0">&copy; {new Date().getFullYear()} Binnemat Pakistan. All Rights Reserved.</p>
-        <p className="m-0 font-urdu text-sm font-bold text-[#6F4E37] dark:text-[#C49774]">
+        <p className="m-0 font-urdu text-sm font-bold text-[#ff3131] dark:text-[#ff8585]">
           ہر گھر کا سکون — بااعتماد الیکٹرک واٹر ہیٹرز اور ہوم ایپلائینسز
         </p>
       </div>

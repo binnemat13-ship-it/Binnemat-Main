@@ -57,7 +57,7 @@ export function ProductSlugRoute() {
   if (loading) {
     return (
       <div className="max-w-[1360px] mx-auto px-[5%] py-24 text-center">
-        <div className="w-10 h-10 border-4 border-[#6F4E37] border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+        <div className="w-10 h-10 border-4 border-[#ff3131] border-t-transparent rounded-full animate-spin mx-auto mb-4" />
         <p className="text-sm text-slate-500 font-wix font-semibold">Loading certified appliance specifications...</p>
       </div>
     );
@@ -130,7 +130,7 @@ export function DecoyAdminRoute() {
       </p>
       <button
         onClick={() => navigate({ to: '/' })}
-        className="px-6 py-2.5 rounded-full bg-gradient-to-r from-[#6F4E37] to-[#8C6547] hover:brightness-105 text-white font-bold text-xs transition-all shadow-md cursor-pointer border-none"
+        className="px-6 py-2.5 rounded-full bg-gradient-to-r from-[#ff3131] to-[#d01a1a] hover:brightness-105 text-white font-bold text-xs transition-all shadow-md cursor-pointer border-none"
       >
         Return to Home Store
       </button>

@@ -7,23 +7,30 @@
   --color-bn-cream: #F7F6F4;
   --color-bn-dark: #0E0C0B;
   --color-bn-darker: #070605;
-  --color-bn-mocha: #6F4E37;
-  --color-bn-mochaDark: #523624;
-  --color-bn-mochaLight: #8C6547;
-  --color-bn-mochaGlow: rgba(111, 78, 55, 0.35);
+  --color-bn-red: #ff3131;
+  --color-bn-redDark: #d01a1a;
+  --color-bn-redDarker: #9e0f0f;
+  --color-bn-redLight: #ff5c5c;
+  --color-bn-redSoft: #ff8585;
+  --color-bn-redTint: #fff0f0;
+  --color-bn-redGlow: rgba(255, 49, 49, 0.35);
+  --color-bn-mocha: #ff3131;
+  --color-bn-mochaDark: #d01a1a;
+  --color-bn-mochaLight: #ff5c5c;
+  --color-bn-mochaGlow: rgba(255, 49, 49, 0.35);
   --color-bn-platinum: #E5E4E2;
   --color-bn-platinumLight: #F7F6F5;
   --color-bn-platinumDark: #A6A5A3;
-  --color-bn-lavender: #E6EDFD;
-  --color-bn-lavenderSoft: #ECE6FB;
+  --color-bn-lavender: #fff0f0;
+  --color-bn-lavenderSoft: #ffe5e5;
   --color-bn-borderPlatinum: rgba(229, 228, 226, 0.85);
   --color-bn-borderLight: rgba(229, 228, 226, 0.85);
   --color-bn-borderDark: rgba(229, 228, 226, 0.14);
-  /* Aliases to guarantee 100% full-site Mocha Brown and Platinum Silver alignment */
-  --color-bn-gold: #6F4E37;
-  --color-bn-goldDark: #523624;
-  --color-bn-goldLight: #8C6547;
-  --color-bn-goldGlow: rgba(111, 78, 55, 0.35);
+  /* Aliases to guarantee 100% full-site #ff3131 scarlet alignment */
+  --color-bn-gold: #ff3131;
+  --color-bn-goldDark: #d01a1a;
+  --color-bn-goldLight: #ff5c5c;
+  --color-bn-goldGlow: rgba(255, 49, 49, 0.35);
   --font-cinzel: 'Cinzel', Georgia, serif;
   --font-outfit: 'Outfit', sans-serif;
   --font-wix: 'Wix Madefor Display', sans-serif;
@@ -42,16 +49,16 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #8C6547;
+  background: #d01a1a;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6F4E37;
+  background: #ff3131;
 }
 
 ::selection {
-  background-color: #6F4E37;
+  background-color: #ff3131;
   color: #FFFFFF;
 }
 
@@ -106,7 +113,7 @@ html.dark ::-webkit-scrollbar-track {
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid rgba(229, 228, 226, 0.9);
-  box-shadow: 0 10px 35px -5px rgba(111, 78, 55, 0.08);
+  box-shadow: 0 10px 35px -5px rgba(255, 49, 49, 0.08);
   transition: background 0.3s ease, border-color 0.3s ease;
 }
 
@@ -121,7 +128,7 @@ html.dark .glass-apple {
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid rgba(229, 228, 226, 0.9);
-  box-shadow: 0 12px 35px -10px rgba(111, 78, 55, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  box-shadow: 0 12px 35px -10px rgba(255, 49, 49, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.95);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -133,31 +140,31 @@ html.dark .glass-apple-card {
 
 .glass-apple-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(111, 78, 55, 0.45);
-  box-shadow: 0 20px 48px -10px rgba(111, 78, 55, 0.18), inset 0 1px 0 rgba(255, 255, 255, 1);
+  border-color: rgba(255, 49, 49, 0.45);
+  box-shadow: 0 20px 48px -10px rgba(255, 49, 49, 0.18), inset 0 1px 0 rgba(255, 255, 255, 1);
 }
 
 html.dark .glass-apple-card:hover {
-  border-color: rgba(196, 151, 116, 0.45);
-  box-shadow: 0 20px 48px -10px rgba(111, 78, 55, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 133, 133, 0.45);
+  box-shadow: 0 20px 48px -10px rgba(255, 49, 49, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
 /* Luxury Gradients (Mocha Brown & Platinum Silver) */
 .mocha-gradient-text,
 .gold-gradient-text {
-  background: linear-gradient(135deg, #6F4E37 0%, #8C6547 55%, #C49774 100%);
+  background: linear-gradient(135deg, #ff5c5c 0%, #ff3131 55%, #d01a1a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .platinum-mocha-gradient {
-  background: linear-gradient(135deg, #1E1B18 0%, #6F4E37 55%, #8C6547 100%);
+  background: linear-gradient(135deg, #1E1B18 0%, #ff3131 55%, #d01a1a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .glow-mocha {
-  box-shadow: 0 0 35px rgba(111, 78, 55, 0.35);
+  box-shadow: 0 0 35px rgba(255, 49, 49, 0.35);
 }
 
 .glow-platinum {

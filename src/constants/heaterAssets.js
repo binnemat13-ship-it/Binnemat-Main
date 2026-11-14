@@ -12,9 +12,9 @@ export const HEATER_MOCK_SVGS = {
         <stop offset="100%" stop-color="%23CBD5E1"/>
       </linearGradient>
       <linearGradient id="goldStrip" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stop-color="%23C49A45"/>
-        <stop offset="50%" stop-color="%23FBBF24"/>
-        <stop offset="100%" stop-color="%2392400E"/>
+        <stop offset="0%" stop-color="%23ff3131"/>
+        <stop offset="50%" stop-color="%23ff5c5c"/>
+        <stop offset="100%" stop-color="%23d01a1a"/>
       </linearGradient>
       <radialGradient id="amberGlow" cx="50%" cy="50%" r="50%">
         <stop offset="0%" stop-color="%23F59E0B" stop-opacity="0.8"/>
@@ -35,7 +35,7 @@ export const HEATER_MOCK_SVGS = {
     <!-- Vertical Gold Accent Inlay -->
     <rect x="245" y="75" width="10" height="310" rx="5" fill="url(%23goldStrip)"/>
     <!-- Circular Digital Control Pod -->
-    <circle cx="250" cy="230" r="52" fill="%230F172A" stroke="%23C49A45" stroke-width="3.5" filter="url(%23shadow)"/>
+    <circle cx="250" cy="230" r="52" fill="%230F172A" stroke="%23ff3131" stroke-width="3.5" filter="url(%23shadow)"/>
     <!-- Ambient Heat Ring -->
     <circle cx="250" cy="230" r="44" fill="none" stroke="%23F59E0B" stroke-width="2.5" stroke-dasharray="180 50"/>
     <!-- Digital LED Temp Display -->
@@ -43,7 +43,7 @@ export const HEATER_MOCK_SVGS = {
     <text x="250" y="248" font-family="sans-serif" font-weight="700" font-size="9" fill="%2338BDF8" letter-spacing="2" text-anchor="middle">OPTIMAL HEAT</text>
     <!-- Brand Badge -->
     <text x="250" y="145" font-family="serif" font-weight="900" font-size="16" fill="%230F172A" letter-spacing="4" text-anchor="middle">BINNEMAT</text>
-    <text x="250" y="162" font-family="sans-serif" font-weight="700" font-size="8" fill="%23C49A45" letter-spacing="3" text-anchor="middle">SAPPHIRE 35L</text>
+    <text x="250" y="162" font-family="sans-serif" font-weight="700" font-size="8" fill="%23ff3131" letter-spacing="3" text-anchor="middle">SAPPHIRE 35L</text>
     <!-- Status LED -->
     <circle cx="250" cy="180" r="4" fill="%2310B981"/>
     <!-- Lower Incoloy 840 Badge -->
@@ -73,7 +73,7 @@ export const HEATER_MOCK_SVGS = {
       <linearGradient id="roseGold" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stop-color="%23F43F5E"/>
         <stop offset="50%" stop-color="%23FB923C"/>
-        <stop offset="100%" stop-color="%23C49A45"/>
+        <stop offset="100%" stop-color="%23ff3131"/>
       </linearGradient>
       <filter id="fShadow" x="-20%" y="-20%" width="140%" height="140%">
         <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="%23000000" flood-opacity="0.6"/>
@@ -221,9 +221,9 @@ export const HEATER_MOCK_SVGS = {
       </filter>
     </defs>
     <!-- Tank Body -->
-    <rect x="145" y="60" width="210" height="350" rx="40" fill="url(%23hybBody)" stroke="%23C49A45" stroke-width="2.5"/>
+    <rect x="145" y="60" width="210" height="350" rx="40" fill="url(%23hybBody)" stroke="%23ff3131" stroke-width="2.5"/>
     <!-- Dual Power Indicator Strip -->
-    <rect x="145" y="125" width="210" height="10" fill="%23C49A45"/>
+    <rect x="145" y="125" width="210" height="10" fill="%23ff3131"/>
     <text x="250" y="105" font-family="serif" font-weight="900" font-size="16" fill="%23F8FAFC" letter-spacing="4" text-anchor="middle">BINNEMAT</text>
     <text x="250" y="120" font-family="sans-serif" font-weight="bold" font-size="8" fill="%23FBBF24" letter-spacing="2" text-anchor="middle">DUAL HYBRID GAS & ELECTRIC</text>
     <!-- Upper Electric Thermostat Control -->

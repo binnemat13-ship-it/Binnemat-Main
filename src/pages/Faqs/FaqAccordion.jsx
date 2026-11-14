@@ -122,8 +122,8 @@ export default function FaqAccordion() {
             onClick={() => setActiveTab(tab.id)}
             className={`px-4 py-2 rounded-full text-xs font-bold transition-all border cursor-pointer whitespace-nowrap flex-shrink-0 ${
               activeTab === tab.id
-                ? 'bg-gradient-to-r from-[#6F4E37] to-[#8C6547] text-white border-transparent shadow-sm'
-                : 'glass-apple-card text-slate-700 dark:text-slate-300 border-[#E5E4E2] dark:border-white/10 hover:border-[#6F4E37]/50'
+                ? 'bg-gradient-to-r from-[#ff3131] to-[#d01a1a] text-white border-transparent shadow-sm'
+                : 'glass-apple-card text-slate-700 dark:text-slate-300 border-[#E5E4E2] dark:border-white/10 hover:border-[#ff3131]/50'
             }`}
           >
             {tab.label}

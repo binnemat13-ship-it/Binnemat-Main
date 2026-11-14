@@ -74,8 +74,8 @@ export default function AboutTimeline() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
           <div className="absolute bottom-6 left-6 right-6">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E6EDFD]/25 border border-[#E5E4E2]/40 text-[#E6EDFD] text-[10px] font-mono font-bold uppercase tracking-widest backdrop-blur-md mb-1">
-              <Award size={12} className="text-[#C49774]" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#fff0f0]/25 border border-[#E5E4E2]/40 text-[#ff8585] text-[10px] font-mono font-bold uppercase tracking-widest backdrop-blur-md mb-1">
+              <Award size={12} className="text-[#ff8585]" />
               <span>FACTORY DIRECT STANDARDS</span>
             </span>
             <h3 className="font-wix text-xl font-bold text-white m-0 drop-shadow">
@@ -87,7 +87,7 @@ export default function AboutTimeline() {
         {/* RIGHT COLUMN: 3 SHARP PUNCHY BULLETS */}
         <div className="gsap-timeline-right lg:col-span-6 p-5 sm:p-10 space-y-6">
           <div>
-            <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#6F4E37] dark:text-[#C49774] block mb-1">
+            <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#ff3131] dark:text-[#ff8585] block mb-1">
               THE BINNEMAT BENCHMARK
             </span>
             <h2 className="font-wix text-2xl sm:text-3xl font-extrabold text-neutral-900 dark:text-neutral-100 m-0">
@@ -98,7 +98,7 @@ export default function AboutTimeline() {
           <div className="space-y-4">
             {points.map((pt, idx) => (
               <div key={idx} className="flex items-start gap-3.5">
-                <div className="w-8 h-8 rounded-xl bg-[#E6EDFD] dark:bg-[#6F4E37]/20 text-[#6F4E37] dark:text-[#E6EDFD] flex items-center justify-center shrink-0 mt-0.5">
+                <div className="w-8 h-8 rounded-xl bg-[#fff0f0] dark:bg-[#ff3131]/20 text-[#ff3131] dark:text-[#ff8585] flex items-center justify-center shrink-0 mt-0.5">
                   <CheckCircle2 size={16} />
                 </div>
                 <div>

@@ -23,11 +23,11 @@ export default function ShippingPolicy() {
     <div className="max-w-[1050px] mx-auto px-[5%] py-4 sm:py-6 relative z-10">
       <div ref={cardRef} className="glass-apple-card p-8 sm:p-12 rounded-3xl border border-[#E5E4E2] dark:border-white/10 bg-white/95 dark:bg-[#161311]/95 shadow-md">
         <div className="flex items-center gap-3 mb-6">
-          <div className="w-12 h-12 rounded-2xl bg-[#E6EDFD] text-[#6F4E37] dark:bg-[#6F4E37]/20 dark:text-[#E6EDFD] flex items-center justify-center">
+          <div className="w-12 h-12 rounded-2xl bg-[#fff0f0] text-[#ff3131] dark:bg-[#ff3131]/20 dark:text-[#ff8585] flex items-center justify-center">
             <Truck size={26} />
           </div>
           <div>
-            <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#6F4E37] dark:text-[#C49774] block">
+            <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#ff3131] dark:text-[#ff8585] block">
               LOGISTICS PROTOCOLS
             </span>
             <h1 className="font-wix text-2xl sm:text-3xl font-extrabold text-neutral-900 dark:text-neutral-100 m-0">

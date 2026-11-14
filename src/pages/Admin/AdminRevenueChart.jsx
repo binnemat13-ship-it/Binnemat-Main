@@ -79,8 +79,8 @@ export default function AdminRevenueChart({ orders = [] }) {
         <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-48 select-none">
           <defs>
             <linearGradient id="goldRevenueGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#C49A45" stopOpacity="0.4" />
-              <stop offset="100%" stopColor="#C49A45" stopOpacity="0.0" />
+              <stop offset="0%" stopColor="#ff3131" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="#ff3131" stopOpacity="0.0" />
             </linearGradient>
           </defs>
 
@@ -101,7 +101,7 @@ export default function AdminRevenueChart({ orders = [] }) {
           <path d={areaPath} fill="url(#goldRevenueGrad)" />
 
           {/* Line Stroke */}
-          <path d={linePath} fill="none" stroke="#C49A45" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+          <path d={linePath} fill="none" stroke="#ff3131" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
 
           {/* Data Points */}
           {points.map((p, idx) => (

@@ -34,7 +34,7 @@ export default function CartDrawer({ onNavigateCategory }) {
       <Drawer
         title={
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-[#6F4E37] to-[#8C6547] flex items-center justify-center text-white shadow-sm">
+            <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-[#ff3131] to-[#d01a1a] flex items-center justify-center text-white shadow-sm">
               <ShoppingBag size={15} />
             </div>
             <span className="font-wix text-base font-extrabold text-slate-900 dark:text-white tracking-tight">
@@ -50,7 +50,7 @@ export default function CartDrawer({ onNavigateCategory }) {
       >
         {cartItems.length === 0 ? (
           <div className="flex flex-col items-center justify-center my-auto text-center py-12">
-            <div className="w-16 h-16 rounded-full bg-[#E6EDFD] dark:bg-[#6F4E37]/20 text-[#6F4E37] dark:text-[#E6EDFD] flex items-center justify-center mb-4 shadow-sm border border-[#E5E4E2] dark:border-white/10">
+            <div className="w-16 h-16 rounded-full bg-[#fff0f0] dark:bg-[#ff3131]/20 text-[#ff3131] dark:text-[#ff8585] flex items-center justify-center mb-4 shadow-sm border border-[#E5E4E2] dark:border-white/10">
               <ShoppingBag size={28} />
             </div>
             <h3 className="font-wix text-lg font-bold text-slate-900 dark:text-white mb-1">
@@ -66,7 +66,7 @@ export default function CartDrawer({ onNavigateCategory }) {
                   closeCart();
                   if (onNavigateCategory) onNavigateCategory('winter-collection');
                 }}
-                className="rounded-full font-bold bg-gradient-to-r from-[#6F4E37] to-[#8C6547] hover:brightness-105 border-none text-white h-11 shadow-sm"
+                className="rounded-full font-bold bg-gradient-to-r from-[#ff3131] to-[#d01a1a] hover:brightness-105 border-none text-white h-11 shadow-sm"
               >
                 Explore Winter Geysers
               </Button>
@@ -108,7 +108,7 @@ export default function CartDrawer({ onNavigateCategory }) {
                     <h4 className="font-wix text-xs font-bold text-slate-900 dark:text-white truncate mb-1">
                       {item.name}
                     </h4>
-                    <span className="text-xs font-extrabold text-[#6F4E37] dark:text-[#E6EDFD] block mb-2 font-mono">
+                    <span className="text-xs font-extrabold text-[#ff3131] dark:text-[#ff8585] block mb-2 font-mono">
                       Rs. {(item.price * item.quantity).toLocaleString()}
                     </span>
 
@@ -116,7 +116,7 @@ export default function CartDrawer({ onNavigateCategory }) {
                     <div className="inline-flex items-center gap-2 border border-[#E5E4E2] dark:border-white/10 rounded-full px-2.5 py-0.5 bg-white dark:bg-white/[0.06]">
                       <button
                         onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                        className="p-0 bg-transparent border-none cursor-pointer text-slate-600 dark:text-slate-300 hover:text-[#6F4E37]"
+                        className="p-0 bg-transparent border-none cursor-pointer text-slate-600 dark:text-slate-300 hover:text-[#ff3131]"
                       >
                         <Minus size={11} />
                       </button>
@@ -125,7 +125,7 @@ export default function CartDrawer({ onNavigateCategory }) {
                       </span>
                       <button
                         onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                        className="p-0 bg-transparent border-none cursor-pointer text-slate-600 dark:text-slate-300 hover:text-[#6F4E37]"
+                        className="p-0 bg-transparent border-none cursor-pointer text-slate-600 dark:text-slate-300 hover:text-[#ff3131]"
                       >
                         <Plus size={11} />
                       </button>
@@ -153,7 +153,7 @@ export default function CartDrawer({ onNavigateCategory }) {
                 </span>
               </div>
 
-              <div className="p-2.5 rounded-xl bg-[#E6EDFD] dark:bg-[#6F4E37]/15 border border-[#E5E4E2] dark:border-white/10 text-xs flex items-center gap-2 text-[#6F4E37] dark:text-[#E6EDFD] font-semibold">
+              <div className="p-2.5 rounded-xl bg-[#fff0f0] dark:bg-[#ff3131]/15 border border-[#E5E4E2] dark:border-white/10 text-xs flex items-center gap-2 text-[#ff3131] dark:text-[#ff8585] font-semibold">
                 <ShieldCheck size={16} />
                 <span>100% Brand-Sealed with Stamped Warranty</span>
               </div>
@@ -164,7 +164,7 @@ export default function CartDrawer({ onNavigateCategory }) {
                   size="large"
                   icon={<ArrowRight size={15} />}
                   onClick={() => setCheckoutModalOpen(true)}
-                  className="w-full rounded-full h-11 font-bold bg-gradient-to-r from-[#6F4E37] to-[#8C6547] hover:brightness-105 border-none text-white shadow-md flex items-center justify-center gap-2"
+                  className="w-full rounded-full h-11 font-bold bg-gradient-to-r from-[#ff3131] to-[#d01a1a] hover:brightness-105 border-none text-white shadow-md flex items-center justify-center gap-2"
                 >
                   Proceed to Checkout
                 </Button>
@@ -173,7 +173,7 @@ export default function CartDrawer({ onNavigateCategory }) {
                   size="large"
                   icon={<MessageSquare size={15} />}
                   onClick={handleQuickWhatsApp}
-                  className="w-full rounded-full h-11 font-bold border-[#E5E4E2] dark:border-white/10 text-slate-800 dark:text-slate-200 hover:text-[#6F4E37] flex items-center justify-center gap-2"
+                  className="w-full rounded-full h-11 font-bold border-[#E5E4E2] dark:border-white/10 text-slate-800 dark:text-slate-200 hover:text-[#ff3131] flex items-center justify-center gap-2"
                 >
                   Quick WhatsApp Order
                 </Button>

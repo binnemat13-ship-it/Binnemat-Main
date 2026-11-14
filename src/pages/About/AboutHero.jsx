@@ -46,8 +46,8 @@ export default function AboutHero() {
 
       {/* FLOATING CENTERED COPY */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 sm:p-12 text-white">
-        <span className="gsap-about-hero-item inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#E6EDFD]/20 border border-[#E5E4E2]/40 text-[#E6EDFD] text-xs font-mono font-bold uppercase tracking-widest mb-3 backdrop-blur-md">
-          <Sparkles size={13} className="text-[#C49774]" />
+        <span className="gsap-about-hero-item inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#fff0f0]/20 border border-[#E5E4E2]/40 text-[#ff8585] text-xs font-mono font-bold uppercase tracking-widest mb-3 backdrop-blur-md">
+          <Sparkles size={13} className="text-[#ff8585]" />
           <span>BINNEMAT APPLIANCES</span>
         </span>
         <h1 className="gsap-about-hero-item font-wix text-2xl sm:text-5xl lg:text-6xl font-black max-w-3xl leading-tight m-0 text-white drop-shadow-lg">

@@ -26,8 +26,8 @@ export function ThemeProvider({ children }) {
   const antdThemeConfig = {
     algorithm: isDarkMode ? theme.darkAlgorithm : theme.defaultAlgorithm,
     token: {
-      colorPrimary: '#6F4E37',
-      colorLink: '#6F4E37',
+      colorPrimary: '#ff3131',
+      colorLink: '#ff3131',
       borderRadius: 14,
       fontFamily: '"Wix Madefor Display", "Plus Jakarta Sans", sans-serif',
       colorBgContainer: isDarkMode ? '#1A1715' : '#FFFFFF',

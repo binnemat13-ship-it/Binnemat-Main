@@ -42,11 +42,11 @@ export default function AdminLogin() {
           <div className="flex justify-center mb-5">
             <Logo />
           </div>
-          <div className="w-16 h-16 rounded-2xl bg-[#E6EDFD] dark:bg-[#6F4E37]/20 text-[#6F4E37] dark:text-[#E6EDFD] flex items-center justify-center mx-auto mb-4 border border-[#E5E4E2] dark:border-white/10 shadow-sm">
+          <div className="w-16 h-16 rounded-2xl bg-[#fff0f0] dark:bg-[#ff3131]/20 text-[#ff3131] dark:text-[#ff8585] flex items-center justify-center mx-auto mb-4 border border-[#E5E4E2] dark:border-white/10 shadow-sm">
             <ShieldCheck size={32} />
           </div>
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E6EDFD] dark:bg-[#6F4E37]/20 border border-[#E5E4E2] dark:border-white/10 text-[#6F4E37] dark:text-[#E6EDFD] text-[10px] font-black uppercase tracking-widest mb-3">
-            <Sparkles size={11} className="text-[#8C6547]" />
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#fff0f0] dark:bg-[#ff3131]/20 border border-[#E5E4E2] dark:border-white/10 text-[#ff3131] dark:text-[#ff8585] text-[10px] font-black uppercase tracking-widest mb-3">
+            <Sparkles size={11} className="text-[#d01a1a]" />
             <span>PROTECTED GATEWAY</span>
           </span>
           <h1 className="font-wix text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white m-0 tracking-tight">
@@ -91,7 +91,7 @@ export default function AdminLogin() {
             loading={loading}
             disabled={isLocked}
             icon={<ArrowRight size={16} />}
-            className="w-full h-12 rounded-full font-bold bg-gradient-to-r from-[#6F4E37] to-[#8C6547] hover:brightness-105 border-none text-white shadow-lg flex items-center justify-center gap-2 text-sm"
+            className="w-full h-12 rounded-full font-bold bg-gradient-to-r from-[#ff3131] to-[#d01a1a] hover:brightness-105 border-none text-white shadow-lg flex items-center justify-center gap-2 text-sm"
           >
             {isLocked ? `Locked (${lockoutRemaining}s)` : 'Unlock Dashboard'}
           </Button>

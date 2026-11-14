@@ -37,7 +37,7 @@ export default function ProductInfo({ product }) {
   return (
     <div ref={infoRef} className="flex flex-col">
       {/* CATEGORY & CODE */}
-      <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#6F4E37] dark:text-[#C49774] mb-1 block">
+      <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#ff3131] dark:text-[#ff8585] mb-1 block">
         {product?.category?.replace('-', ' ').toUpperCase() || 'OFFICIAL APPLIANCE'}
       </span>
 
@@ -55,8 +55,8 @@ export default function ProductInfo({ product }) {
       </div>
 
       {/* PRICE */}
-      <div className="mb-6 p-4 rounded-2xl bg-[#E6EDFD] dark:bg-[#6F4E37]/15 border border-[#E5E4E2] dark:border-[#6F4E37]/30 flex flex-col sm:flex-row sm:items-baseline gap-1.5 sm:gap-3 shadow-xs">
-        <span className="text-2xl sm:text-3xl font-black text-[#6F4E37] dark:text-[#E6EDFD]">
+      <div className="mb-6 p-4 rounded-2xl bg-[#fff0f0] dark:bg-[#ff3131]/15 border border-[#E5E4E2] dark:border-[#ff3131]/30 flex flex-col sm:flex-row sm:items-baseline gap-1.5 sm:gap-3 shadow-xs">
+        <span className="text-2xl sm:text-3xl font-black text-[#ff3131] dark:text-[#ff8585]">
           {formattedPrice}
         </span>
         <span className="text-xs font-bold text-neutral-600 dark:text-neutral-400">
@@ -76,7 +76,7 @@ export default function ProductInfo({ product }) {
           <div className="inline-flex items-center gap-3 border border-[#E5E4E2] dark:border-white/10 rounded-xl px-3 py-1.5 bg-white dark:bg-[#1A1715]">
             <button
               onClick={() => setQuantity(Math.max(1, quantity - 1))}
-              className="p-1 bg-transparent border-none cursor-pointer text-neutral-600 dark:text-neutral-300 hover:text-[#6F4E37]"
+              className="p-1 bg-transparent border-none cursor-pointer text-neutral-600 dark:text-neutral-300 hover:text-[#ff3131]"
             >
               <Minus size={14} />
             </button>
@@ -85,7 +85,7 @@ export default function ProductInfo({ product }) {
             </span>
             <button
               onClick={() => setQuantity(quantity + 1)}
-              className="p-1 bg-transparent border-none cursor-pointer text-neutral-600 dark:text-neutral-300 hover:text-[#6F4E37]"
+              className="p-1 bg-transparent border-none cursor-pointer text-neutral-600 dark:text-neutral-300 hover:text-[#ff3131]"
             >
               <Plus size={14} />
             </button>
@@ -98,7 +98,7 @@ export default function ProductInfo({ product }) {
             size="large"
             icon={<ShoppingBag size={18} />}
             onClick={handleAddToCart}
-            className="w-full sm:w-auto rounded-full h-12 sm:h-13 px-6 sm:px-8 font-bold text-sm bg-gradient-to-r from-[#6F4E37] to-[#8C6547] hover:brightness-105 border-none text-white shadow-[0_4px_16px_rgba(111,78,55,0.35)] flex items-center justify-center gap-2"
+            className="w-full sm:w-auto rounded-full h-12 sm:h-13 px-6 sm:px-8 font-bold text-sm bg-gradient-to-r from-[#ff3131] to-[#d01a1a] hover:brightness-105 border-none text-white shadow-[0_4px_16px_rgba(255,49,49,0.35)] flex items-center justify-center gap-2"
           >
             Add to Shopping Cart
           </Button>
@@ -107,7 +107,7 @@ export default function ProductInfo({ product }) {
             size="large"
             icon={<MessageSquare size={18} />}
             onClick={handleWhatsAppOrder}
-            className="w-full sm:w-auto rounded-full h-12 sm:h-13 px-6 font-bold text-sm border-[#E5E4E2] dark:border-white/10 text-neutral-800 dark:text-neutral-200 hover:border-[#6F4E37] flex items-center justify-center gap-2"
+            className="w-full sm:w-auto rounded-full h-12 sm:h-13 px-6 font-bold text-sm border-[#E5E4E2] dark:border-white/10 text-neutral-800 dark:text-neutral-200 hover:border-[#ff3131] flex items-center justify-center gap-2"
           >
             Instant WhatsApp Order
           </Button>
@@ -117,15 +117,15 @@ export default function ProductInfo({ product }) {
       {/* FAST TRUST BADGES */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-6 border-t border-[#E5E4E2] dark:border-white/10 text-xs text-neutral-700 dark:text-neutral-300">
         <div className="flex items-center gap-2">
-          <ShieldCheck size={18} className="text-[#6F4E37] dark:text-[#C49774]" />
+          <ShieldCheck size={18} className="text-[#ff3131] dark:text-[#ff8585]" />
           <span>Brand Sealed Unit</span>
         </div>
         <div className="flex items-center gap-2">
-          <Truck size={18} className="text-[#6F4E37] dark:text-[#C49774]" />
+          <Truck size={18} className="text-[#ff3131] dark:text-[#ff8585]" />
           <span>Safe Nationwide Delivery</span>
         </div>
         <div className="flex items-center gap-2">
-          <Clock size={18} className="text-[#6F4E37] dark:text-[#C49774]" />
+          <Clock size={18} className="text-[#ff3131] dark:text-[#ff8585]" />
           <span>24/7 WhatsApp Hotline</span>
         </div>
       </div>

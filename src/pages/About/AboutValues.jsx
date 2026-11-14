@@ -34,22 +34,22 @@ export default function AboutValues() {
 
   const pillars = [
     {
-      icon: <ShieldCheck size={20} className="text-[#6F4E37] dark:text-[#C49774]" />,
+      icon: <ShieldCheck size={20} className="text-[#ff3131] dark:text-[#ff8585]" />,
       title: "100% Factory Sealed",
       desc: "Authentic manufacturer warranty card stamped on dispatch."
     },
     {
-      icon: <Zap size={20} className="text-[#6F4E37] dark:text-[#C49774]" />,
+      icon: <Zap size={20} className="text-[#ff3131] dark:text-[#ff8585]" />,
       title: "Wide-Voltage Safe",
       desc: "Built to operate stably between 140V-260V without external stabilizers."
     },
     {
-      icon: <Truck size={20} className="text-[#6F4E37] dark:text-[#C49774]" />,
+      icon: <Truck size={20} className="text-[#ff3131] dark:text-[#ff8585]" />,
       title: "Zero-Breakage Delivery",
       desc: "Reinforced polystyrene shock crating for safe 50+ city shipping."
     },
     {
-      icon: <Headphones size={20} className="text-[#6F4E37] dark:text-[#C49774]" />,
+      icon: <Headphones size={20} className="text-[#ff3131] dark:text-[#ff8585]" />,
       title: "Direct WhatsApp Line",
       desc: "Instant guidance on sizing, installation, and after-sales support."
     }
@@ -63,7 +63,7 @@ export default function AboutValues() {
             key={idx}
             className="gsap-val-card glass-apple-card p-5 rounded-2xl border border-[#E5E4E2] dark:border-white/10 bg-white/95 dark:bg-[#161311]/95 shadow-xs flex items-start gap-3.5"
           >
-            <div className="w-9 h-9 rounded-xl bg-[#E6EDFD] dark:bg-[#6F4E37]/20 flex items-center justify-center shrink-0">
+            <div className="w-9 h-9 rounded-xl bg-[#fff0f0] dark:bg-[#ff3131]/20 flex items-center justify-center shrink-0">
               {p.icon}
             </div>
             <div>

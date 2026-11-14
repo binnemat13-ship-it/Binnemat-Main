@@ -101,14 +101,14 @@ export default function CheckoutModal({ open, onClose }) {
     >
       {completedOrder ? (
         <div className="py-6 text-center space-y-4">
-          <div className="w-16 h-16 rounded-full bg-[#E6EDFD] dark:bg-[#6F4E37]/20 text-[#6F4E37] dark:text-[#E6EDFD] border border-[#E5E4E2] dark:border-white/10 flex items-center justify-center mx-auto shadow-sm">
+          <div className="w-16 h-16 rounded-full bg-[#fff0f0] dark:bg-[#ff3131]/20 text-[#ff3131] dark:text-[#ff8585] border border-[#E5E4E2] dark:border-white/10 flex items-center justify-center mx-auto shadow-sm">
             <CheckCircle size={32} />
           </div>
           <h2 className="font-wix text-2xl font-extrabold text-slate-900 dark:text-white m-0 tracking-tight">
             Order Successfully Placed!
           </h2>
           <p className="text-sm text-slate-600 dark:text-slate-400 max-w-md mx-auto">
-            Your order reference is <strong className="text-[#6F4E37] dark:text-[#E6EDFD] font-mono">{completedOrder.refId}</strong>. Our dispatch department has received your booking.
+            Your order reference is <strong className="text-[#ff3131] dark:text-[#ff8585] font-mono">{completedOrder.refId}</strong>. Our dispatch department has received your booking.
           </p>
 
           <div className="p-4 rounded-2xl glass-apple-card border border-[#E5E4E2] dark:border-white/10 text-xs text-slate-700 dark:text-slate-300 max-w-sm mx-auto text-left space-y-1.5 shadow-sm">
@@ -122,7 +122,7 @@ export default function CheckoutModal({ open, onClose }) {
             </div>
             <div className="flex justify-between border-t border-[#E5E4E2] dark:border-white/10 pt-1.5 mt-1">
               <span className="text-slate-500">Total:</span>
-              <strong className="text-[#6F4E37] dark:text-[#E6EDFD] font-mono font-bold">{formattedSubtotal}</strong>
+              <strong className="text-[#ff3131] dark:text-[#ff8585] font-mono font-bold">{formattedSubtotal}</strong>
             </div>
           </div>
 
@@ -131,7 +131,7 @@ export default function CheckoutModal({ open, onClose }) {
               href={completedOrder.whatsAppUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#6F4E37] to-[#8C6547] hover:brightness-105 text-white font-bold text-xs shadow-md no-underline"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#ff3131] to-[#d01a1a] hover:brightness-105 text-white font-bold text-xs shadow-md no-underline"
             >
               <MessageSquare size={16} />
               <span>Send Receipt on WhatsApp</span>
@@ -146,7 +146,7 @@ export default function CheckoutModal({ open, onClose }) {
         </div>
       ) : (
         <div className="py-2">
-          <span className="text-[11px] font-extrabold tracking-widest uppercase text-[#6F4E37] dark:text-[#C49774] block mb-1">
+          <span className="text-[11px] font-extrabold tracking-widest uppercase text-[#ff3131] dark:text-[#ff8585] block mb-1">
             EXPRESS CHECKOUT &bull; COD
           </span>
           <h2 className="font-wix text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mb-4 tracking-tight">
@@ -216,10 +216,10 @@ export default function CheckoutModal({ open, onClose }) {
               </Radio.Group>
             </div>
 
-            <div className="p-3.5 rounded-2xl bg-[#E6EDFD]/60 dark:bg-white/[0.04] border border-[#E5E4E2] dark:border-white/10 flex justify-between items-center text-xs shadow-sm">
+            <div className="p-3.5 rounded-2xl bg-[#fff0f0]/60 dark:bg-white/[0.04] border border-[#E5E4E2] dark:border-white/10 flex justify-between items-center text-xs shadow-sm">
               <div>
                 <span className="text-slate-500 block">Total Payable:</span>
-                <strong className="text-base text-[#6F4E37] dark:text-[#E6EDFD] font-mono font-extrabold">
+                <strong className="text-base text-[#ff3131] dark:text-[#ff8585] font-mono font-extrabold">
                   {formattedSubtotal}
                 </strong>
               </div>
@@ -232,7 +232,7 @@ export default function CheckoutModal({ open, onClose }) {
               type="primary"
               htmlType="submit"
               loading={submitting}
-              className="w-full rounded-full h-12 font-bold bg-gradient-to-r from-[#6F4E37] to-[#8C6547] hover:brightness-105 border-none text-white shadow-md text-sm mt-2"
+              className="w-full rounded-full h-12 font-bold bg-gradient-to-r from-[#ff3131] to-[#d01a1a] hover:brightness-105 border-none text-white shadow-md text-sm mt-2"
             >
               Confirm &amp; Book Order
             </Button>

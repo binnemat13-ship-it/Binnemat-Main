@@ -64,7 +64,7 @@ export default function AboutStory() {
       {/* MINIMAL INTRO WITH GOLD URDU SLOGAN */}
       <div className="gsap-story-intro glass-apple-card flex flex-col md:flex-row items-center justify-between gap-6 p-6 sm:p-8 rounded-3xl bg-white/90 dark:bg-[#161311]/90 border border-[#E5E4E2] dark:border-white/10 shadow-sm">
         <div className="max-w-xl">
-          <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#6F4E37] dark:text-[#C49774] block mb-1">
+          <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#ff3131] dark:text-[#ff8585] block mb-1">
             THE PHILOSOPHY
           </span>
           <h2 className="font-wix text-2xl sm:text-3xl font-extrabold text-neutral-900 dark:text-neutral-100 m-0 mb-2">
@@ -75,11 +75,11 @@ export default function AboutStory() {
           </p>
         </div>
 
-        <div className="text-center px-6 py-4 rounded-2xl bg-[#E6EDFD]/70 dark:bg-[#1A1715] border border-[#E5E4E2] dark:border-white/10 shadow-xs shrink-0">
-          <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#6F4E37] dark:text-[#E6EDFD] block">
+        <div className="text-center px-6 py-4 rounded-2xl bg-[#fff0f0]/70 dark:bg-[#1A1715] border border-[#E5E4E2] dark:border-white/10 shadow-xs shrink-0">
+          <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#ff3131] dark:text-[#ff8585] block">
             OUR PROMISE
           </span>
-          <div className="font-urdu text-3xl sm:text-4xl text-[#6F4E37] dark:text-[#C49774] my-1 font-bold">
+          <div className="font-urdu text-3xl sm:text-4xl text-[#ff3131] dark:text-[#ff8585] my-1 font-bold">
             {APP_CONFIG.SLOGAN_URDU}
           </div>
           <span className="text-[11px] text-neutral-500">Peace, Quiet &amp; Reliability</span>
@@ -108,7 +108,7 @@ export default function AboutStory() {
               </span>
             </div>
             <div className="p-6">
-              <h3 className="font-wix text-lg font-bold text-slate-900 dark:text-white m-0 mb-2 group-hover:text-[#6F4E37] dark:group-hover:text-[#E6EDFD] transition-colors tracking-tight">
+              <h3 className="font-wix text-lg font-bold text-slate-900 dark:text-white m-0 mb-2 group-hover:text-[#ff3131] dark:group-hover:text-[#ff8585] transition-colors tracking-tight">
                 {item.title}
               </h3>
               <p className="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 m-0 leading-relaxed font-light">

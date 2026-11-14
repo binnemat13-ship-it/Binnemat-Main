@@ -38,10 +38,10 @@ export default function ContactCards() {
     <div ref={containerRef} className="space-y-6">
       {/* WHATSAPP CARD */}
       <div className="gsap-contact-card glass-apple-card p-6 sm:p-7 rounded-3xl border border-[#E5E4E2] dark:border-white/10 shadow-sm relative overflow-hidden">
-        <div className="w-12 h-12 rounded-full bg-[#E6EDFD] dark:bg-[#6F4E37]/20 border border-[#E5E4E2] dark:border-white/10 text-[#6F4E37] dark:text-[#E6EDFD] flex items-center justify-center mb-4 shadow-sm">
+        <div className="w-12 h-12 rounded-full bg-[#fff0f0] dark:bg-[#ff3131]/20 border border-[#E5E4E2] dark:border-white/10 text-[#ff3131] dark:text-[#ff8585] flex items-center justify-center mb-4 shadow-sm">
           <Phone size={22} />
         </div>
-        <span className="text-[11px] font-extrabold text-[#6F4E37] dark:text-[#C49774] uppercase tracking-wider block mb-1">
+        <span className="text-[11px] font-extrabold text-[#ff3131] dark:text-[#ff8585] uppercase tracking-wider block mb-1">
           FASTEST RESPONSE
         </span>
         <h3 className="font-wix text-lg font-bold text-slate-900 dark:text-white mb-2 tracking-tight">
@@ -54,7 +54,7 @@ export default function ContactCards() {
           href={getWhatsAppLink('Salam Binnemat, I need consultation on appliances.')}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex justify-center w-full sm:w-auto items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-[#6F4E37] to-[#8C6547] hover:brightness-105 text-white text-xs font-bold no-underline shadow-md transition-all cursor-pointer text-center"
+          className="inline-flex justify-center w-full sm:w-auto items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-[#ff3131] to-[#d01a1a] hover:brightness-105 text-white text-xs font-bold no-underline shadow-md transition-all cursor-pointer text-center"
         >
           <Phone size={14} />
           <span>Chat on WhatsApp (+{whatsappNumber})</span>
@@ -64,7 +64,7 @@ export default function ContactCards() {
       {/* EMAIL & STORE INFO */}
       <div className="gsap-contact-card glass-apple-card p-6 sm:p-7 rounded-3xl border border-[#E5E4E2] dark:border-white/10 shadow-sm space-y-4 text-xs">
         <div className="flex gap-3.5 items-start">
-          <div className="w-8 h-8 rounded-full bg-[#E6EDFD] dark:bg-[#6F4E37]/20 flex items-center justify-center text-[#6F4E37] dark:text-[#E6EDFD] shrink-0 mt-0.5">
+          <div className="w-8 h-8 rounded-full bg-[#fff0f0] dark:bg-[#ff3131]/20 flex items-center justify-center text-[#ff3131] dark:text-[#ff8585] shrink-0 mt-0.5">
             <Mail size={15} />
           </div>
           <div>
@@ -74,7 +74,7 @@ export default function ContactCards() {
         </div>
 
         <div className="flex gap-3.5 items-start">
-          <div className="w-8 h-8 rounded-full bg-[#E6EDFD] dark:bg-[#6F4E37]/20 flex items-center justify-center text-[#6F4E37] dark:text-[#E6EDFD] shrink-0 mt-0.5">
+          <div className="w-8 h-8 rounded-full bg-[#fff0f0] dark:bg-[#ff3131]/20 flex items-center justify-center text-[#ff3131] dark:text-[#ff8585] shrink-0 mt-0.5">
             <MapPin size={15} />
           </div>
           <div>
@@ -84,7 +84,7 @@ export default function ContactCards() {
         </div>
 
         <div className="flex gap-3.5 items-start">
-          <div className="w-8 h-8 rounded-full bg-[#E6EDFD] dark:bg-[#6F4E37]/20 flex items-center justify-center text-[#6F4E37] dark:text-[#E6EDFD] shrink-0 mt-0.5">
+          <div className="w-8 h-8 rounded-full bg-[#fff0f0] dark:bg-[#ff3131]/20 flex items-center justify-center text-[#ff3131] dark:text-[#ff8585] shrink-0 mt-0.5">
             <Clock size={15} />
           </div>
           <div>

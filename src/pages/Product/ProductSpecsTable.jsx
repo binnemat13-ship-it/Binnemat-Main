@@ -44,7 +44,7 @@ export default function ProductSpecsTable({ specs }) {
   return (
     <div ref={tableRef} className="glass-apple-card p-6 sm:p-10 rounded-3xl border border-[#E5E4E2] dark:border-white/10 bg-white/95 dark:bg-[#1A1715]/95 my-10 shadow-sm">
       <div className="mb-6">
-        <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#6F4E37] dark:text-[#C49774] block mb-1">
+        <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#ff3131] dark:text-[#ff8585] block mb-1">
           PRECISION ENGINEERING
         </span>
         <h2 className="font-wix text-xl sm:text-2xl font-extrabold text-neutral-900 dark:text-neutral-100 m-0">

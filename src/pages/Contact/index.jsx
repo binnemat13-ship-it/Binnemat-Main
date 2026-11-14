@@ -25,7 +25,7 @@ export default function ContactPage() {
   return (
     <div className="max-w-[1360px] mx-auto px-[5%] py-4 sm:py-6 relative z-10">
       <div ref={headerRef} className="text-center max-w-xl mx-auto mb-10">
-        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E6EDFD] dark:bg-[#6F4E37]/20 border border-[#E5E4E2] dark:border-white/10 text-[11px] font-extrabold tracking-widest uppercase text-[#6F4E37] dark:text-[#E6EDFD] mb-3">
+        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#fff0f0] dark:bg-[#ff3131]/20 border border-[#E5E4E2] dark:border-white/10 text-[11px] font-extrabold tracking-widest uppercase text-[#ff3131] dark:text-[#ff8585] mb-3">
           GET IN TOUCH
         </span>
         <h1 className="font-wix text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white m-0 tracking-tight">

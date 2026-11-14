@@ -119,15 +119,15 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
     >
       {/* 1. LUXURY RADIAL AMBIENT AURA (WARM CHAMPAGNE & MOCHA GLOW) */}
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
-        <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-[radial-gradient(ellipse_at_center,_rgba(212,175,55,0.14)_0%,_rgba(111,78,55,0.08)_40%,_transparent_70%)] dark:bg-[radial-gradient(ellipse_at_center,_rgba(212,175,55,0.18)_0%,_rgba(111,78,55,0.14)_45%,_transparent_75%)] blur-[120px] rounded-full animate-pulse-aura" />
+        <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-[radial-gradient(ellipse_at_center,_rgba(212,175,55,0.14)_0%,_rgba(255,49,49,0.08)_40%,_transparent_70%)] dark:bg-[radial-gradient(ellipse_at_center,_rgba(212,175,55,0.18)_0%,_rgba(255,49,49,0.14)_45%,_transparent_75%)] blur-[120px] rounded-full animate-pulse-aura" />
         <div className="absolute top-[60%] right-[-10%] w-[500px] h-[500px] bg-[radial-gradient(circle,_rgba(230,237,253,0.3)_0%,_transparent_65%)] dark:bg-[radial-gradient(circle,_rgba(230,237,253,0.04)_0%,_transparent_70%)] blur-[100px] rounded-full" />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000005_1px,transparent_1px),linear-gradient(to_bottom,#00000005_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_75%_55%_at_50%_40%,#000_70%,transparent_100%)]" />
       </div>
 
       {/* 2. TOP EYEBROW BADGE: LIVE BACKEND SYNCHRONIZATION */}
-      <div className="gsap-hero-header inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 dark:bg-[#1E1B19]/90 border border-bn-gold/30 dark:border-bn-gold/35 shadow-[0_4px_24px_rgba(111,78,55,0.08)] backdrop-blur-xl mb-4 text-center">
+      <div className="gsap-hero-header inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 dark:bg-[#1E1B19]/90 border border-bn-gold/30 dark:border-bn-gold/35 shadow-[0_4px_24px_rgba(255,49,49,0.08)] backdrop-blur-xl mb-4 text-center">
         <span className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_#10B981] animate-pulse" />
-        <span className="text-[11px] sm:text-xs font-mono font-bold tracking-widest text-[#6F4E37] dark:text-[#E5C9A1] uppercase">
+        <span className="text-[11px] sm:text-xs font-mono font-bold tracking-widest text-[#ff3131] dark:text-[#ff8585] uppercase">
           Binnemat Flagship Showcase &bull; Main Collection
         </span>
         <span className="hidden sm:inline-block text-[10px] bg-bn-gold/15 text-bn-goldDark dark:text-bn-gold font-bold px-2 py-0.5 rounded-full uppercase">
@@ -138,7 +138,7 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
       {/* 3. HERO HEADLINE & PHILOSOPHY */}
       <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8 px-2">
         <h1 className="gsap-hero-header font-wix font-black text-4xl sm:text-6xl lg:text-[76px] tracking-tight text-slate-900 dark:text-white leading-[1.08] select-none m-0">
-          Thermal &amp; Inverter <span className="bg-gradient-to-r from-[#6F4E37] via-[#A8794E] to-[#D4AF37] bg-clip-text text-transparent">Luxury.</span>
+          Thermal &amp; Inverter <span className="bg-gradient-to-r from-[#ff5c5c] via-[#ff3131] to-[#d01a1a] bg-clip-text text-transparent">Luxury.</span>
         </h1>
         <p className="gsap-hero-header text-slate-600 dark:text-slate-300 text-xs sm:text-base max-w-xl mx-auto mt-2.5 sm:mt-3 font-normal leading-relaxed">
           Zero winter gas chills, whisper-silent 30W solar fans, and Italian precision cooking.
@@ -147,10 +147,10 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
 
       {/* 4. THE MASTER STAGE (EXPANSIVE LUXURY DUAL-ZONE PRESENTATION) */}
       <div className="gsap-hero-stage w-full max-w-6xl mx-auto relative z-10">
-        <div className="glass-apple-card rounded-3xl sm:rounded-[36px] border border-black/[0.08] dark:border-white/[0.1] bg-white/85 dark:bg-[#151210]/90 backdrop-blur-3xl shadow-[0_25px_80px_rgba(111,78,55,0.12)] dark:shadow-[0_25px_80px_rgba(0,0,0,0.85)] p-5 sm:p-8 lg:p-12 relative overflow-hidden">
+        <div className="glass-apple-card rounded-3xl sm:rounded-[36px] border border-black/[0.08] dark:border-white/[0.1] bg-white/85 dark:bg-[#151210]/90 backdrop-blur-3xl shadow-[0_25px_80px_rgba(255,49,49,0.12)] dark:shadow-[0_25px_80px_rgba(0,0,0,0.85)] p-5 sm:p-8 lg:p-12 relative overflow-hidden">
           
           {/* Subtle Ambient Edge Glow */}
-          <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-60" />
+          <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#ff3131] to-transparent opacity-60" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
@@ -159,7 +159,7 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
               
               {/* Badge & Live Availability */}
               <div className="flex flex-wrap items-center gap-2 mb-3">
-                <span className="px-3 py-1 rounded-full text-[10px] font-mono font-bold tracking-wider bg-gradient-to-r from-[#6F4E37]/15 to-[#8C6547]/20 text-[#6F4E37] dark:text-[#E5C9A1] border border-[#6F4E37]/25 uppercase">
+                <span className="px-3 py-1 rounded-full text-[10px] font-mono font-bold tracking-wider bg-gradient-to-r from-[#ff3131]/15 to-[#d01a1a]/20 text-[#ff3131] dark:text-[#ff8585] border border-[#ff3131]/25 uppercase">
                   {productBadge}
                 </span>
                 <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-emerald-700 dark:text-emerald-400">
@@ -182,7 +182,7 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-6">
                 {specsList.slice(0, 4).map((spec, i) => (
                   <div key={i} className="flex items-center gap-2 text-xs text-slate-800 dark:text-slate-200 font-medium bg-black/[0.02] dark:bg-white/[0.03] p-2 rounded-xl border border-black/[0.04] dark:border-white/[0.05]">
-                    <div className="w-5 h-5 rounded-lg bg-[#6F4E37]/10 text-[#6F4E37] dark:text-[#E5C9A1] flex items-center justify-center flex-shrink-0">
+                    <div className="w-5 h-5 rounded-lg bg-[#ff3131]/10 text-[#ff3131] dark:text-[#ff8585] flex items-center justify-center flex-shrink-0">
                       <Check size={12} strokeWidth={3} />
                     </div>
                     <span className="truncate">{spec}</span>
@@ -197,7 +197,7 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
                     Direct Official Price
                   </span>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-2xl sm:text-3xl font-wix font-black text-[#6F4E37] dark:text-[#E5C9A1] tracking-tight">
+                    <span className="text-2xl sm:text-3xl font-wix font-black text-[#ff3131] dark:text-[#ff8585] tracking-tight">
                       {productPrice}
                     </span>
                     <span className="text-[10px] text-emerald-700 dark:text-emerald-400 font-bold bg-emerald-100/80 dark:bg-emerald-950/60 px-2 py-0.5 rounded-md border border-emerald-300 dark:border-emerald-800">
@@ -215,7 +215,7 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
                         onExploreClick();
                       }
                     }}
-                    className="flex-1 sm:flex-initial px-5 py-3 rounded-2xl bg-gradient-to-r from-[#6F4E37] to-[#8C6547] hover:brightness-105 text-white font-bold text-xs tracking-wide transition-all shadow-[0_6px_22px_rgba(111,78,55,0.35)] flex items-center justify-center gap-1.5 cursor-pointer border-none"
+                    className="flex-1 sm:flex-initial px-5 py-3 rounded-2xl bg-gradient-to-r from-[#ff3131] to-[#d01a1a] hover:brightness-105 text-white font-bold text-xs tracking-wide transition-all shadow-[0_6px_22px_rgba(255,49,49,0.35)] flex items-center justify-center gap-1.5 cursor-pointer border-none"
                   >
                     <span>View Appliance</span>
                     <ArrowUpRight size={15} />
@@ -228,7 +228,7 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
                     className="flex-1 sm:flex-initial px-4 py-3 rounded-2xl bg-white dark:bg-[#1D1A18] hover:bg-slate-50 dark:hover:bg-[#252220] border border-[#E5E4E2] dark:border-white/10 text-slate-800 dark:text-slate-200 font-bold text-xs transition-all flex items-center justify-center gap-1.5 no-underline shadow-sm text-center"
                     aria-label="Direct WhatsApp Inquiry"
                   >
-                    <MessageCircle size={15} className="text-[#6F4E37] dark:text-[#E5C9A1]" />
+                    <MessageCircle size={15} className="text-[#ff3131] dark:text-[#ff8585]" />
                     <span>WhatsApp</span>
                   </a>
                 </div>
@@ -243,7 +243,7 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
               <div className="relative w-full aspect-square max-w-[340px] sm:max-w-[420px] lg:max-w-[460px] flex items-center justify-center">
                 
                 {/* Radiant Ambient Halo */}
-                <div className="absolute inset-4 rounded-full bg-gradient-to-tr from-[#D4AF37]/25 via-[#6F4E37]/20 to-transparent blur-3xl -z-10 animate-pulse-aura" />
+                <div className="absolute inset-4 rounded-full bg-gradient-to-tr from-[#ff3131]/25 via-[#d01a1a]/20 to-transparent blur-3xl -z-10 animate-pulse-aura" />
                 <div className="absolute inset-12 rounded-full border border-bn-gold/20 dark:border-bn-gold/30 -z-10" />
                 
                 {/* Soft Elliptical Ground Shadow */}
@@ -336,7 +336,7 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
                       onClick={() => setActiveIdx(idx)}
                       className={`flex-shrink-0 flex items-center gap-3 p-2 sm:p-2.5 rounded-2xl transition-all duration-300 text-left border cursor-pointer ${
                         isActive
-                          ? 'bg-gradient-to-r from-[#6F4E37]/15 to-[#8C6547]/20 border-[#6F4E37] dark:border-[#D4AF37] shadow-[0_4px_16px_rgba(111,78,55,0.2)] scale-[1.02]'
+                          ? 'bg-gradient-to-r from-[#ff3131]/15 to-[#d01a1a]/20 border-[#ff3131] dark:border-[#ff3131] shadow-[0_4px_16px_rgba(255,49,49,0.2)] scale-[1.02]'
                           : 'bg-black/[0.02] dark:bg-white/[0.03] border-black/[0.06] dark:border-white/[0.06] hover:bg-black/[0.04] dark:hover:bg-white/[0.06]'
                       }`}
                     >
@@ -355,7 +355,7 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
                         <h4 className="text-xs font-bold text-slate-900 dark:text-white truncate m-0 leading-tight">
                           {item.name}
                         </h4>
-                        <span className="text-[11px] font-extrabold text-[#6F4E37] dark:text-[#E5C9A1] block mt-0.5">
+                        <span className="text-[11px] font-extrabold text-[#ff3131] dark:text-[#ff8585] block mt-0.5">
                           {itemPrice}
                         </span>
                       </div>

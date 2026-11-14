@@ -42,8 +42,8 @@ export default function Home({ onSelectProduct, onSelectCategory, setActivePage 
 
       {/* FIXED STILL BACKGROUND (MOCHA BROWN, PLATINUM SILVER & PALE LAVENDER AURORA) */}
       <div className="fixed inset-0 pointer-events-none -z-20 bg-[#F7F6F4] dark:bg-[#0E0C0B] transition-colors duration-300">
-        <div className="absolute top-[15%] left-1/2 -translate-x-1/2 w-[850px] h-[850px] bg-[#E6EDFD]/60 dark:bg-[#E6EDFD]/[0.06] blur-[150px] rounded-full" />
-        <div className="absolute top-[55%] right-[-5%] w-[650px] h-[650px] bg-[#6F4E37]/[0.045] dark:bg-[#6F4E37]/[0.1] blur-[130px] rounded-full" />
+        <div className="absolute top-[15%] left-1/2 -translate-x-1/2 w-[850px] h-[850px] bg-[#fff0f0]/60 dark:bg-[#fff0f0]/[0.06] blur-[150px] rounded-full" />
+        <div className="absolute top-[55%] right-[-5%] w-[650px] h-[650px] bg-[#ff3131]/[0.045] dark:bg-[#ff3131]/[0.1] blur-[130px] rounded-full" />
         <div className="absolute top-[80%] left-[-5%] w-[550px] h-[550px] bg-[#E5E4E2]/50 dark:bg-[#E5E4E2]/[0.04] blur-[120px] rounded-full" />
       </div>
 

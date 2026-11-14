@@ -78,7 +78,7 @@ export default function ProductCarousel({ eyebrow, title, products, onSelectProd
       <div className="gsap-carousel-header flex items-end justify-between mb-6 gap-4">
         <div>
           {eyebrow && (
-            <span className="text-[11px] font-mono tracking-widest uppercase text-[#6F4E37] dark:text-[#C49774] block mb-1 font-bold">
+            <span className="text-[11px] font-mono tracking-widest uppercase text-[#ff3131] dark:text-[#ff8585] block mb-1 font-bold">
               {eyebrow}
             </span>
           )}
@@ -91,7 +91,7 @@ export default function ProductCarousel({ eyebrow, title, products, onSelectProd
         <div className="flex items-center gap-3">
           <div className="hidden sm:block w-24 h-1.5 bg-slate-200 dark:bg-white/10 rounded-full overflow-hidden">
             <div 
-              className="h-full bg-gradient-to-r from-[#6F4E37] to-[#8C6547] rounded-full transition-all duration-300"
+              className="h-full bg-gradient-to-r from-[#ff3131] to-[#d01a1a] rounded-full transition-all duration-300"
               style={{ width: `${Math.max(15, scrollProgress)}%` }}
             />
           </div>
@@ -100,14 +100,14 @@ export default function ProductCarousel({ eyebrow, title, products, onSelectProd
             <button
               onClick={() => scroll(-1)}
               aria-label="Previous Products"
-              className="w-9 h-9 rounded-full border border-[#E5E4E2] dark:border-white/10 bg-white dark:bg-[#161522] text-slate-800 dark:text-slate-200 flex items-center justify-center hover:bg-slate-50 dark:hover:bg-[#1E1D2D] hover:border-[#6F4E37] hover:text-[#6F4E37] dark:hover:border-[#C49774] dark:hover:text-[#C49774] transition-all cursor-pointer shadow-sm hover:scale-105 active:scale-95"
+              className="w-9 h-9 rounded-full border border-[#E5E4E2] dark:border-white/10 bg-white dark:bg-[#161522] text-slate-800 dark:text-slate-200 flex items-center justify-center hover:bg-slate-50 dark:hover:bg-[#1E1D2D] hover:border-[#ff3131] hover:text-[#ff3131] dark:hover:border-[#ff8585] dark:hover:text-[#ff8585] transition-all cursor-pointer shadow-sm hover:scale-105 active:scale-95"
             >
               <ChevronLeft size={18} />
             </button>
             <button
               onClick={() => scroll(1)}
               aria-label="Next Products"
-              className="w-9 h-9 rounded-full border border-[#E5E4E2] dark:border-white/10 bg-white dark:bg-[#161522] text-slate-800 dark:text-slate-200 flex items-center justify-center hover:bg-slate-50 dark:hover:bg-[#1E1D2D] hover:border-[#6F4E37] hover:text-[#6F4E37] dark:hover:border-[#C49774] dark:hover:text-[#C49774] transition-all cursor-pointer shadow-sm hover:scale-105 active:scale-95"
+              className="w-9 h-9 rounded-full border border-[#E5E4E2] dark:border-white/10 bg-white dark:bg-[#161522] text-slate-800 dark:text-slate-200 flex items-center justify-center hover:bg-slate-50 dark:hover:bg-[#1E1D2D] hover:border-[#ff3131] hover:text-[#ff3131] dark:hover:border-[#ff8585] dark:hover:text-[#ff8585] transition-all cursor-pointer shadow-sm hover:scale-105 active:scale-95"
             >
               <ChevronRight size={18} />
             </button>

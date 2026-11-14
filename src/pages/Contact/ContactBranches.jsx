@@ -64,7 +64,7 @@ export default function ContactBranches() {
   return (
     <div ref={containerRef} className="glass-apple-card p-8 sm:p-10 rounded-3xl border border-[#E5E4E2] dark:border-white/10 my-8 shadow-sm relative overflow-hidden">
       <div className="text-center max-w-xl mx-auto mb-8">
-        <span className="text-[11px] font-extrabold tracking-widest uppercase text-[#6F4E37] dark:text-[#C49774] block mb-1">
+        <span className="text-[11px] font-extrabold tracking-widest uppercase text-[#ff3131] dark:text-[#ff8585] block mb-1">
           OFFICIAL STORE &amp; DISPATCH HUB
         </span>
         <h2 className="font-wix text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white m-0 tracking-tight">
@@ -80,10 +80,10 @@ export default function ContactBranches() {
           <div key={idx} className="gsap-branch-card p-5 rounded-2xl glass-apple-card border border-[#E5E4E2] dark:border-white/10 text-xs space-y-2 flex flex-col justify-between shadow-sm">
             <div>
               <div className="flex items-center justify-between mb-2.5">
-                <div className="w-8 h-8 rounded-lg bg-[#E6EDFD] dark:bg-[#6F4E37]/20 border border-[#E5E4E2] dark:border-white/10 flex items-center justify-center text-[#6F4E37] dark:text-[#E6EDFD]">
+                <div className="w-8 h-8 rounded-lg bg-[#fff0f0] dark:bg-[#ff3131]/20 border border-[#E5E4E2] dark:border-white/10 flex items-center justify-center text-[#ff3131] dark:text-[#ff8585]">
                   {item.icon}
                 </div>
-                <span className="text-[10px] font-bold text-[#6F4E37] dark:text-[#E6EDFD] uppercase px-2 py-0.5 rounded-full bg-[#E6EDFD] dark:bg-[#6F4E37]/20 border border-[#E5E4E2] dark:border-white/10">
+                <span className="text-[10px] font-bold text-[#ff3131] dark:text-[#ff8585] uppercase px-2 py-0.5 rounded-full bg-[#fff0f0] dark:bg-[#ff3131]/20 border border-[#E5E4E2] dark:border-white/10">
                   {item.badge}
                 </span>
               </div>

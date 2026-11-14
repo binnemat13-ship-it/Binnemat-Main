@@ -57,7 +57,7 @@ export default function ContactForm() {
 
   return (
     <div ref={formRef} className="glass-apple-card p-5 sm:p-10 rounded-3xl border border-[#E5E4E2] dark:border-white/10 shadow-sm relative overflow-hidden">
-      <span className="text-[11px] font-extrabold tracking-widest uppercase text-[#6F4E37] dark:text-[#C49774] block mb-2">
+      <span className="text-[11px] font-extrabold tracking-widest uppercase text-[#ff3131] dark:text-[#ff8585] block mb-2">
         INQUIRY &amp; SIZING ASSISTANCE
       </span>
       <h2 className="font-wix text-2xl font-extrabold text-slate-900 dark:text-white mb-2 tracking-tight">
@@ -132,7 +132,7 @@ export default function ContactForm() {
           htmlType="submit"
           icon={<MessageSquare size={16} />}
           size="large"
-          className="w-full rounded-full h-12 font-bold bg-gradient-to-r from-[#6F4E37] to-[#8C6547] hover:brightness-105 border-none text-white shadow-md flex items-center justify-center gap-2 mt-2"
+          className="w-full rounded-full h-12 font-bold bg-gradient-to-r from-[#ff3131] to-[#d01a1a] hover:brightness-105 border-none text-white shadow-md flex items-center justify-center gap-2 mt-2"
         >
           Send Inquiry via WhatsApp
         </Button>

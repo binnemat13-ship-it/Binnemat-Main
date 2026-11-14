@@ -23,8 +23,8 @@ const WIDGETS_DATA = [
     gaugePercent: 90,
     gaugeIcon: Thermometer,
     icon: Flame,
-    color: '#6F4E37',
-    accentBg: 'rgba(111, 78, 55, 0.1)',
+    color: '#ff3131',
+    accentBg: 'rgba(255, 49, 49, 0.1)',
     badgeText: '7-Year Tank Warranty',
     categorySlug: 'winter-collection',
     btnText: 'Explore Winter Geysers',
@@ -225,20 +225,20 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory }) {
         className="w-full min-h-screen flex items-center justify-center py-10 px-4 sm:px-6 relative overflow-hidden"
       >
         {/* Still Ambient Mesh Glow in Pinned Stage */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#E6EDFD]/60 dark:bg-[#6F4E37]/[0.08] blur-[120px] pointer-events-none -z-10 rounded-full" />
-        <div className="absolute top-1/3 right-10 w-[450px] h-[450px] bg-[#6F4E37]/[0.04] blur-[100px] pointer-events-none -z-10 rounded-full" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#fff0f0]/60 dark:bg-[#ff3131]/[0.08] blur-[120px] pointer-events-none -z-10 rounded-full" />
+        <div className="absolute top-1/3 right-10 w-[450px] h-[450px] bg-[#ff3131]/[0.04] blur-[100px] pointer-events-none -z-10 rounded-full" />
 
         <div className="max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* LEFT COLUMN: STILL HEADLINE & SYNCED SELECTOR TABS */}
           <div className="lg:col-span-5 flex flex-col justify-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#E6EDFD] dark:bg-[#1A1715] border border-[#E5E4E2] dark:border-white/[0.1] text-xs font-mono text-[#6F4E37] dark:text-[#E6EDFD] mb-4 font-bold w-fit shadow-xs">
-              <Sparkles size={13} className="text-[#6F4E37] dark:text-[#C49774]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#fff0f0] dark:bg-[#1A1715] border border-[#E5E4E2] dark:border-white/[0.1] text-xs font-mono text-[#ff3131] dark:text-[#ff8585] mb-4 font-bold w-fit shadow-xs">
+              <Sparkles size={13} className="text-[#ff3131] dark:text-[#ff8585]" />
               <span>Core Engineering Pillars</span>
             </div>
 
             <h2 className="font-wix font-black text-4xl sm:text-5xl lg:text-6xl text-slate-900 dark:text-white tracking-tight leading-[1.08] mb-4">
               Upgrade Your <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6F4E37] via-[#8C6547] to-[#C49774]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5c5c] via-[#ff3131] to-[#d01a1a]">
                 Living.
               </span>
             </h2>
@@ -252,7 +252,7 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory }) {
               {/* Left Vertical Progress Line */}
               <div className="absolute left-1 top-2 bottom-2 w-1 bg-slate-200 dark:bg-white/10 rounded-full overflow-hidden hidden sm:block">
                 <div 
-                  className="w-full bg-gradient-to-b from-[#6F4E37] to-[#8C6547] transition-all duration-500 rounded-full shadow-[0_0_8px_#6F4E37]"
+                  className="w-full bg-gradient-to-b from-[#ff3131] to-[#d01a1a] transition-all duration-500 rounded-full shadow-[0_0_8px_#ff3131]"
                   style={{ 
                     height: `${((activeTab + 1) / WIDGETS_DATA.length) * 100}%` 
                   }}
@@ -267,12 +267,12 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory }) {
                     onClick={() => handleTabClick(idx)}
                     className={`sm:ml-4 p-4 rounded-2xl text-left transition-all duration-300 border flex items-center justify-between cursor-pointer ${
                       isSelected
-                        ? 'bg-white dark:bg-[#181724] border-[#6F4E37]/50 dark:border-[#8C6547]/50 shadow-[0_10px_30px_rgba(111,78,55,0.12)] scale-[1.02]'
+                        ? 'bg-white dark:bg-[#181724] border-[#ff3131]/50 dark:border-[#d01a1a]/50 shadow-[0_10px_30px_rgba(255,49,49,0.12)] scale-[1.02]'
                         : 'bg-white/60 dark:bg-[#111018]/60 border-black/[0.06] dark:border-white/[0.06] hover:border-black/15 dark:hover:border-white/15 hover:bg-white/80 dark:hover:bg-[#111018]/80'
                     }`}
                   >
                     <div>
-                      <span className={`text-[10px] font-mono block font-bold ${isSelected ? 'text-[#6F4E37] dark:text-[#C49774]' : 'text-slate-400 dark:text-slate-500'}`}>
+                      <span className={`text-[10px] font-mono block font-bold ${isSelected ? 'text-[#ff3131] dark:text-[#ff8585]' : 'text-slate-400 dark:text-slate-500'}`}>
                         {item.tabNumber}
                       </span>
                       <span className={`text-sm font-wix font-bold ${isSelected ? 'text-slate-900 dark:text-white' : 'text-slate-600 dark:text-slate-300'}`}>
@@ -281,7 +281,7 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory }) {
                     </div>
                     <div
                       className={`w-2.5 h-2.5 rounded-full transition-all ${
-                        isSelected ? 'bg-[#6F4E37] shadow-[0_0_10px_#6F4E37] scale-125' : 'bg-slate-300 dark:bg-slate-600'
+                        isSelected ? 'bg-[#ff3131] shadow-[0_0_10px_#ff3131] scale-125' : 'bg-slate-300 dark:bg-slate-600'
                       }`}
                     />
                   </button>
@@ -304,7 +304,7 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory }) {
                   className="lg:absolute lg:inset-0 w-full rounded-3xl border border-[#E5E4E2] dark:border-white/[0.1] bg-white/95 dark:bg-[#161311]/95 p-6 sm:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.6)] flex flex-col justify-between overflow-hidden will-change-transform mb-6 lg:mb-0"
                   style={{
                     boxShadow: isSelected 
-                      ? '0 25px 60px rgba(111, 78, 55, 0.16)' 
+                      ? '0 25px 60px rgba(255, 49, 49, 0.16)' 
                       : '0 15px 35px rgba(0, 0, 0, 0.08)'
                   }}
                 >
@@ -382,7 +382,7 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory }) {
                     <div className="sm:col-span-7 space-y-2">
                       {item.points.map((pt, i) => (
                         <div key={i} className="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
-                          <CheckCircle2 size={13} className="text-[#6F4E37] dark:text-[#C49774] mt-0.5 flex-shrink-0" />
+                          <CheckCircle2 size={13} className="text-[#ff3131] dark:text-[#ff8585] mt-0.5 flex-shrink-0" />
                           <span>{pt}</span>
                         </div>
                       ))}
@@ -404,13 +404,13 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory }) {
                   {/* BOTTOM ACTION BAR */}
                   <div className="flex items-center justify-between pt-4 border-t border-black/[0.06] dark:border-white/[0.08] mt-3">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/[0.03] dark:bg-white/[0.05] border border-black/[0.06] dark:border-white/[0.08] text-[11px] font-mono text-slate-700 dark:text-slate-300 font-bold">
-                      <Award size={12} className="text-[#6F4E37] dark:text-[#C49774]" />
+                      <Award size={12} className="text-[#ff3131] dark:text-[#ff8585]" />
                       <span>{item.badgeText}</span>
                     </span>
 
                     <button
                       onClick={() => onSelectCategory && onSelectCategory(item.categorySlug)}
-                      className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-950 hover:bg-[#6F4E37] dark:hover:bg-[#6F4E37] dark:hover:text-white text-xs font-bold transition-all cursor-pointer border-none shadow-sm hover:shadow-[0_4px_18px_rgba(111,78,55,0.3)]"
+                      className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-950 hover:bg-[#ff3131] dark:hover:bg-[#ff3131] dark:hover:text-white text-xs font-bold transition-all cursor-pointer border-none shadow-sm hover:shadow-[0_4px_18px_rgba(255,49,49,0.3)]"
                     >
                       <span>{item.btnText}</span>
                       <ArrowUpRight size={14} />

@@ -66,8 +66,8 @@ export default function TestimonialsSection() {
   return (
     <section ref={containerRef} className="max-w-[1360px] mx-auto px-[5%] my-10 sm:my-12 text-slate-900 dark:text-white">
       <div className="text-center mb-10">
-        <span className="text-[11px] font-mono tracking-widest uppercase text-[#6F4E37] dark:text-[#C49774] block mb-1 font-bold flex items-center justify-center gap-1.5">
-          <Sparkles size={13} className="text-[#6F4E37] dark:text-[#C49774]" />
+        <span className="text-[11px] font-mono tracking-widest uppercase text-[#ff3131] dark:text-[#ff8585] block mb-1 font-bold flex items-center justify-center gap-1.5">
+          <Sparkles size={13} className="text-[#ff3131] dark:text-[#ff8585]" />
           <span>AUTHENTIC DOMESTIC EXPERIENCES</span>
         </span>
         <h2 className="font-wix text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight m-0">
@@ -79,7 +79,7 @@ export default function TestimonialsSection() {
         {reviews.map((r, idx) => (
           <div 
             key={idx} 
-            className="gsap-review-card glass-apple-card group rounded-3xl overflow-hidden border border-[#E5E4E2] dark:border-white/[0.1] hover:border-[#6F4E37]/50 bg-white/95 dark:bg-[#1A1715]/95 shadow-md hover:shadow-[0_15px_35px_rgba(111,78,55,0.12)] transition-all duration-500 flex flex-col"
+            className="gsap-review-card glass-apple-card group rounded-3xl overflow-hidden border border-[#E5E4E2] dark:border-white/[0.1] hover:border-[#ff3131]/50 bg-white/95 dark:bg-[#1A1715]/95 shadow-md hover:shadow-[0_15px_35px_rgba(255,49,49,0.12)] transition-all duration-500 flex flex-col"
           >
             {/* REAL INSTALLATION PHOTO */}
             <div className="h-44 w-full bg-[#F7F6F4] dark:bg-[#12100E] relative overflow-hidden">
@@ -92,7 +92,7 @@ export default function TestimonialsSection() {
                 }}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
               />
-              <span className="absolute bottom-3 left-3 bg-[#E6EDFD]/90 dark:bg-[#1A1715]/90 backdrop-blur-md text-[#6F4E37] dark:text-[#E6EDFD] text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full border border-[#E5E4E2] dark:border-white/10 shadow-xs">
+              <span className="absolute bottom-3 left-3 bg-[#fff0f0]/90 dark:bg-[#1A1715]/90 backdrop-blur-md text-[#ff3131] dark:text-[#ff8585] text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full border border-[#E5E4E2] dark:border-white/10 shadow-xs">
                 {r.product}
               </span>
             </div>
@@ -101,7 +101,7 @@ export default function TestimonialsSection() {
             <div className="p-5 flex flex-col flex-grow">
               <div className="flex items-center gap-1 mb-3">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={14} className="fill-[#6F4E37] text-[#6F4E37] dark:fill-[#C49774] dark:text-[#C49774]" />
+                  <Star key={i} size={14} className="fill-[#ff3131] text-[#ff3131] dark:fill-[#ff8585] dark:text-[#ff8585]" />
                 ))}
               </div>
 

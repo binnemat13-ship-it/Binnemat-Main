@@ -111,13 +111,13 @@ export default function SuperconsciousStackSection({ onExploreGeysers, onExplore
   return (
     <section ref={sectionRef} className="py-20 px-4 sm:px-6 max-w-6xl mx-auto text-slate-900">
       <div className="text-center max-w-2xl mx-auto mb-14">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#E6EDFD] border border-[#E5E4E2] text-xs font-mono text-[#6F4E37] mb-3 font-bold shadow-xs">
-          <Sparkles size={13} className="text-[#6F4E37]" />
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#fff0f0] border border-[#E5E4E2] text-xs font-mono text-[#ff3131] mb-3 font-bold shadow-xs">
+          <Sparkles size={13} className="text-[#ff3131]" />
           <span>Dual Climate Flagships</span>
         </div>
         <h2 className="font-wix font-black text-3xl sm:text-5xl text-slate-900 tracking-tight leading-tight">
           Two Extreme Climates. <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6F4E37] via-[#8C6547] to-[#C49774]">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5c5c] via-[#ff3131] to-[#d01a1a]">
             One Engineering Standard.
           </span>
         </h2>
@@ -129,15 +129,15 @@ export default function SuperconsciousStackSection({ onExploreGeysers, onExplore
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* CARD 1: WINTER THERMAL SANCTUARY */}
         <div 
-          className="gsap-stack-card glass-apple-card group rounded-3xl p-6 sm:p-8 border border-[#E5E4E2] bg-white/95 hover:border-[#6F4E37]/50 transition-all duration-500 ease-out relative overflow-hidden flex flex-col justify-between min-h-[520px] shadow-[0_10px_35px_rgba(111,78,55,0.06)] hover:shadow-[0_20px_50px_rgba(111,78,55,0.14)]"
+          className="gsap-stack-card glass-apple-card group rounded-3xl p-6 sm:p-8 border border-[#E5E4E2] bg-white/95 hover:border-[#ff3131]/50 transition-all duration-500 ease-out relative overflow-hidden flex flex-col justify-between min-h-[520px] shadow-[0_10px_35px_rgba(255,49,49,0.06)] hover:shadow-[0_20px_50px_rgba(255,49,49,0.14)]"
         >
           {/* Subtle Ambient Mocha Glow */}
-          <div className="absolute top-0 right-0 w-72 h-72 bg-[#E6EDFD]/70 blur-3xl pointer-events-none -z-10 group-hover:bg-[#6F4E37]/[0.1] transition-all" />
+          <div className="absolute top-0 right-0 w-72 h-72 bg-[#fff0f0]/70 blur-3xl pointer-events-none -z-10 group-hover:bg-[#ff3131]/[0.1] transition-all" />
 
           <div>
             <div className="flex items-center justify-between mb-4">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#E6EDFD] border border-[#E5E4E2] text-[11px] font-mono text-[#6F4E37] font-bold">
-                <Flame size={12} className="text-[#6F4E37]" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#fff0f0] border border-[#E5E4E2] text-[11px] font-mono text-[#ff3131] font-bold">
+                <Flame size={12} className="text-[#ff3131]" />
                 <span>Winter Thermal Sanctuary</span>
               </div>
               <span className="text-xs font-mono text-slate-400 font-bold">01 / WINTER</span>
@@ -154,17 +154,17 @@ export default function SuperconsciousStackSection({ onExploreGeysers, onExplore
             <div className="p-3.5 rounded-2xl bg-[#F7F6F4] border border-[#E5E4E2] mb-4">
               <div className="flex items-center justify-between text-xs mb-1.5">
                 <span className="font-mono text-slate-600 font-semibold flex items-center gap-1.5">
-                  <Thermometer size={14} className="text-[#6F4E37]" />
+                  <Thermometer size={14} className="text-[#ff3131]" />
                   <span>Max Water Temperature</span>
                 </span>
-                <span className="font-wix font-black text-[#6F4E37] text-sm">
+                <span className="font-wix font-black text-[#ff3131] text-sm">
                   <GsapCounter endValue={75} suffix="°C Boiling" />
                 </span>
               </div>
               <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
                 <div 
                   ref={tempGaugeRef}
-                  className="h-full bg-gradient-to-r from-[#6F4E37] to-amber-600 rounded-full w-0 transition-all shadow-[0_0_8px_#6F4E37]"
+                  className="h-full bg-gradient-to-r from-[#ff3131] to-amber-600 rounded-full w-0 transition-all shadow-[0_0_8px_#ff3131]"
                 />
               </div>
             </div>
@@ -175,7 +175,7 @@ export default function SuperconsciousStackSection({ onExploreGeysers, onExplore
             {/* Parallax Floating Pill Badge */}
             <div 
               ref={badge1Ref}
-              className="absolute -top-2 left-2 z-10 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-[#E5E4E2] shadow-md text-[11px] font-mono font-bold text-[#6F4E37] flex items-center gap-1.5"
+              className="absolute -top-2 left-2 z-10 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-[#E5E4E2] shadow-md text-[11px] font-mono font-bold text-[#ff3131] flex items-center gap-1.5"
             >
               <Shield size={12} />
               <span>7-Yr Tank Guarantee</span>
@@ -203,7 +203,7 @@ export default function SuperconsciousStackSection({ onExploreGeysers, onExplore
             </div>
             <button
               onClick={onExploreGeysers}
-              className="px-5 py-2.5 rounded-full bg-slate-900 hover:bg-[#6F4E37] text-white text-xs font-bold transition-all flex items-center gap-2 cursor-pointer border-none shadow-sm hover:shadow-[0_4px_18px_rgba(111,78,55,0.3)]"
+              className="px-5 py-2.5 rounded-full bg-slate-900 hover:bg-[#ff3131] text-white text-xs font-bold transition-all flex items-center gap-2 cursor-pointer border-none shadow-sm hover:shadow-[0_4px_18px_rgba(255,49,49,0.3)]"
             >
               <span>Explore Geysers</span>
               <ArrowUpRight size={14} />

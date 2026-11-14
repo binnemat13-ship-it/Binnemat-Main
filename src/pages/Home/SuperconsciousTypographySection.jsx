@@ -98,12 +98,12 @@ export default function SuperconsciousTypographySection() {
       className="relative py-12 sm:py-16 px-4 sm:px-6 max-w-6xl mx-auto overflow-hidden bg-transparent text-slate-900 dark:text-white transition-colors duration-300"
     >
       {/* BACKGROUND MESH VIGNETTE (PALE LAVENDER & MOCHA) */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-[#E6EDFD]/75 dark:bg-[#6F4E37]/[0.12] blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-[#fff0f0]/75 dark:bg-[#ff3131]/[0.12] blur-3xl pointer-events-none -z-10" />
 
       {/* TOP PILL BADGE */}
       <div className="flex justify-center mb-6 sm:mb-8 px-2 text-center">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#E6EDFD]/85 dark:bg-[#1A1614]/90 border border-[#E5E4E2] dark:border-white/[0.1] text-[#6F4E37] dark:text-[#E5E4E2] text-[10px] sm:text-xs font-mono uppercase tracking-wider sm:tracking-widest backdrop-blur-md shadow-sm">
-          <Sparkles size={13} className="text-[#6F4E37] dark:text-[#C49774] shrink-0" />
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#fff0f0]/85 dark:bg-[#1A1614]/90 border border-[#E5E4E2] dark:border-white/[0.1] text-[#ff3131] dark:text-[#E5E4E2] text-[10px] sm:text-xs font-mono uppercase tracking-wider sm:tracking-widest backdrop-blur-md shadow-sm">
+          <Sparkles size={13} className="text-[#ff3131] dark:text-[#ff8585] shrink-0" />
           <span className="font-bold">Domestic Serenity &bull; Engineered In Pakistan</span>
         </div>
       </div>
@@ -114,8 +114,8 @@ export default function SuperconsciousTypographySection() {
         <div className="gsap-typo-line flex flex-wrap items-center justify-center gap-2 sm:gap-4 font-wix text-2xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-slate-900 dark:text-white tracking-tight">
           <span>End</span>
           {/* Wireframe Capsule 1 */}
-          <span className="gsap-capsule-1 inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-6 py-1 sm:py-2.5 rounded-full bg-[#E6EDFD]/90 dark:bg-[#1C1816]/95 border border-[#E5E4E2] dark:border-[#8C6547]/40 text-[11px] sm:text-sm font-mono text-[#6F4E37] dark:text-[#E5E4E2] shadow-[0_4px_20px_rgba(111,78,55,0.08)] hover:scale-105 transition-transform cursor-default will-change-transform">
-            <Flame size={14} className="text-[#6F4E37] dark:text-[#C49774] animate-pulse" />
+          <span className="gsap-capsule-1 inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-6 py-1 sm:py-2.5 rounded-full bg-[#fff0f0]/90 dark:bg-[#1C1816]/95 border border-[#E5E4E2] dark:border-[#d01a1a]/40 text-[11px] sm:text-sm font-mono text-[#ff3131] dark:text-[#E5E4E2] shadow-[0_4px_20px_rgba(255,49,49,0.08)] hover:scale-105 transition-transform cursor-default will-change-transform">
+            <Flame size={14} className="text-[#ff3131] dark:text-[#ff8585] animate-pulse" />
             <span className="font-bold text-slate-900 dark:text-white tracking-normal">3s FastHeat™</span>
           </span>
           <span>Winter</span>
@@ -129,7 +129,7 @@ export default function SuperconsciousTypographySection() {
             <Shield size={14} className="text-emerald-600 dark:text-emerald-400" />
             <span className="font-bold text-slate-900 dark:text-white tracking-normal">Incoloy 840</span>
           </span>
-          <span className="font-serif-italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#6F4E37] to-[#8C6547] dark:from-[#C49774] dark:to-[#E5E4E2]">
+          <span className="font-serif-italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#ff3131] to-[#d01a1a] dark:from-[#ff8585] dark:to-[#E5E4E2]">
             Master
           </span>
         </div>
@@ -138,11 +138,11 @@ export default function SuperconsciousTypographySection() {
         <div className="gsap-typo-line flex flex-wrap items-center justify-center gap-2 sm:gap-4 font-wix text-2xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-slate-900 dark:text-white tracking-tight">
           <span>Your</span>
           {/* Wireframe Capsule 3 */}
-          <span className="gsap-capsule-3 inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-6 py-1 sm:py-2.5 rounded-full bg-[#E6EDFD]/90 dark:bg-[#1C1816]/95 border border-[#E5E4E2] dark:border-[#8C6547]/40 text-[11px] sm:text-sm font-mono text-[#6F4E37] dark:text-[#E5E4E2] shadow-[0_4px_20px_rgba(111,78,55,0.08)] hover:scale-105 transition-transform cursor-default will-change-transform">
+          <span className="gsap-capsule-3 inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-6 py-1 sm:py-2.5 rounded-full bg-[#fff0f0]/90 dark:bg-[#1C1816]/95 border border-[#E5E4E2] dark:border-[#d01a1a]/40 text-[11px] sm:text-sm font-mono text-[#ff3131] dark:text-[#E5E4E2] shadow-[0_4px_20px_rgba(255,49,49,0.08)] hover:scale-105 transition-transform cursor-default will-change-transform">
             <Zap size={14} className="text-amber-500" />
             <span className="font-bold text-slate-900 dark:text-white tracking-normal">30W Solar Fan</span>
           </span>
-          <span className="font-serif-italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#8C6547] to-[#6F4E37] dark:from-[#E5E4E2] dark:to-[#C49774]">
+          <span className="font-serif-italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#d01a1a] to-[#ff3131] dark:from-[#E5E4E2] dark:to-[#ff8585]">
             Comfort
           </span>
         </div>
@@ -161,7 +161,7 @@ export default function SuperconsciousTypographySection() {
 
         <div className="md:col-span-5 grid grid-cols-2 gap-4">
           <div className="gsap-metric-tile p-5 rounded-2xl bg-white/95 dark:bg-[#161311]/90 border border-[#E5E4E2] dark:border-white/[0.1] shadow-sm">
-            <span className="text-3xl font-wix font-black text-[#6F4E37] dark:text-[#C49774] block">
+            <span className="text-3xl font-wix font-black text-[#ff3131] dark:text-[#ff8585] block">
               <GsapCounter endValue={85} prefix="+" suffix="%" />
             </span>
             <span className="text-xs text-slate-500 dark:text-slate-400 font-medium mt-1 block">

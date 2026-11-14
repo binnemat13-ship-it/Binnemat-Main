@@ -111,11 +111,11 @@ export default function PolicyContent() {
         >
           <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-4">
             <div className="flex items-center gap-3.5">
-              <div className="w-12 h-12 rounded-2xl bg-[#E6EDFD] dark:bg-[#6F4E37]/20 text-[#6F4E37] dark:text-[#E6EDFD] flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 rounded-2xl bg-[#fff0f0] dark:bg-[#ff3131]/20 text-[#ff3131] dark:text-[#ff8585] flex items-center justify-center flex-shrink-0">
                 {p.icon}
               </div>
               <div>
-                <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-[#6F4E37] dark:text-[#C49774] block">
+                <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-[#ff3131] dark:text-[#ff8585] block">
                   {p.badge}
                 </span>
                 <h2 className="font-wix text-xl sm:text-2xl font-extrabold text-neutral-900 dark:text-neutral-100 m-0">
@@ -129,7 +129,7 @@ export default function PolicyContent() {
                 navigate({ to: p.path });
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#6F4E37] dark:text-[#E6EDFD] hover:underline bg-transparent border-none cursor-pointer self-start sm:self-center"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#ff3131] dark:text-[#ff8585] hover:underline bg-transparent border-none cursor-pointer self-start sm:self-center"
             >
               <span>Read Full Policy</span>
               <ArrowRight size={14} />

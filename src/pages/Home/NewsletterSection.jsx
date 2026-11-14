@@ -14,12 +14,12 @@ export default function NewsletterSection() {
 
   return (
     <section className="relative px-4 sm:px-6 max-w-4xl mx-auto my-10 text-slate-900 dark:text-white">
-      <div className="glass-apple-card relative rounded-3xl p-5 sm:p-12 border border-[#E5E4E2] dark:border-white/[0.12] bg-white/95 dark:bg-[#161311]/95 backdrop-blur-2xl overflow-hidden shadow-[0_20px_50px_rgba(111,78,55,0.08)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.7)] text-center">
+      <div className="glass-apple-card relative rounded-3xl p-5 sm:p-12 border border-[#E5E4E2] dark:border-white/[0.12] bg-white/95 dark:bg-[#161311]/95 backdrop-blur-2xl overflow-hidden shadow-[0_20px_50px_rgba(255,49,49,0.08)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.7)] text-center">
         {/* Subtle Warm Mocha & Platinum Backlight (No washed-out foggy grey cloud in dark mode) */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[250px] bg-[radial-gradient(ellipse_at_top,_rgba(111,78,55,0.12)_0%,_transparent_70%)] dark:bg-[radial-gradient(ellipse_at_top,_rgba(111,78,55,0.25)_0%,_transparent_70%)] pointer-events-none -z-10" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[250px] bg-[radial-gradient(ellipse_at_top,_rgba(255,49,49,0.12)_0%,_transparent_70%)] dark:bg-[radial-gradient(ellipse_at_top,_rgba(255,49,49,0.25)_0%,_transparent_70%)] pointer-events-none -z-10" />
 
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E6EDFD] dark:bg-[#1A1614] border border-[#E5E4E2] dark:border-white/[0.12] text-[#6F4E37] dark:text-[#E5E4E2] text-xs font-mono uppercase tracking-widest mb-4 font-bold shadow-xs">
-          <Sparkles size={13} className="text-[#6F4E37] dark:text-[#C49774]" />
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#fff0f0] dark:bg-[#1A1614] border border-[#E5E4E2] dark:border-white/[0.12] text-[#ff3131] dark:text-[#E5E4E2] text-xs font-mono uppercase tracking-widest mb-4 font-bold shadow-xs">
+          <Sparkles size={13} className="text-[#ff3131] dark:text-[#ff8585]" />
           <span>Official Updates &amp; Alerts</span>
         </div>
 
@@ -32,7 +32,7 @@ export default function NewsletterSection() {
         </p>
 
         {/* REFINED INPUT CAPSULE */}
-        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between p-1.5 rounded-2xl sm:rounded-full bg-[#F7F6F4] dark:bg-[#0A0908] border border-[#E5E4E2] dark:border-white/[0.15] backdrop-blur-2xl max-w-md mx-auto shadow-sm focus-within:border-[#6F4E37] focus-within:ring-2 focus-within:ring-[#6F4E37]/20 transition-all gap-2 sm:gap-0">
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between p-1.5 rounded-2xl sm:rounded-full bg-[#F7F6F4] dark:bg-[#0A0908] border border-[#E5E4E2] dark:border-white/[0.15] backdrop-blur-2xl max-w-md mx-auto shadow-sm focus-within:border-[#ff3131] focus-within:ring-2 focus-within:ring-[#ff3131]/20 transition-all gap-2 sm:gap-0">
           <input 
             type="email" 
             placeholder="Enter your email address"
@@ -43,7 +43,7 @@ export default function NewsletterSection() {
           />
           <button
             type="submit"
-            className="px-5 sm:px-6 py-2.5 rounded-full bg-gradient-to-r from-[#6F4E37] to-[#8C6547] hover:brightness-110 text-white font-bold text-xs tracking-wide transition-all shadow-[0_4px_16px_rgba(111,78,55,0.35)] flex items-center justify-center gap-1.5 cursor-pointer border-none flex-shrink-0"
+            className="px-5 sm:px-6 py-2.5 rounded-full bg-gradient-to-r from-[#ff3131] to-[#d01a1a] hover:brightness-110 text-white font-bold text-xs tracking-wide transition-all shadow-[0_4px_16px_rgba(255,49,49,0.35)] flex items-center justify-center gap-1.5 cursor-pointer border-none flex-shrink-0"
           >
             <span>Subscribe</span>
             <ArrowUpRight size={14} />
@@ -52,10 +52,10 @@ export default function NewsletterSection() {
 
         <div className="flex items-center justify-center gap-6 mt-6 text-[11px] text-slate-500 dark:text-slate-400 font-mono font-medium">
           <span className="flex items-center gap-1">
-            <CheckCircle2 size={12} className="text-[#6F4E37] dark:text-[#C49774]" /> Zero spam
+            <CheckCircle2 size={12} className="text-[#ff3131] dark:text-[#ff8585]" /> Zero spam
           </span>
           <span className="flex items-center gap-1">
-            <CheckCircle2 size={12} className="text-[#6F4E37] dark:text-[#C49774]" /> Official warranty alerts
+            <CheckCircle2 size={12} className="text-[#ff3131] dark:text-[#ff8585]" /> Official warranty alerts
           </span>
         </div>
       </div>

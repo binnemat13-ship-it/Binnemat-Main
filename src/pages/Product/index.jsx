@@ -22,7 +22,7 @@ export default function ProductView({
         <h2 className="font-wix text-2xl font-bold mb-4">No Product Selected</h2>
         <button 
           onClick={onNavigateHome}
-          className="px-6 py-2.5 rounded-full bg-[#6F4E37] text-white font-bold cursor-pointer border-none shadow-sm hover:bg-[#8C6547] transition-colors"
+          className="px-6 py-2.5 rounded-full bg-[#ff3131] text-white font-bold cursor-pointer border-none shadow-sm hover:bg-[#d01a1a] transition-colors"
         >
           Return to Home
         </button>
@@ -36,9 +36,9 @@ export default function ProductView({
       <div className="mb-6">
         <Breadcrumb
           items={[
-            { title: <span onClick={onNavigateHome} className="cursor-pointer hover:text-[#6F4E37]">Home</span> },
-            { title: <span onClick={() => onSelectCategory(product.category || 'all')} className="cursor-pointer hover:text-[#6F4E37] capitalize">{product.category?.replace('-', ' ') || 'Appliances'}</span> },
-            { title: <span className="font-bold text-[#6F4E37] dark:text-[#C49774] line-clamp-1">{product.name}</span> }
+            { title: <span onClick={onNavigateHome} className="cursor-pointer hover:text-[#ff3131]">Home</span> },
+            { title: <span onClick={() => onSelectCategory(product.category || 'all')} className="cursor-pointer hover:text-[#ff3131] capitalize">{product.category?.replace('-', ' ') || 'Appliances'}</span> },
+            { title: <span className="font-bold text-[#ff3131] dark:text-[#ff8585] line-clamp-1">{product.name}</span> }
           ]}
         />
       </div>

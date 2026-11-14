@@ -58,11 +58,11 @@ export default function FaqTroubleshooting() {
   return (
     <div ref={containerRef} className="glass-apple-card p-5 sm:p-10 rounded-3xl border border-[#E5E4E2] dark:border-white/10 my-10 shadow-sm relative overflow-hidden">
       <div className="flex items-center gap-3.5 mb-6">
-        <div className="w-10 h-10 rounded-full bg-[#E6EDFD] dark:bg-[#6F4E37]/20 border border-[#E5E4E2] dark:border-white/10 text-[#6F4E37] dark:text-[#E6EDFD] flex items-center justify-center shadow-sm shrink-0">
+        <div className="w-10 h-10 rounded-full bg-[#fff0f0] dark:bg-[#ff3131]/20 border border-[#E5E4E2] dark:border-white/10 text-[#ff3131] dark:text-[#ff8585] flex items-center justify-center shadow-sm shrink-0">
           <AlertCircle size={20} />
         </div>
         <div>
-          <span className="text-[11px] font-extrabold tracking-widest uppercase text-[#6F4E37] dark:text-[#C49774] block">
+          <span className="text-[11px] font-extrabold tracking-widest uppercase text-[#ff3131] dark:text-[#ff8585] block">
             SELF-HELP DIAGNOSTICS
           </span>
           <h2 className="font-wix text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white m-0 tracking-tight">
@@ -80,7 +80,7 @@ export default function FaqTroubleshooting() {
             <p className="text-slate-600 dark:text-slate-400 m-0">
               <span className="font-bold text-slate-700 dark:text-slate-300">Root Cause:</span> {item.cause}
             </p>
-            <p className="text-[#6F4E37] dark:text-[#E6EDFD] m-0 font-medium pt-1.5 border-t border-[#E5E4E2] dark:border-white/10">
+            <p className="text-[#ff3131] dark:text-[#ff8585] m-0 font-medium pt-1.5 border-t border-[#E5E4E2] dark:border-white/10">
               <span className="font-bold">Fix:</span> {item.solution}
             </p>
           </div>

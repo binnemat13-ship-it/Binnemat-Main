@@ -46,7 +46,7 @@ export default function FaqCta() {
         icon={<PhoneCall size={16} />}
         href={APP_CONFIG.DEVELOPER_WHATSAPP}
         target="_blank"
-        className="w-full sm:w-auto rounded-full h-12 sm:h-11 px-5 sm:px-7 font-bold text-xs sm:text-sm bg-gradient-to-r from-[#6F4E37] to-[#8C6547] hover:brightness-105 border-none text-white shadow-md inline-flex items-center justify-center gap-2"
+        className="w-full sm:w-auto rounded-full h-12 sm:h-11 px-5 sm:px-7 font-bold text-xs sm:text-sm bg-gradient-to-r from-[#ff3131] to-[#d01a1a] hover:brightness-105 border-none text-white shadow-md inline-flex items-center justify-center gap-2"
       >
         Ask on WhatsApp (+92 321 2418430)
       </Button>

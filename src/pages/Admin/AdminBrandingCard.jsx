@@ -129,7 +129,7 @@ export default function AdminBrandingCard() {
           <div className="h-20 rounded-xl bg-white dark:bg-black/40 border border-neutral-200 dark:border-neutral-800 flex items-center justify-center p-3">
             <div className="flex items-center gap-3 px-3 py-1.5 rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700">
               <img
-                src={siteFavicon || "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23C49A45'/><text x='50%' y='55%' font-family='serif' font-weight='bold' font-size='40' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'>B</text></svg>"}
+                src={siteFavicon || "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23ff3131'/><text x='50%' y='55%' font-family='serif' font-weight='bold' font-size='40' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'>B</text></svg>"}
                 alt="Favicon"
                 className="w-5 h-5 rounded object-contain"
               />

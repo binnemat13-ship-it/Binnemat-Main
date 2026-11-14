@@ -33,7 +33,7 @@ export default function EnergyBannerSection({ onShopClick }) {
 
   return (
     <section ref={containerRef} className="max-w-[1360px] mx-auto px-3 sm:px-[5%] my-6 sm:my-10 text-slate-900 dark:text-white">
-      <div className="glass-apple-card rounded-3xl p-5 sm:p-8 md:p-12 border border-emerald-500/20 dark:border-emerald-500/30 bg-gradient-to-br from-emerald-50/50 via-white to-[#E6EDFD]/40 dark:from-emerald-950/20 dark:via-[#161311] dark:to-[#6F4E37]/15 grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 items-center shadow-[0_15px_45px_rgba(5,150,105,0.08)] dark:shadow-[0_15px_45px_rgba(0,0,0,0.6)] relative overflow-hidden">
+      <div className="glass-apple-card rounded-3xl p-5 sm:p-8 md:p-12 border border-emerald-500/20 dark:border-emerald-500/30 bg-gradient-to-br from-emerald-50/50 via-white to-[#fff0f0]/40 dark:from-emerald-950/20 dark:via-[#161311] dark:to-[#ff3131]/15 grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 items-center shadow-[0_15px_45px_rgba(5,150,105,0.08)] dark:shadow-[0_15px_45px_rgba(0,0,0,0.6)] relative overflow-hidden">
         {/* Ambient Backlight */}
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-80 h-80 bg-emerald-400/[0.12] dark:bg-emerald-500/[0.08] blur-3xl pointer-events-none -z-10" />
 
@@ -46,7 +46,7 @@ export default function EnergyBannerSection({ onShopClick }) {
 
           <h2 className="font-wix text-2xl sm:text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-3 sm:mb-4 leading-tight tracking-tight">
             30W BLDC Inverter Fans. <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-[#6F4E37] dark:from-emerald-400 dark:to-[#C49774]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-[#ff3131] dark:from-emerald-400 dark:to-[#ff8585]">
               Runs 3x Longer on UPS &amp; Solar.
             </span>
           </h2>

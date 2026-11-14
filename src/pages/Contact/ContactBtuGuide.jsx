@@ -67,11 +67,11 @@ export default function ContactBtuGuide() {
   return (
     <div ref={containerRef} className="glass-apple-card p-5 sm:p-10 rounded-3xl border border-[#E5E4E2] dark:border-white/10 my-10 shadow-sm relative overflow-hidden">
       <div className="flex items-center gap-3.5 mb-6">
-        <div className="w-10 h-10 rounded-full bg-[#E6EDFD] dark:bg-[#6F4E37]/20 border border-[#E5E4E2] dark:border-white/10 text-[#6F4E37] dark:text-[#E6EDFD] flex items-center justify-center shadow-sm shrink-0">
+        <div className="w-10 h-10 rounded-full bg-[#fff0f0] dark:bg-[#ff3131]/20 border border-[#E5E4E2] dark:border-white/10 text-[#ff3131] dark:text-[#ff8585] flex items-center justify-center shadow-sm shrink-0">
           <Calculator size={18} />
         </div>
         <div>
-          <span className="text-[11px] font-extrabold tracking-widest uppercase text-[#6F4E37] dark:text-[#C49774] block">
+          <span className="text-[11px] font-extrabold tracking-widest uppercase text-[#ff3131] dark:text-[#ff8585] block">
             PRE-PURCHASE ESTIMATOR
           </span>
           <h2 className="font-wix text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white m-0 tracking-tight">
@@ -80,7 +80,7 @@ export default function ContactBtuGuide() {
         </div>
       </div>
 
-      <span className="sm:hidden text-[11px] text-[#6F4E37] dark:text-[#C49774] font-mono font-semibold block mb-2">
+      <span className="sm:hidden text-[11px] text-[#ff3131] dark:text-[#ff8585] font-mono font-semibold block mb-2">
         ← Swipe horizontally to view full table details →
       </span>
 
@@ -90,7 +90,7 @@ export default function ContactBtuGuide() {
             <tr className="border-b border-[#E5E4E2] dark:border-white/10 text-slate-500 dark:text-slate-400">
               <th className="py-3 px-3 font-bold text-slate-900 dark:text-white font-wix">Appliance Category</th>
               <th className="py-3 px-3 font-bold font-wix">Ideal Household / Room Type</th>
-              <th className="py-3 px-3 font-bold text-[#6F4E37] dark:text-[#C49774] font-wix">Technical Specification Note</th>
+              <th className="py-3 px-3 font-bold text-[#ff3131] dark:text-[#ff8585] font-wix">Technical Specification Note</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-[#E5E4E2] dark:divide-white/5">

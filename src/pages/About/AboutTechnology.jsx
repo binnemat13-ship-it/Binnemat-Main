@@ -73,7 +73,7 @@ export default function AboutTechnology() {
   return (
     <div ref={containerRef} className="mb-14">
       <div className="gsap-tech-header text-center max-w-xl mx-auto mb-8">
-        <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#6F4E37] dark:text-[#C49774] block mb-1">
+        <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#ff3131] dark:text-[#ff8585] block mb-1">
           ENGINEERING BENCHMARKS
         </span>
         <h2 className="font-wix text-2xl sm:text-3xl font-extrabold text-neutral-900 dark:text-neutral-100 m-0">
@@ -97,12 +97,12 @@ export default function AboutTechnology() {
                 }}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-108"
               />
-              <span className="absolute top-3 left-3 bg-[#E6EDFD]/90 dark:bg-[#1A1715]/90 backdrop-blur-md text-[#6F4E37] dark:text-[#E6EDFD] text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full border border-[#E5E4E2] dark:border-white/10 shadow-xs">
+              <span className="absolute top-3 left-3 bg-[#fff0f0]/90 dark:bg-[#1A1715]/90 backdrop-blur-md text-[#ff3131] dark:text-[#ff8585] text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full border border-[#E5E4E2] dark:border-white/10 shadow-xs">
                 {t.badge}
               </span>
             </div>
             <div className="p-4 flex flex-col flex-grow">
-              <h3 className="font-wix text-sm font-bold text-neutral-900 dark:text-neutral-100 mb-1 group-hover:text-[#6F4E37] dark:group-hover:text-[#C49774] transition-colors">
+              <h3 className="font-wix text-sm font-bold text-neutral-900 dark:text-neutral-100 mb-1 group-hover:text-[#ff3131] dark:group-hover:text-[#ff8585] transition-colors">
                 {t.title}
               </h3>
               <p className="text-xs text-neutral-500 dark:text-neutral-400 m-0 leading-relaxed font-normal">

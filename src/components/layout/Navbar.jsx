@@ -55,7 +55,7 @@ export default function Navbar({ logoSrc }) {
                 onClick={() => handleNavClick(item.path)}
                 className={`text-xs font-semibold px-3.5 py-1.5 rounded-full transition-all duration-200 cursor-pointer border-none ${
                   isActive(item.path)
-                    ? 'bg-gradient-to-r from-[#6F4E37]/15 to-[#8C6547]/15 text-[#6F4E37] dark:text-[#E5E4E2] font-bold border border-[#6F4E37]/30 shadow-sm'
+                    ? 'bg-gradient-to-r from-[#ff3131]/15 to-[#d01a1a]/15 text-[#ff3131] dark:text-[#E5E4E2] font-bold border border-[#ff3131]/30 shadow-sm'
                     : 'bg-transparent text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-black/[0.04] dark:hover:bg-white/[0.06]'
                 }`}
               >
@@ -76,7 +76,7 @@ export default function Navbar({ logoSrc }) {
               {isDarkMode ? (
                 <Sun size={15} className="text-amber-400 animate-pulse" />
               ) : (
-                <Moon size={15} className="text-[#6F4E37]" />
+                <Moon size={15} className="text-[#ff3131]" />
               )}
             </button>
 
@@ -86,9 +86,9 @@ export default function Navbar({ logoSrc }) {
               aria-label="View Shopping Cart"
               className="relative px-3 py-1.5 rounded-full bg-black/[0.03] dark:bg-white/[0.08] hover:bg-black/[0.06] dark:hover:bg-white/[0.12] border border-black/[0.06] dark:border-white/[0.1] text-slate-800 dark:text-slate-200 transition-all cursor-pointer flex items-center gap-1.5 text-xs font-semibold"
             >
-              <ShoppingBag size={14} className="text-[#6F4E37] dark:text-[#C49774]" />
+              <ShoppingBag size={14} className="text-[#ff3131] dark:text-[#ff8585]" />
               <span className="hidden sm:inline text-slate-700 dark:text-slate-200">Cart</span>
-              <span className="w-5 h-5 rounded-full bg-gradient-to-r from-[#6F4E37] to-[#8C6547] text-white text-[10px] font-black flex items-center justify-center shadow-[0_0_8px_rgba(111,78,55,0.4)]">
+              <span className="w-5 h-5 rounded-full bg-gradient-to-r from-[#ff3131] to-[#d01a1a] text-white text-[10px] font-black flex items-center justify-center shadow-[0_0_8px_rgba(255,49,49,0.4)]">
                 {totalCount}
               </span>
             </button>
@@ -98,7 +98,7 @@ export default function Navbar({ logoSrc }) {
               href={`https://wa.me/${whatsappNumber}?text=Salam%20Binnemat,%20I%20would%20like%20to%20explore%20your%20premium%20appliances`}
               target="_blank"
               rel="noreferrer"
-              className="hidden sm:inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-gradient-to-r from-[#6F4E37] to-[#8C6547] hover:brightness-105 text-white font-bold text-xs tracking-wide transition-all shadow-[0_4px_18px_rgba(111,78,55,0.35)] no-underline cursor-pointer"
+              className="hidden sm:inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-gradient-to-r from-[#ff3131] to-[#d01a1a] hover:brightness-105 text-white font-bold text-xs tracking-wide transition-all shadow-[0_4px_18px_rgba(255,49,49,0.35)] no-underline cursor-pointer"
             >
               <MessageCircle size={13} />
               <span>WhatsApp</span>
@@ -142,7 +142,7 @@ export default function Navbar({ logoSrc }) {
                   aria-label={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
                   className="w-9 h-9 rounded-full bg-black/[0.05] dark:bg-white/[0.08] flex items-center justify-center text-slate-700 dark:text-slate-200 border-none cursor-pointer"
                 >
-                  {isDarkMode ? <Sun size={17} className="text-amber-400" /> : <Moon size={17} className="text-[#6F4E37]" />}
+                  {isDarkMode ? <Sun size={17} className="text-amber-400" /> : <Moon size={17} className="text-[#ff3131]" />}
                 </button>
                 <button
                   onClick={() => setMobileDrawerOpen(false)}
@@ -161,7 +161,7 @@ export default function Navbar({ logoSrc }) {
                   onClick={() => handleNavClick(item.path)}
                   className={`text-left text-2xl font-wix font-bold py-2 bg-transparent border-none cursor-pointer transition-colors ${
                     isActive(item.path)
-                      ? 'text-[#6F4E37] dark:text-[#C49774]'
+                      ? 'text-[#ff3131] dark:text-[#ff8585]'
                       : 'text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white'
                   }`}
                 >
@@ -180,14 +180,14 @@ export default function Navbar({ logoSrc }) {
               }}
               className="w-full py-3.5 rounded-full bg-black/[0.04] dark:bg-white/[0.06] border border-black/10 dark:border-white/10 text-slate-900 dark:text-white font-bold text-sm flex items-center justify-center gap-2 cursor-pointer"
             >
-              <ShoppingBag size={16} className="text-[#6F4E37] dark:text-[#C49774]" />
+              <ShoppingBag size={16} className="text-[#ff3131] dark:text-[#ff8585]" />
               <span>Shopping Cart ({totalCount})</span>
             </button>
             <a
               href={`https://wa.me/${whatsappNumber}`}
               target="_blank"
               rel="noreferrer"
-              className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#6F4E37] to-[#8C6547] text-white font-bold text-sm flex items-center justify-center gap-2 no-underline text-center shadow-[0_4px_20px_rgba(111,78,55,0.35)]"
+              className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#ff3131] to-[#d01a1a] text-white font-bold text-sm flex items-center justify-center gap-2 no-underline text-center shadow-[0_4px_20px_rgba(255,49,49,0.35)]"
             >
               <MessageCircle size={16} />
               <span>Connect on WhatsApp</span>

@@ -31,7 +31,7 @@ export default function MobileBottomBar() {
           onClick={() => handleNav('/')}
           className={`flex flex-col items-center justify-center gap-1 py-1 px-1 rounded-xl transition-all cursor-pointer border-none bg-transparent ${
             isHome
-              ? 'text-[#6F4E37] dark:text-[#E5E4E2] font-bold'
+              ? 'text-[#ff3131] dark:text-[#E5E4E2] font-bold'
               : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
           }`}
           aria-label="Home"
@@ -45,7 +45,7 @@ export default function MobileBottomBar() {
           onClick={() => handleNav('/categories')}
           className={`flex flex-col items-center justify-center gap-1 py-1 px-1 rounded-xl transition-all cursor-pointer border-none bg-transparent ${
             isCategories
-              ? 'text-[#6F4E37] dark:text-[#E5E4E2] font-bold'
+              ? 'text-[#ff3131] dark:text-[#E5E4E2] font-bold'
               : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
           }`}
           aria-label="Categories"
@@ -63,7 +63,7 @@ export default function MobileBottomBar() {
           <div className="relative">
             <ShoppingBag size={19} className="stroke-[1.8]" />
             {totalCount > 0 && (
-              <span className="absolute -top-1.5 -right-2 min-w-[17px] h-[17px] px-1 rounded-full bg-gradient-to-r from-[#6F4E37] to-[#8C6547] text-white text-[9px] font-black flex items-center justify-center shadow-sm">
+              <span className="absolute -top-1.5 -right-2 min-w-[17px] h-[17px] px-1 rounded-full bg-gradient-to-r from-[#ff3131] to-[#d01a1a] text-white text-[9px] font-black flex items-center justify-center shadow-sm">
                 {totalCount}
               </span>
             )}

@@ -28,12 +28,12 @@ export default function ProductGallery({ images, badge, name }) {
     <div ref={galleryRef} className="flex flex-col gap-4">
       {/* MAIN VIEWPORT WITH LUXURY SHADOW & BADGE */}
       <div className="glass-apple-card rounded-3xl border border-[#E5E4E2] dark:border-white/10 bg-[#F7F6F4] dark:bg-[#12100E] p-2 h-[300px] sm:h-[460px] flex items-center justify-center relative overflow-hidden shadow-xl group">
-        <span className="absolute top-4 left-4 z-10 bg-[#E6EDFD]/95 dark:bg-[#1A1715]/95 text-[#6F4E37] dark:text-[#E6EDFD] border border-[#E5E4E2] dark:border-white/10 text-xs font-mono font-bold px-3.5 py-1 rounded-full shadow-md backdrop-blur-md">
+        <span className="absolute top-4 left-4 z-10 bg-[#fff0f0]/95 dark:bg-[#1A1715]/95 text-[#ff3131] dark:text-[#ff8585] border border-[#E5E4E2] dark:border-white/10 text-xs font-mono font-bold px-3.5 py-1 rounded-full shadow-md backdrop-blur-md">
           {badge || "100% BRAND SEALED"}
         </span>
 
         <span className="absolute bottom-4 right-4 z-10 bg-white/90 dark:bg-[#1A1715]/90 text-slate-800 dark:text-slate-200 border border-[#E5E4E2] dark:border-white/10 text-[11px] font-bold px-3 py-1 rounded-xl flex items-center gap-1.5 backdrop-blur-md">
-          <ShieldCheck size={14} className="text-[#6F4E37] dark:text-[#C49774]" />
+          <ShieldCheck size={14} className="text-[#ff3131] dark:text-[#ff8585]" />
           <span>Official Warranty Stamped</span>
         </span>
 
@@ -59,7 +59,7 @@ export default function ProductGallery({ images, badge, name }) {
               onClick={() => setActiveImageIndex(idx)}
               className={`w-20 h-20 rounded-xl overflow-hidden p-1 border-2 transition-all bg-[#F7F6F4] dark:bg-[#1A1715] cursor-pointer flex-shrink-0 ${
                 activeImageIndex === idx
-                  ? 'border-[#6F4E37] shadow-md scale-105'
+                  ? 'border-[#ff3131] shadow-md scale-105'
                   : 'border-[#E5E4E2] dark:border-white/10 opacity-70 hover:opacity-100'
               }`}
             >
