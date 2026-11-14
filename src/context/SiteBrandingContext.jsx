@@ -2,14 +2,15 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import { fetchWpSettings, updateWpSettings, fetchMediaById, uploadMediaToWordPress } from '../services/wooAdminService';
 import { APP_CONFIG } from '../config/env';
 
-const DEFAULT_FAVICON_SVG = "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23C49A45'/><text x='50%' y='55%' font-family='serif' font-weight='bold' font-size='40' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'>B</text></svg>";
+export const DEFAULT_SITE_LOGO = '/images/logo.png';
+const DEFAULT_FAVICON_SVG = DEFAULT_SITE_LOGO;
 
 const DEFAULT_ADDRESS = 'Akbar Butt Wala Gala, Hafizabad Road, Gujranwala, Pakistan';
 const DEFAULT_WHATSAPP = APP_CONFIG.WHATSAPP_NUMBER || '923212418430';
 
 const SiteBrandingContext = createContext({
-  siteLogo: null,
-  siteFavicon: null,
+  siteLogo: DEFAULT_SITE_LOGO,
+  siteFavicon: DEFAULT_SITE_LOGO,
   whatsappNumber: DEFAULT_WHATSAPP,
   supportPhone: '+92 321 2418430',
   supportEmail: 'sales@binnemat.com',
@@ -31,13 +32,13 @@ function applyFaviconToDocument(url) {
       link.rel = 'icon';
       document.head.appendChild(link);
     }
-    link.href = url || DEFAULT_FAVICON_SVG;
+    link.href = url || DEFAULT_SITE_LOGO;
   } catch (e) {}
 }
 
 export function SiteBrandingProvider({ children }) {
-  const [siteLogo, setSiteLogo] = useState(() => localStorage.getItem('binnemat_custom_logo') || null);
-  const [siteFavicon, setSiteFavicon] = useState(() => localStorage.getItem('binnemat_custom_favicon') || null);
+  const [siteLogo, setSiteLogo] = useState(() => localStorage.getItem('binnemat_custom_logo') || DEFAULT_SITE_LOGO);
+  const [siteFavicon, setSiteFavicon] = useState(() => localStorage.getItem('binnemat_custom_favicon') || DEFAULT_SITE_LOGO);
   const [whatsappNumber, setWhatsappNumber] = useState(() => localStorage.getItem('binnemat_whatsapp') || DEFAULT_WHATSAPP);
   const [supportPhone, setSupportPhone] = useState(() => localStorage.getItem('binnemat_support_phone') || '+92 321 2418430');
   const [supportEmail, setSupportEmail] = useState(() => localStorage.getItem('binnemat_support_email') || 'sales@binnemat.com');
@@ -119,17 +120,17 @@ export function SiteBrandingProvider({ children }) {
   };
 
   const resetSiteLogo = async () => {
-    setSiteLogo(null);
+    setSiteLogo(DEFAULT_SITE_LOGO);
     localStorage.removeItem('binnemat_custom_logo');
     localStorage.removeItem('binnemat_custom_logo_id');
     await updateWpSettings({ site_logo: 0 }).catch(() => {});
   };
 
   const resetSiteFavicon = async () => {
-    setSiteFavicon(null);
+    setSiteFavicon(DEFAULT_SITE_LOGO);
     localStorage.removeItem('binnemat_custom_favicon');
     localStorage.removeItem('binnemat_custom_favicon_id');
-    applyFaviconToDocument(null);
+    applyFaviconToDocument(DEFAULT_SITE_LOGO);
     await updateWpSettings({ site_icon: 0 }).catch(() => {});
   };
 

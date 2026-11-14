@@ -97,7 +97,9 @@ async function requestV3(endpoint, method = 'GET', body = null, options = {}) {
   const { key, secret } = getAdminCredentials();
   
   // Attach credentials via query parameters so proxies/CDN cannot strip them
-  let fullUrl = `${APP_CONFIG.WC_V3_API_URL}${endpoint}`;
+  const base = (APP_CONFIG.WC_V3_API_URL || '').replace(/\/+$/, '');
+  const path = endpoint.startsWith('/') ? endpoint : `/${endpoint}`;
+  let fullUrl = `${base}${path}`;
   if (key && secret) {
     const sep = fullUrl.includes('?') ? '&' : '?';
     fullUrl += `${sep}consumer_key=${encodeURIComponent(key)}&consumer_secret=${encodeURIComponent(secret)}`;
@@ -227,7 +229,8 @@ export async function createAdminCategory(categoryData, options = {}) {
 export async function uploadMediaToWordPress(file, options = {}) {
   const wpUser = localStorage.getItem('binnemat_wp_user') || APP_CONFIG.WP_USER || '';
   const wpPass = localStorage.getItem('binnemat_wp_app_pass') || APP_CONFIG.WP_APP_PASS || '';
-  const endpoint = '/api-wp-v2/media';
+  const wpV2Base = (APP_CONFIG.WP_V2_API_URL || '/api-wp-v2').replace(/\/+$/, '');
+  const endpoint = `${wpV2Base}/media`;
 
   const cleanName = file.name.replace(/[^a-zA-Z0-9.-]/g, '_');
   const headers = {
@@ -286,7 +289,8 @@ export async function fetchWpSettings(options = {}) {
 
   await throttleRequest();
 
-  const endpoint = '/api-wp-v2/settings';
+  const wpV2Base = (APP_CONFIG.WP_V2_API_URL || '/api-wp-v2').replace(/\/+$/, '');
+  const endpoint = `${wpV2Base}/settings`;
   const headers = { 
     'Accept': 'application/json',
     'Authorization': 'Basic ' + btoa(`${wpUser}:${wpPass.replace(/\s+/g, '')}`)
@@ -306,7 +310,8 @@ export async function fetchWpSettings(options = {}) {
 export async function updateWpSettings(settingsData, options = {}) {
   const wpUser = localStorage.getItem('binnemat_wp_user') || APP_CONFIG.WP_USER || '';
   const wpPass = localStorage.getItem('binnemat_wp_app_pass') || APP_CONFIG.WP_APP_PASS || '';
-  const endpoint = '/api-wp-v2/settings';
+  const wpV2Base = (APP_CONFIG.WP_V2_API_URL || '/api-wp-v2').replace(/\/+$/, '');
+  const endpoint = `${wpV2Base}/settings`;
   const headers = {
     'Content-Type': 'application/json',
     'Accept': 'application/json'
@@ -323,7 +328,8 @@ export async function updateWpSettings(settingsData, options = {}) {
 }
 
 export async function fetchMediaById(id, options = {}) {
-  const endpoint = `/api-wp-v2/media/${id}`;
+  const wpV2Base = (APP_CONFIG.WP_V2_API_URL || '/api-wp-v2').replace(/\/+$/, '');
+  const endpoint = `${wpV2Base}/media/${id}`;
   const res = await fetch(endpoint, { signal: options.signal });
   if (!res.ok) throw new Error(`Failed to fetch media #${id}`);
   return await res.json();

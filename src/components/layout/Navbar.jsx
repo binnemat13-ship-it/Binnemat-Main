@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Drawer } from 'antd';
 import { useNavigate, useRouterState } from '@tanstack/react-router';
 import { ShoppingBag, Menu, Sparkles, MessageCircle, X, Sun, Moon } from 'lucide-react';
+import Logo from '../common/Logo';
 import { useCart } from '../../context/CartContext';
 import { useSiteBranding } from '../../context/SiteBrandingContext';
 import { useTheme } from '../../context/ThemeContext';
@@ -39,27 +40,12 @@ export default function Navbar({ logoSrc }) {
       {/* FLOATING TOP-CENTER PILL NAVBAR (LUXURY LIGHT & DARK EDITION) */}
       <header className="fixed top-4 md:top-5 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-[1080px] pointer-events-auto transition-all duration-300">
         <nav className="glass-apple bg-white/85 dark:bg-[#111018]/90 backdrop-blur-2xl border border-black/[0.06] dark:border-white/[0.1] rounded-full px-4 sm:px-6 py-2.5 shadow-[0_12px_40px_rgba(115,34,242,0.08)] dark:shadow-[0_12px_40px_rgba(0,0,0,0.6)] flex items-center justify-between">
-          {/* BRAND LOGO / SACRED GEOMETRY MARK */}
-          <button
-            onClick={() => handleNavClick('/')}
-            className="flex items-center gap-2.5 bg-transparent border-none cursor-pointer group text-left p-0"
-            aria-label="Binnemat Home"
-          >
-            {/* Glowing Torus Glyph */}
-            <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-[#6F4E37] to-[#8C6547] flex items-center justify-center p-0.5 shadow-[0_0_15px_rgba(111,78,55,0.3)] group-hover:scale-105 transition-transform">
-              <div className="w-full h-full rounded-full bg-white dark:bg-[#111018] flex items-center justify-center">
-                <div className="w-3.5 h-3.5 rounded-full border-2 border-[#6F4E37] animate-pulse" />
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-wix font-extrabold text-lg tracking-tight text-slate-900 dark:text-white lowercase leading-none">
-                binnemat
-              </span>
-              <span className="text-[9px] font-mono tracking-widest text-[#6F4E37] dark:text-[#C49774] uppercase mt-0.5 font-bold">
-                Thermal &bull; Inverter
-              </span>
-            </div>
-          </button>
+          {/* BRAND LOGO */}
+          <Logo 
+            logoSrc={logoSrc} 
+            onClick={() => handleNavClick('/')} 
+            imgClassName="h-10 sm:h-12 md:h-13 w-auto max-w-[190px] sm:max-w-[220px] object-contain transition-transform duration-300 hover:scale-105 dark:brightness-0 dark:invert"
+          />
 
           {/* DESKTOP PILL LINKS */}
           <div className="hidden lg:flex items-center gap-1 bg-black/[0.03] dark:bg-white/[0.04] p-1 rounded-full border border-black/[0.04] dark:border-white/[0.06]">
@@ -144,14 +130,11 @@ export default function Navbar({ logoSrc }) {
           <div>
             {/* TOP BAR IN DRAWER */}
             <div className="flex items-center justify-between pb-6 border-b border-black/10 dark:border-white/10">
-              <div className="flex items-center gap-2">
-                <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-[#6F4E37] to-[#8C6547] flex items-center justify-center p-0.5">
-                  <div className="w-full h-full rounded-full bg-white dark:bg-[#110F0E] flex items-center justify-center">
-                    <div className="w-2.5 h-2.5 rounded-full border-2 border-[#6F4E37]" />
-                  </div>
-                </div>
-                <span className="font-wix font-extrabold text-xl lowercase text-slate-900 dark:text-white">binnemat</span>
-              </div>
+              <Logo 
+                logoSrc={logoSrc} 
+                onClick={() => handleNavClick('/')} 
+                imgClassName="h-10 sm:h-12 w-auto max-w-[180px] object-contain dark:brightness-0 dark:invert"
+              />
               <div className="flex items-center gap-2">
                 {/* Mobile Drawer Theme Toggle */}
                 <button

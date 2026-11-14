@@ -1,21 +1,53 @@
 // Application Environment Configuration (12-Factor App)
-function resolveWpApiUrl() {
-  if (import.meta.env.VITE_WP_API_URL) {
-    return import.meta.env.VITE_WP_API_URL.replace(/([^:])\/\//g, '$1/');
+function normalizeApiUrl(rawUrl, defaultPath, wpJsonNamespace) {
+  if (!rawUrl || typeof rawUrl !== 'string') return defaultPath;
+  let url = rawUrl.trim();
+  if (!url) return defaultPath;
+
+  // Local/relative proxy paths like '/api-wc' or '/api-wc-v3'
+  if (url.startsWith('/')) {
+    return url.replace(/\/+$/, '');
   }
-  return '/api-wc';
+
+  // Full URL handling (e.g. https://api.binnemat.com)
+  if (url.startsWith('http://') || url.startsWith('https://')) {
+    url = url.replace(/\/+$/, '');
+    // If user provided origin without /wp-json namespace, append it
+    if (!url.includes('/wp-json')) {
+      url = `${url}${wpJsonNamespace}`;
+    }
+    return url;
+  }
+
+  return url.replace(/\/+$/, '');
+}
+
+function resolveWpApiUrl() {
+  return normalizeApiUrl(import.meta.env.VITE_WP_API_URL, '/api-wc', '/wp-json/wc/store/v1');
 }
 
 function resolveWcV3ApiUrl() {
-  if (import.meta.env.VITE_WC_V3_URL) {
-    return import.meta.env.VITE_WC_V3_URL.replace(/([^:])\/\//g, '$1/');
+  return normalizeApiUrl(import.meta.env.VITE_WC_V3_URL, '/api-wc-v3', '/wp-json/wc/v3');
+}
+
+function resolveWpV2ApiUrl() {
+  if (import.meta.env.VITE_WP_V2_URL) {
+    return import.meta.env.VITE_WP_V2_URL.trim().replace(/\/+$/, '');
   }
-  return '/api-wc-v3';
+  const wpApiUrl = import.meta.env.VITE_WP_API_URL?.trim();
+  if (wpApiUrl && (wpApiUrl.startsWith('http://') || wpApiUrl.startsWith('https://'))) {
+    try {
+      const origin = new URL(wpApiUrl).origin;
+      return `${origin}/wp-json/wp/v2`;
+    } catch (e) {}
+  }
+  return '/api-wp-v2';
 }
 
 export const APP_CONFIG = Object.freeze({
   WP_API_URL: resolveWpApiUrl(),
   WC_V3_API_URL: resolveWcV3ApiUrl(),
+  WP_V2_API_URL: resolveWpV2ApiUrl(),
   WC_CONSUMER_KEY: import.meta.env.VITE_WC_CONSUMER_KEY || '',
   WC_CONSUMER_SECRET: import.meta.env.VITE_WC_CONSUMER_SECRET || '',
   ADMIN_PASSWORD: import.meta.env.VITE_ADMIN_PASSWORD || '',

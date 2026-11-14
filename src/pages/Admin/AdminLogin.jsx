@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Input, message, Alert } from 'antd';
 import { Lock, ShieldCheck, ArrowRight, Sparkles, AlertTriangle } from 'lucide-react';
+import Logo from '../../components/common/Logo';
 import { useAdminAuth } from '../../context/AdminAuthContext';
 
 export default function AdminLogin() {
@@ -38,6 +39,9 @@ export default function AdminLogin() {
     <div className="min-h-[75vh] flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-md p-8 sm:p-10 rounded-3xl border border-[#E5E4E2] dark:border-white/10 glass-apple-card shadow-2xl relative overflow-hidden">
         <div className="text-center mb-8">
+          <div className="flex justify-center mb-5">
+            <Logo />
+          </div>
           <div className="w-16 h-16 rounded-2xl bg-[#E6EDFD] dark:bg-[#6F4E37]/20 text-[#6F4E37] dark:text-[#E6EDFD] flex items-center justify-center mx-auto mb-4 border border-[#E5E4E2] dark:border-white/10 shadow-sm">
             <ShieldCheck size={32} />
           </div>

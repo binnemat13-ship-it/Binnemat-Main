@@ -77,9 +77,7 @@ Thank you for your business!`
         {/* INVOICE HEADER */}
         <div className="flex justify-between items-start border-b border-neutral-200 dark:border-neutral-800 pb-4">
           <div>
-            <h2 className="font-cinzel text-xl font-black text-neutral-900 dark:text-neutral-100 m-0">
-              BINNEMAT<span className="text-bn-gold">.</span>
-            </h2>
+            <img src="/images/logo.png" alt="Binnemat" className="h-9 w-auto max-w-[150px] object-contain mb-1.5" />
             <span className="font-urdu text-xs font-bold text-bn-goldDark dark:text-bn-gold block">
               ہر گھر کا سکون — Premium Appliances
             </span>

@@ -109,6 +109,12 @@ async function fetchWithRetry(url, fetchOptions, maxRetries = 2) {
   }
 }
 
+function resolveEndpointUrl(baseUrl, endpoint) {
+  const base = (baseUrl || '').replace(/\/+$/, '');
+  const path = endpoint.startsWith('/') ? endpoint : `/${endpoint}`;
+  return `${base}${path}`;
+}
+
 /**
  * Enhanced GET with Cache, Deduplication, AbortController, Throttling & Circuit Breaker
  */
@@ -145,7 +151,7 @@ export async function getJson(endpoint, customHeaders = {}, options = {}) {
     }
 
     try {
-      const url = `${APP_CONFIG.WP_API_URL}${endpoint}`;
+      const url = resolveEndpointUrl(APP_CONFIG.WP_API_URL, endpoint);
       const response = await fetchWithRetry(url, {
         signal: signalToUse,
         headers: buildHeaders(customHeaders)
@@ -190,7 +196,7 @@ export async function postJson(endpoint, body = {}, customHeaders = {}, options 
   }
 
   try {
-    const url = `${APP_CONFIG.WP_API_URL}${endpoint}`;
+    const url = resolveEndpointUrl(APP_CONFIG.WP_API_URL, endpoint);
     const response = await fetchWithRetry(url, {
       method: 'POST',
       signal: controller.signal,
@@ -232,7 +238,7 @@ export async function deleteJson(endpoint, customHeaders = {}, options = {}) {
   }
 
   try {
-    const url = `${APP_CONFIG.WP_API_URL}${endpoint}`;
+    const url = resolveEndpointUrl(APP_CONFIG.WP_API_URL, endpoint);
     const response = await fetchWithRetry(url, {
       method: 'DELETE',
       signal: controller.signal,

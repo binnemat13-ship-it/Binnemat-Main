@@ -26,8 +26,12 @@ export default function Footer({ logoSrc }) {
       <div className="max-w-[1360px] mx-auto px-[5%] grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
         {/* COL 1: BRAND INFO */}
         <div>
-          <div className="mb-4">
-            <Logo logoSrc={logoSrc} onClick={() => handleNav('/')} />
+          <div className="mb-5">
+            <Logo 
+              logoSrc={logoSrc} 
+              onClick={() => handleNav('/')} 
+              imgClassName="h-14 sm:h-16 md:h-20 w-auto max-w-[240px] sm:max-w-[280px] object-contain transition-transform duration-300 hover:scale-105 dark:brightness-0 dark:invert"
+            />
           </div>
           <p className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm leading-relaxed mb-6 max-w-sm font-normal">
             Pakistan's authorized supplier of high-efficiency Electric Geysers, 30W BLDC inverter fans, and Italian built-in glass hobs with official factory warranties.
