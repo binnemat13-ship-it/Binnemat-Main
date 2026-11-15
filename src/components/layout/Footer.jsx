@@ -30,7 +30,7 @@ export default function Footer({ logoSrc }) {
             <Logo 
               logoSrc={logoSrc} 
               onClick={() => handleNav('/')} 
-              imgClassName="h-14 sm:h-16 md:h-20 w-auto max-w-[240px] sm:max-w-[280px] object-contain transition-transform duration-300 hover:scale-105 dark:brightness-0 dark:invert"
+              imgClassName="h-16 sm:h-20 md:h-24 w-auto max-w-[280px] sm:max-w-[340px] object-contain transition-transform duration-300 hover:scale-105 dark:brightness-0 dark:invert"
             />
           </div>
           <p className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm leading-relaxed mb-6 max-w-sm font-normal">
@@ -110,7 +110,7 @@ export default function Footer({ logoSrc }) {
       {/* COPYRIGHT BOTTOM BAR */}
       <div className="max-w-[1360px] mx-auto px-[5%] pt-8 border-t border-[#E5E4E2] dark:border-white/[0.08] flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4 text-center sm:text-left">
         <p className="m-0">&copy; {new Date().getFullYear()} Binnemat Pakistan. All Rights Reserved.</p>
-        <p className="m-0 font-urdu text-sm font-bold text-[#ff3131] dark:text-[#ff8585]">
+        <p className="m-0 font-canva-sans text-sm font-bold text-[#ff3131] dark:text-[#ff8585]">
           ہر گھر کا سکون — بااعتماد الیکٹرک واٹر ہیٹرز اور ہوم ایپلائینسز
         </p>
       </div>

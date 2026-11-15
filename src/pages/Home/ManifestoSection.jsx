@@ -48,7 +48,7 @@ export default function ManifestoSection() {
         </div>
 
         {/* Urdu Calligraphy Headline */}
-        <h2 className="font-urdu text-4xl sm:text-7xl md:text-8xl text-slate-900 dark:text-white pt-2 pb-1 leading-[1.3] drop-shadow-sm font-bold">
+        <h2 className="font-canva-sans text-4xl sm:text-7xl md:text-8xl text-slate-900 dark:text-white pt-2 pb-1 leading-[1.3] drop-shadow-sm font-bold">
           ہر گھر کا سکون
         </h2>
 

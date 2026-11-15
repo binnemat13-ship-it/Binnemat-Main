@@ -82,9 +82,9 @@ export default function TestimonialsSection() {
             className="gsap-review-card glass-apple-card group rounded-3xl overflow-hidden border border-[#E5E4E2] dark:border-white/[0.1] hover:border-[#ff3131]/50 bg-white/95 dark:bg-[#1A1715]/95 shadow-md hover:shadow-[0_15px_35px_rgba(255,49,49,0.12)] transition-all duration-500 flex flex-col"
           >
             {/* REAL INSTALLATION PHOTO */}
-            <div className="h-44 w-full bg-[#F7F6F4] dark:bg-[#12100E] relative overflow-hidden">
+            {/* <div className="h-44 w-full bg-[#F7F6F4] dark:bg-[#12100E] relative overflow-hidden">
               <img
-                src={r.img}
+                // src={r.img}
                 alt={r.product}
                 onError={(e) => {
                   e.currentTarget.onerror = null;
@@ -95,7 +95,7 @@ export default function TestimonialsSection() {
               <span className="absolute bottom-3 left-3 bg-[#fff0f0]/90 dark:bg-[#1A1715]/90 backdrop-blur-md text-[#ff3131] dark:text-[#ff8585] text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full border border-[#E5E4E2] dark:border-white/10 shadow-xs">
                 {r.product}
               </span>
-            </div>
+            </div> */}
 
             {/* REVIEW DETAILS */}
             <div className="p-5 flex flex-col flex-grow">

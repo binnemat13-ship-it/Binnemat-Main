@@ -90,10 +90,10 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
   const specsList = currentProduct?.specs 
     ? (Array.isArray(currentProduct.specs) ? currentProduct.specs : Object.entries(currentProduct.specs).map(([k, v]) => `${k}: ${v}`))
     : [
-        'Italian Incoloy 840 Element',
+        'Advanced Carbon Fiber Tube Heating Element',
         'Zero Sui Gas Dependency',
-        'ELCB Built-in Safety Breaker',
-        '7-Year Official Tank Warranty'
+        'Dual Heating Technology – 450W / 900W',
+        '180° wide-angle oscillation'
       ];
 
   const handleNext = () => {
@@ -146,8 +146,8 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
       </div> */}
 
       {/* 4. THE MASTER STAGE (EXPANSIVE LUXURY DUAL-ZONE PRESENTATION) */}
-      <div className="gsap-hero-stage w-full max-w-6xl mx-auto relative z-10">
-        <div className="glass-apple-card rounded-3xl sm:rounded-[36px] border border-black/[0.08] dark:border-white/[0.1] bg-white/85 dark:bg-[#151210]/90 backdrop-blur-3xl shadow-[0_25px_80px_rgba(255,49,49,0.12)] dark:shadow-[0_25px_80px_rgba(0,0,0,0.85)] p-5 sm:p-8 lg:p-12 relative overflow-hidden">
+      <div className="gsap-hero-stage w-full max-w-[1400px] mx-auto relative z-10 px-2 sm:px-4">
+        <div className="glass-apple-card rounded-3xl sm:rounded-[36px] border border-black/[0.08] dark:border-white/[0.1] bg-white/85 dark:bg-[#151210]/90 backdrop-blur-3xl shadow-[0_25px_80px_rgba(255,49,49,0.12)] dark:shadow-[0_25px_80px_rgba(0,0,0,0.85)] p-5 sm:p-8 lg:p-14 relative overflow-hidden">
           
           {/* Subtle Ambient Edge Glow */}
           <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#ff3131] to-transparent opacity-60" />
@@ -240,7 +240,7 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
             <div className="lg:col-span-6 flex flex-col items-center justify-center order-1 lg:order-2 relative">
               
               {/* Radial Glowing Pedestal (Eliminates harsh black square cutout) */}
-              <div className="relative w-full aspect-square max-w-[340px] sm:max-w-[420px] lg:max-w-[460px] flex items-center justify-center">
+              <div className="relative w-full aspect-square max-w-[380px] sm:max-w-[480px] lg:max-w-[540px] flex items-center justify-center">
                 
                 {/* Radiant Ambient Halo */}
                 <div className="absolute inset-4 rounded-full bg-gradient-to-tr from-[#ff3131]/25 via-[#d01a1a]/20 to-transparent blur-3xl -z-10 animate-pulse-aura" />

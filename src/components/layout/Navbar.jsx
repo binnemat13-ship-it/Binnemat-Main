@@ -39,12 +39,12 @@ export default function Navbar({ logoSrc }) {
     <>
       {/* FLOATING TOP-CENTER PILL NAVBAR (LUXURY LIGHT & DARK EDITION) */}
       <header className="fixed top-4 md:top-5 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-[1080px] pointer-events-auto transition-all duration-300">
-        <nav className="glass-apple bg-white/85 dark:bg-[#111018]/90 backdrop-blur-2xl border border-black/[0.06] dark:border-white/[0.1] rounded-full px-4 sm:px-6 py-2.5 shadow-[0_12px_40px_rgba(115,34,242,0.08)] dark:shadow-[0_12px_40px_rgba(0,0,0,0.6)] flex items-center justify-between">
+        <nav className="glass-apple bg-white/85 dark:bg-[#111018]/90 backdrop-blur-2xl border border-black/[0.06] dark:border-white/[0.1] rounded-full px-4 sm:px-6 py-2 shadow-[0_12px_40px_rgba(115,34,242,0.08)] dark:shadow-[0_12px_40px_rgba(0,0,0,0.6)] flex items-center justify-between">
           {/* BRAND LOGO */}
           <Logo 
             logoSrc={logoSrc} 
             onClick={() => handleNavClick('/')} 
-            imgClassName="h-10 sm:h-12 md:h-13 w-auto max-w-[190px] sm:max-w-[220px] object-contain transition-transform duration-300 hover:scale-105 dark:brightness-0 dark:invert"
+            imgClassName="h-12 sm:h-14 md:h-16 w-auto max-w-[220px] sm:max-w-[260px] object-contain transition-transform duration-300 hover:scale-105 dark:brightness-0 dark:invert"
           />
 
           {/* DESKTOP PILL LINKS */}

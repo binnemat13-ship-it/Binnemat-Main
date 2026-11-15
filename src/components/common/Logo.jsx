@@ -16,7 +16,7 @@ export default function Logo({ logoSrc, onClick, className = '', imgClassName = 
         <img
           src={effectiveLogo}
           alt={APP_CONFIG.APP_NAME}
-          className={imgClassName || "h-10 sm:h-12 md:h-13 w-auto max-w-[190px] sm:max-w-[220px] object-contain transition-transform duration-300 hover:scale-105 dark:brightness-0 dark:invert"}
+          className={imgClassName || "h-12 sm:h-14 md:h-16 w-auto max-w-[220px] sm:max-w-[260px] object-contain transition-transform duration-300 hover:scale-105 dark:brightness-0 dark:invert"}
           onError={() => {
             if (effectiveLogo !== defaultLogo) {
               setImgError(true);
