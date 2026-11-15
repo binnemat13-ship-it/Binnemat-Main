@@ -213,7 +213,7 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory, onSelec
             </h2>
 
             <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6 font-normal max-w-md">
-              Live Winter Collection appliances engineered for Pakistani saline hard water, zero gas dependency, and maximum thermal endurance.
+              Live Winter Collection appliances engineered for Pakistani Cozy Homes, zero gas dependency, and maximum thermal endurance.
             </p>
 
             {/* VERTICAL SELECTOR TABS WITH DYNAMIC PROGRESS TRACK */}
@@ -364,11 +364,11 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory, onSelec
 
                     {/* Spatial Appliance Portal */}
                     <div className="sm:col-span-5 flex justify-center">
-                      <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden bg-[#0C0B0C] p-2 relative shadow-[0_12px_30px_rgba(0,0,0,0.18)] border border-black/10 dark:border-white/10 group-hover:scale-105 transition-transform flex items-center justify-center">
+                      <div className="w-36 h-36 sm:w-48 sm:h-48 rounded-xl overflow-hidden bg-transparent p-2 relative group-hover:scale-105 transition-transform flex items-center justify-center">
                         <img
                           src={item.image}
                           alt={item.title}
-                          className="w-full h-full object-contain filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.7)] will-change-transform"
+                          className="w-full h-full object-contain will-change-transform rounded"
                           onError={(e) => {
                             e.currentTarget.onerror = null;
                             e.currentTarget.src = SAFE_SVG_PLACEHOLDER;

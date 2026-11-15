@@ -47,14 +47,22 @@ export async function fetchLiveCategories(options = {}) {
     const data = await getJson('/products/categories?per_page=12', {}, options);
     if (Array.isArray(data) && data.length > 0) {
       console.log("Data from backend - Categories:", data);
-      return data.map(cat => ({
-        id: cat.id,
-        name: cat.name,
-        slug: cat.slug,
-        count: cat.count || 0,
-        image: cat.images?.[0]?.src || SAFE_SVG_PLACEHOLDER,
-        desc: cat.description || "Official brand-sealed appliances."
-      }));
+      return data.map(cat => {
+        // Robust extraction of Category Image:
+        // WooCommerce Store API can return: cat.image.src, cat.images[0].src, or string cat.image
+        const catImg = cat.image?.src || 
+                       cat.images?.[0]?.src || 
+                       (typeof cat.image === 'string' && cat.image.startsWith('http') ? cat.image : null);
+
+        return {
+          id: cat.id,
+          name: cat.name,
+          slug: cat.slug,
+          count: cat.count || 0,
+          image: catImg || null,
+          desc: cat.description || "Official brand-sealed appliances."
+        };
+      });
     }
   } catch (error) {
     if (error.name === 'AbortError') throw error;

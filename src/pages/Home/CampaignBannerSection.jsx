@@ -11,13 +11,13 @@ export default function CampaignBannerSection() {
   const highlights = [
     {
       icon: <Flame size={18} className="text-[#ff3131] dark:text-[#E5E4E2]" />,
-      title: "FastHeat™ Geysers",
-      sub: "3s Flow & 50L Enamel Storage",
+      title: "Fast Heat",
+      sub: "2s Heat 450w / 900w",
       color: "bg-[#fff0f0]"
     },
     {
       icon: <Zap size={18} className="text-emerald-600 dark:text-emerald-400" />,
-      title: "30W BLDC Inverters",
+      title: "Efficent Invertor",
       sub: "65% Power Cut & Solar Direct",
       color: "bg-emerald-50"
     },

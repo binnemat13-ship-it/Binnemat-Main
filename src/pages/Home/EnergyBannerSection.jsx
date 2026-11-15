@@ -63,22 +63,19 @@ export default function EnergyBannerSection({ onShopClick, onSelectProduct }) {
             Say goodbye to suffocating gas fumes, cylinder refills, and gas load-shedding. Instant infrared thermal warmth with auto-thermostat and child-safe cool-touch exterior.
           </p>
 
-          {/* VISUAL BILL COMPARISON TILE */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 p-3.5 sm:p-4 rounded-2xl bg-white dark:bg-[#1A1715] border border-[#E5E4E2] dark:border-white/[0.1] mb-6 sm:mb-8 max-w-lg text-xs shadow-sm">
-            <div className="sm:border-r border-[#E5E4E2] dark:border-white/10 sm:pr-4 pb-2 sm:pb-0 border-b sm:border-b-0">
-              <span className="text-slate-500 block mb-0.5 font-medium">Gas Heater / Cylinder Refills</span>
-              <strong className="text-rose-600 text-base block font-wix font-bold">
-                <GsapCounter endValue={6500} prefix="Rs. " suffix=" / Mo" />
+          {/* OFFICIAL DIRECT STORE PRICE TILE */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#1A1715] border border-[#E5E4E2] dark:border-white/[0.1] mb-6 sm:mb-8 max-w-md shadow-xs flex items-center justify-between">
+            <div>
+              <span className="text-[11px] font-mono text-slate-500 uppercase font-bold tracking-wider block mb-0.5">
+                Official Direct Store Price
+              </span>
+              <strong className="text-2xl sm:text-3xl text-[#ff3131] dark:text-[#ff8585] font-wix font-black tracking-tight block">
+                {productPrice}
               </strong>
-              <span className="text-[10px] text-slate-400">Carbon monoxide fumes &amp; fire hazards</span>
             </div>
-            <div className="sm:pl-2 pt-1 sm:pt-0">
-              <span className="text-emerald-700 dark:text-emerald-400 font-mono font-bold block mb-0.5">Binnemat Smart Heater</span>
-              <strong className="text-emerald-600 dark:text-emerald-400 text-base block font-wix font-bold">
-                <GsapCounter endValue={2800} prefix="Rs. " suffix=" / Mo" />
-              </strong>
-              <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold">
-                <GsapCounter endValue={22000} prefix="Save Rs. " suffix="+ every winter" />
+            <div className="text-right">
+              <span className="inline-block text-[10px] font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-300 dark:border-emerald-800 px-2.5 py-1 rounded-full">
+                ✓ In Stock &bull; Free Delivery
               </span>
             </div>
           </div>
@@ -112,8 +109,8 @@ export default function EnergyBannerSection({ onShopClick, onSelectProduct }) {
             }}
             className="w-full max-w-sm rounded-3xl overflow-hidden glass-apple-card border border-[#E5E4E2] dark:border-white/[0.1] bg-white dark:bg-[#161311] p-4 group relative shadow-md cursor-pointer hover:border-[#ff3131]/40 transition-all"
           >
-            <div className="h-64 sm:h-72 overflow-hidden rounded-2xl bg-[#0C0B0C] flex items-center justify-center relative p-3">
-              <div className="absolute top-2 left-2 px-2.5 py-0.5 rounded-full bg-[#ff3131]/90 text-white font-mono text-[9px] font-bold uppercase shadow-sm">
+            <div className="h-64 sm:h-72 overflow-hidden rounded-2xl bg-transparent flex items-center justify-center relative p-3">
+              <div className="absolute top-2 left-2 px-2.5 py-0.5 rounded-full bg-[#ff3131] text-white font-mono text-[9px] font-bold uppercase shadow-sm z-10">
                 Lowest Price Deal
               </div>
               <img 
@@ -123,7 +120,7 @@ export default function EnergyBannerSection({ onShopClick, onSelectProduct }) {
                   e.currentTarget.onerror = null;
                   e.currentTarget.src = SAFE_SVG_PLACEHOLDER;
                 }}
-                className="w-full h-full object-contain will-change-transform filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)] group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-contain will-change-transform filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.15)] dark:drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform duration-500 rounded"
               />
             </div>
             <div className="pt-3 px-1 flex justify-between items-center text-xs">

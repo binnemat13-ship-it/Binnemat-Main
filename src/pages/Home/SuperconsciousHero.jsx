@@ -130,9 +130,9 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
         <span className="text-[11px] sm:text-xs font-mono font-bold tracking-widest text-[#ff3131] dark:text-[#ff8585] uppercase">
           Binnemat Flagship Showcase &bull; Main Collection
         </span>
-        <span className="hidden sm:inline-block text-[10px] bg-bn-gold/15 text-bn-goldDark dark:text-bn-gold font-bold px-2 py-0.5 rounded-full uppercase">
+        {/* <span className="hidden sm:inline-block text-[10px] bg-bn-gold/15 text-bn-goldDark dark:text-bn-gold font-bold px-2 py-0.5 rounded-full uppercase">
           Live Backend
-        </span>
+        </span> */}
       </div>
 
       {/* 3. HERO HEADLINE & PHILOSOPHY */}
@@ -270,7 +270,7 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
                 </div>
 
                 {/* Floating Spec Capsule Overlay */}
-                <div className="absolute top-2 right-2 sm:top-4 sm:right-4 glass-apple bg-white/90 dark:bg-[#1E1B19]/90 border border-black/[0.08] dark:border-white/[0.1] rounded-2xl px-3.5 py-2 shadow-lg backdrop-blur-xl flex items-center gap-2">
+                {/* <div className="absolute top-2 right-2 sm:top-4 sm:right-4 glass-apple bg-white/90 dark:bg-[#1E1B19]/90 border border-black/[0.08] dark:border-white/[0.1] rounded-2xl px-3.5 py-2 shadow-lg backdrop-blur-xl flex items-center gap-2">
                   <div className="w-6 h-6 rounded-lg bg-bn-gold/15 text-bn-goldDark dark:text-bn-gold flex items-center justify-center">
                     <Award size={13} />
                   </div>
@@ -278,7 +278,7 @@ export default function SuperconsciousHero({ onSelectProduct, onExploreClick, on
                     <span className="text-[9px] font-mono uppercase text-slate-400 block leading-tight">Authentic Build</span>
                     <span className="text-xs font-bold text-slate-900 dark:text-white leading-tight">Pure Quality</span>
                   </div>
-                </div>
+                </div> */}
 
                 {/* Prev / Next Stage Arrows */}
                 {premiumProducts.length > 1 && (
