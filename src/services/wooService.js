@@ -33,7 +33,8 @@ export function normalizeWcProduct(raw) {
     rating: 5,
     images: (raw.images && raw.images.length > 0) ? raw.images : [{ src: SAFE_SVG_PLACEHOLDER }],
     specs: raw.specs || null,
-    description: raw.description ? raw.description.replace(/<[^>]+>/g, '') : null
+    descriptionHtml: raw.description || raw.short_description || null,
+    description: raw.description ? raw.description.replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').trim() : null
   };
 }
 

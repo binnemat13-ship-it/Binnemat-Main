@@ -64,13 +64,8 @@ export default function ProductInfo({ product }) {
         </span>
       </div>
 
-      {/* SHORT DESCRIPTION */}
-      <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-300 mb-6 font-normal">
-        {product?.description || "Official brand-sealed heavy-duty appliance. Built for Pakistan's climate with official manufacturer warranty card stamped upon delivery."}
-      </p>
-
       {/* QUANTITY & ACTIONS */}
-      <div className="space-y-4 mb-8">
+      <div className="space-y-4 mb-6">
         <div className="flex items-center gap-4">
           <span className="text-xs font-bold text-neutral-700 dark:text-neutral-300">Quantity:</span>
           <div className="inline-flex items-center gap-3 border border-[#E5E4E2] dark:border-white/10 rounded-xl px-3 py-1.5 bg-white dark:bg-[#1A1715]">
