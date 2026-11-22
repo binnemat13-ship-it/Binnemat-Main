@@ -18,9 +18,10 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory, onSelec
         const specs = p.specs 
           ? (Array.isArray(p.specs) ? p.specs : Object.entries(p.specs).map(([k, v]) => `${k}: ${v}`))
           : [
-              'Italian Incoloy 840 anti-corrosive heating coil',
-              'Sapphire diamond enamel tank rated for 8-Bar',
-              'Instant 3-second continuous hot water flow'
+              'Zero Sui Gas Dependency',
+              '180° wide-angle oscillation',
+              'Dual Heating Technology – 450W / 900W',
+              'Advanced Carbon Fiber Tube Heating Element'
             ];
 
         const imgSrc = p.images?.[0]?.src || p.image || '/images/superconscious_heater_hero.jpg';
@@ -48,7 +49,7 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory, onSelec
           badgeText: 'Official Factory Sealed',
           categorySlug: 'winter-collection',
           btnText: 'View Appliance',
-          points: specs.slice(0, 3)
+          points: specs.slice(0, 4)
         };
       })
     : [
@@ -76,7 +77,8 @@ export default function SuperconsciousWidgetsSection({ onSelectCategory, onSelec
           points: [
             'Italian Incoloy 840 anti-corrosive heating coil',
             'Sapphire diamond enamel tank rated for 8-Bar',
-            'Instant 3-second continuous hot water flow'
+            'Instant 3-second continuous hot water flow',
+            
           ]
         }
       ];
