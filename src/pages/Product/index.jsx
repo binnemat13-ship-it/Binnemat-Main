@@ -5,6 +5,7 @@ import ProductInfo from './ProductInfo';
 import ProductSpecsTable from './ProductSpecsTable';
 import ProductCarousel from '../../components/common/ProductCarousel';
 import { useProductsByCategoryQuery } from '../../hooks/useWooQueries';
+import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 
 export default function ProductView({ 
   product, 
@@ -12,6 +13,35 @@ export default function ProductView({
   onSelectCategory, 
   onNavigateHome 
 }) {
+  useDocumentTitle({
+    title: product ? `${product.name} | Price in Pakistan | Binnemat Gujranwala` : 'Appliance Details | Binnemat Pakistan',
+    description: product?.description ? product.description.slice(0, 160).replace(/\s+/g, ' ').trim() : `Buy ${product?.name || 'appliance'} with official warranty at factory price in Gujranwala & Pakistan from Binnemat.`,
+    keywords: product ? `${product.name}, ${product.name} price in pakistan, heaters in pakistan, heaters in gujranwala, home appliances in gujranwala, binnemat appliances, buy ${product.name}` : 'heaters in gujranwala, appliances pakistan, binnemat',
+    canonicalUrl: product?.slug ? `https://binnemat.com/product/${product.slug}` : 'https://binnemat.com',
+    ogImage: (Array.isArray(product?.images) && product.images[0]?.src) || (typeof product?.images?.[0] === 'string' ? product.images[0] : 'https://binnemat.com/images/logo.png'),
+    schemaJson: product ? {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: product.name,
+      image: Array.isArray(product.images) ? product.images.map(img => (typeof img === 'string' ? img : img?.src || '')) : [],
+      description: product.description || `Buy ${product.name} at Binnemat Gujranwala Pakistan.`,
+      brand: {
+        '@type': 'Brand',
+        name: 'Binnemat'
+      },
+      offers: {
+        '@type': 'Offer',
+        priceCurrency: 'PKR',
+        price: product.price || 0,
+        availability: 'https://schema.org/InStock',
+        url: `https://binnemat.com/product/${product.slug}`,
+        seller: {
+          '@type': 'Organization',
+          name: 'Binnemat Gujranwala Official Store'
+        }
+      }
+    } : null
+  });
   // Uses cached category products (0 network calls when navigating from catalog/home)
   const { data: categoryProducts = [] } = useProductsByCategoryQuery(product?.category);
   const relatedProducts = (categoryProducts || []).filter(p => p.id !== product?.id);

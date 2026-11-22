@@ -14,8 +14,15 @@ import {
   useCategoriesQuery, 
   useProductsByCategoryQuery 
 } from '../../hooks/useWooQueries';
+import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 
 export default function Home({ onSelectProduct, onSelectCategory, setActivePage }) {
+  useDocumentTitle({
+    title: 'Binnemat | Best Electric Heaters, Geysers & Home Appliances in Gujranwala & Pakistan',
+    description: 'Shop certified energy-efficient home appliances in Gujranwala and across Pakistan. Premium carbon fiber electric heaters, instant geysers, 30W BLDC inverter fans, and kitchen hobs with direct factory warranty.',
+    keywords: 'home appliances in gujranwala, heaters in gujranwala, heaters in pakistan, electric room heater price in pakistan, carbon fiber heater, instant electric geyser gujranwala, 30W BLDC inverter fans pakistan, kitchen hobs gujranwala, binnemat appliances, binnemat',
+    canonicalUrl: 'https://binnemat.com/',
+  });
   // TanStack Query caching with 5-minute staleTime (0 network calls on component re-mounts)
   const { data: categories = [] } = useCategoriesQuery();
   

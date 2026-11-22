@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /bn-portal-2026/
+Disallow: /admin/
+Disallow: /api/
+Disallow: /api-wc/
+Disallow: /api-wc-v3/
+Disallow: /api-wp-v2/
+
+# Sitemaps
+Sitemap: https://binnemat.com/sitemap.xml

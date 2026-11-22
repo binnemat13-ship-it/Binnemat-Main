@@ -7,6 +7,7 @@ import {
   useCategoriesQuery, 
   useProductsByCategoryQuery 
 } from '../../hooks/useWooQueries';
+import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 
 export default function CategoryView({ 
   initialCategory = 'all', 
@@ -27,6 +28,13 @@ export default function CategoryView({
 
   const currentCategory = categories.find((c) => c.slug === selectedSlug);
   const currentCategoryName = currentCategory ? currentCategory.name : 'All Appliances';
+
+  useDocumentTitle({
+    title: `${currentCategoryName} | Buy in Gujranwala & Pakistan | Binnemat`,
+    description: `Shop high-efficiency ${currentCategoryName.toLowerCase()} in Gujranwala & across Pakistan. Official brand warranty, best factory prices, and fast doorstep delivery.`,
+    keywords: `${currentCategoryName.toLowerCase()} in gujranwala, ${currentCategoryName.toLowerCase()} in pakistan, buy ${currentCategoryName.toLowerCase()}, binnemat appliances, home appliances in gujranwala`,
+    canonicalUrl: selectedSlug && selectedSlug !== 'all' ? `https://binnemat.com/category/${selectedSlug}` : 'https://binnemat.com/categories'
+  });
 
   // Subcategory filtering (By default, shows ALL products of the category!)
   const displayedProducts = activeSubCategory === 'all'

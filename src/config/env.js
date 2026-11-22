@@ -57,6 +57,13 @@ export const APP_CONFIG = Object.freeze({
   WHATSAPP_NUMBER: import.meta.env.VITE_WHATSAPP_NUMBER || '923212418430',
   APP_NAME: import.meta.env.VITE_APP_NAME || 'Binnemat',
   SLOGAN_URDU: import.meta.env.VITE_APP_SLOGAN_URDU || 'ہر گھر کا سکون',
+  // Official UBL Bank Details for Direct IBFT & Card Acceptance
+  BANK_NAME: import.meta.env.VITE_BANK_NAME || 'United Bank Limited (UBL)',
+  BANK_ACCOUNT_TITLE: import.meta.env.VITE_BANK_ACCOUNT_TITLE || 'BIN NEMAT APPLIANCES',
+  BANK_ACCOUNT_NUMBER: import.meta.env.VITE_BANK_ACCOUNT_NUMBER || '12345678901234',
+  BANK_IBAN: import.meta.env.VITE_BANK_IBAN || 'PK00UNIL0109000123456789',
+  BANK_BRANCH: import.meta.env.VITE_BANK_BRANCH || 'Main Branch, Gujranwala',
+  UBL_PAY_URL: import.meta.env.VITE_UBL_PAY_URL || '',
   DEVELOPER_NAME: 'Awais Ahmad',
   DEVELOPER_PHONE: '+92 321 2418430',
   DEVELOPER_WHATSAPP: 'https://wa.me/923212418430',

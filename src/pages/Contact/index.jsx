@@ -1,11 +1,19 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 import ContactCards from './ContactCards';
 import ContactForm from './ContactForm';
 import ContactBtuGuide from './ContactBtuGuide';
 import ContactBranches from './ContactBranches';
 
 export default function ContactPage() {
+  useDocumentTitle({
+    title: 'Contact Binnemat Gujranwala | Showroom & Customer Service Pakistan',
+    description: 'Visit our flagship showroom at Akbar Butt Wala Gala, Hafizabad Road, Gujranwala or contact Binnemat customer support for instant geyser and room heater guidance.',
+    keywords: 'contact binnemat, binnemat showroom gujranwala, hafizabad road gujranwala, heaters in gujranwala, customer support',
+    canonicalUrl: 'https://binnemat.com/contact'
+  });
+
   const headerRef = useRef(null);
 
   useEffect(() => {
